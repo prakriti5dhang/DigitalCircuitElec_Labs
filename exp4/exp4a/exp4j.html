@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+    <title>Experiment 4 A</title>
+    <head>
+<style>
+    #out1{
+        
+width:1136px;
+
+}
+
+.main{
+    position: relative;
+	margin-left: auto;
+	margin-right: auto;
+    
+}
+#inst{
+float:left;
+}
+#out2{
+ position: absolute;
+ /*right: 90px;
+ top: 10px;*/
+ float:left;
+ top:520px;
+ 
+ 
+	
+}
+/*.right{
+width:20%;
+float:right;
+}*/
+table, th,td {
+  border: 2px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 2px;
+  text-align: center;    
+}
+.dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                border:2px solid #3385ff;
+                
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                padding: 12px 16px;
+                z-index: 1;
+                cursor: pointer;
+            }
+
+          .dropdown-content {
+                display: block;
+
+            }
+
+.mimg{
+    position:absolute;
+    right: 1px;
+    top:10px;
+    width:800px;
+   
+    
+    
+}
+#cirkt{
+    position:absolute;
+    right: 1px;
+    top:40px;
+    width:800px;
+    
+}
+.titlec{
+	right: 20px;
+	width:800px;
+}
+#b1{
+	position: absolute;
+	top: 150px;
+    right: 678px;
+    
+    
+}
+#b2{
+	position: absolute;
+	top: 150px;
+    right: 648px;
+    
+    
+}
+#b3{
+	position: absolute;
+	top: 150px;
+    right: 614px;
+    
+    
+}
+#b4{
+	position: absolute;
+	top: 150px;
+    right: 568px;
+    
+    
+}
+#b5{
+	position: absolute;
+	top: 150px;
+    right: 530px;
+    
+    
+}
+
+
+#b6{
+	position: absolute;
+	top: 150px;
+    right: 400px;
+    
+    
+}
+#b7{
+	position: absolute;
+	top: 150px;
+    right: 340px;
+    
+    
+}
+#b8{
+	position: absolute;
+	top: 150px;
+    right: 310px;
+    
+    
+}
+#b9{
+	position: absolute;
+	top: 150px;
+    right: 256px;
+    
+    
+}
+#b10{
+	position: absolute;
+	top: 150px;
+    right: 229px;
+    
+    
+}
+#b11{
+	position: absolute;
+	top: 150px;
+    right: 195px;
+    
+    
+}
+#b12{
+	position: absolute;
+	top: 150px;
+    right: 160px;
+    
+    
+}
+#b13{
+	position: absolute;
+	top: 150px;
+    right: 125px;
+    
+    
+}
+
+#b14{
+	position: absolute;
+	top: 150px;
+    right: 95px;
+    
+    
+}
+</style>
+
+
+
+<script type="text/javascript" src="tbl4.js"> </script>
+    </head>
+    <body>
+<div id="main">
+        <!--div id="out1"-->
+        <div id="inst" style="background-color: #96baf0;   position:absolute; top:10px; width:500px;font-size: 16px;font-weight: bold;">
+        <div class="dropdown">
+			<p style="text-align:center;color:white"> INSTRUCTION</p>
+			<div class="dropdown-content" style="min-width: 330px">
+				<ol type="1">
+					<li>Apply VCC and low level voltage to ground(GND)</li>
+					<li>Apply high level voltage to Strobe1G or strobe 2G. If STROBE 1G is high 2nd Multiplexer is activated . If STROBE 2G is high then 1st Multiplexer is activated.</li>
+					<li>For all the combinations of the select inputs A,B verify that both the LEDs are glowing or not glowing.</li>
+                    <li>Follow the truth table in theory section.</li>
+					<li><b>Note</b>: Red button symbolize as Low (L), Green button symbolize as High(H).</li>
+				</ol> 
+
+			</div>
+		</div>
+	</div>
+	<div>
+	<div id="readings" style="background-color: #96baf0; border: 2px solid #3385ff; position:absolute;  float:left; top:300px; font-size: 16px;font-weight: bold; width:285px">
+		<div class="dropdown">
+			<p style="text-align:center;color:white">READING</p>
+			<div class="rd" style="min-width: 250px" style="background-color:white; border:2px solid #3385ff;" >
+		<p>Strobe	<input type="text" value="" id="dec" placeholder="Strobe" style="background-color:#e6f5ff; width:50px"  readonly=""></p>
+	<p>Select Lines <input type="text" value="" id="inp" placeholder="Input" style="background-color:#e6f5ff; width:50px" readonly=""></p>
+	<input type="button" id="add"  value="Insert to Table" onclick="intbl()" style=" background-color: #d9e2f0;  cursor:pointer;font-size: 16px;font-weight: bold; "/>
+	</div>
+	</div>
+	</div>
+</div>
+
+<div>
+<div class="out2" style="background-color: #96baf0; border: 2px solid #3385ff; position:absolute;   font-size: 16px;font-weight: bold; width:300px;">
+	<div class="dropdown">
+		<p style="text-align:center;color:white">TRUTH TABLE</p>
+		<div class="tb" style="min-width: 265px">
+	<table id = "mytable">
+		<!--caption><b>Truth Table</b></caption-->
+		<tr>
+		<th>Strobe </th>
+		<th>Select Lines (A B)</th>
+        <th>Output</th>
+		<!--th>Outputs (abcdefg)</th-->
+	
+		
+	</tr>
+		</table>
+	</div>
+</div>
+</div>
+</div>
+<!--/div-->
+<div class="titlec" style="background-color: #96baf0;   position:absolute; top:10px; width:800px;font-size: 16px;font-weight: bold;">
+	<p style="text-align:center;color:white">CIRCUIT DIAGRAM</p>
+
+<div id="cirkt">
+    <img class="mimg" src="cir.JPG" alt="circuit image" />
+<img id="b1" onclick="a1()" src="off.png" /> 
+<img id="b2" onclick="a2()" src="off.png">
+<img id="b3" onclick="a3()" src="off.png">
+<img id="b4" onclick="a4()" src="off.png">
+<img id="b5" onclick="a5()" src="off.png">
+<img id="b6" onclick="a6()" src="off.png">
+<img id="b7" onclick="a7()" src="off.png">
+<img id="b8" onclick="a1()" src="off.png" /> 
+<img id="b9" onclick="a2()" src="off.png">
+<img id="b10" onclick="a3()" src="off.png">
+<img id="b11" onclick="a4()" src="off.png">
+<img id="b12" onclick="a5()" src="off.png">
+<img id="b13" onclick="a6()" src="off.png">
+<img id="b14" onclick="a1()" src="off.png" />
+</div>
+</div>
+</div>
+    </body>
+</html>

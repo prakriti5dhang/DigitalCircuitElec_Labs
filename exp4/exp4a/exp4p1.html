@@ -1,0 +1,274 @@
+<!--Lab:exp_4_Part1_Multiplexer
+	File name: exp4p1.html
+    Author:Prakriti Dhang--->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	table, th,td {
+  border: 1px solid black;
+  border-collapse: collapse;
+ 
+}
+th, td {
+  padding: 2px;
+  
+  /*text-align: center;  */  
+}
+
+</style>
+<link rel="stylesheet" type="text/css" href="style_exp4p1.css">
+<script type="text/javascript" src="circuit_exp4p1.js"></script>
+<!--script  type="text/javascript" src="mathjax.js" id="">
+</script-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" id="">
+</script>
+</head>
+<body style="background-color: #0d213b;">
+
+	<div class="row">
+		<b><p style="text-align:center;color:rgb(54, 230, 78); font-size: large">Dual 4:1 Multiplexer(IC 74153) </p></b>
+	</div>
+
+<div class="row">
+  <div class="column" >
+    <div id="inst" style="background-color: #96baf0;   font-size: 16px;font-weight: bold; border:1px solid #3385ff;">
+        <div class="dropdown">
+			<p style="text-align:center;color:rgb(26, 0, 97)"> INSTRUCTION</p>
+			<div class="dropdown-content" style="background-color:white;  border:1px solid #3385ff;" >
+				<ol type="1">
+					<li>Apply \(V_{CC}\) and low level voltage to ground(GND)</li>
+					<li>Apply high level voltage to Strobe1G or strobe 2G. If STROBE 1G is high 2nd Multiplexer is activated . If STROBE 2G is high then 1st Multiplexer is activated.</li>
+					<li>For all the combinations of the select inputs A,B verify that both the LEDs are ON or not.</li>
+                    <li>Follow the truth table in the below section.</li>
+					<li><b>Note</b>: Red button symbolize as Low (L), Green button symbolize as High(H).</li>
+				</ol> 
+
+			</div>
+		</div>
+	</div>
+	
+	<!--div id="reading" style="background-color: #96baf0;    font-size: 16px;font-weight: bold;">
+<div class="title">
+			<p style="text-align:center;color:white"> READINGS</p>
+			<div class="rtbl" style="background-color:white; border:2px solid #3385ff;">
+			<p> Strobe	<input type="text" value="" id="dec" placeholder="Strobe" style="background-color:#e6f5ff; width:50px"  readonly=""></p>
+	<p>Select Lines <input type="text" value="" id="inp" placeholder="Input" style="background-color:#e6f5ff; width:50px" readonly=""></p>
+	<center><input type="button" id="add"  value="Insert to Table" onclick="intbl()" style=" background-color: #d9e2f0;  cursor:pointer;font-size: 16px;font-weight: bold; "/></center>
+			<br></div>
+			</div>
+			</div-->
+	
+	<div id="tablein" style="background-color: #96baf0;   font-size: 16px;font-weight: bold; border:1px solid #3385ff;">
+<div class="tbtitle">
+			<p style="text-align:center;color:rgb(26, 0, 97)">TRUTH TABLE</p>
+			<div class="intbl" style="background-color:white; border:1px solid #3385ff;">
+			<center>
+			<table id = "mytable" >
+		<!--caption><b>Truth Table</b></caption-->
+		<tr> 
+			<th colspan="5">Multiplxer 2 is active</th>
+			<th></th>
+			<th></th>
+			<th colspan="6">Multiplxer 1 is active</th>
+
+			
+		</tr>
+		<tr>
+		
+		<th colspan="2">Strobe </th>
+		<th colspan="2">Select Lines </th>
+        <th>Output</th>
+		<th rowspan="8"> </th>
+		<th rowspan="8"> </th>
+		<th colspan="2">Strobe </th>
+		<th colspan="2">Select Lines </th>
+        <th>Output</th>
+		<!--th>Outputs (abcdefg)</th-->
+	</tr>
+	<tr>
+		<td>1G</td>
+		<td>2G</td>
+		<td>A</td>
+		<td>B</td>
+		<td>1Y</td>
+
+		<td>1G</td>
+		<td>2G</td>
+		<td>A</td>
+		<td>B</td>
+		<td>2Y</td>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>1</td>
+		<td>x</td>
+		<td>x</td>
+		<td>0</td>
+
+		<td>1</td>
+		<td>1</td>
+		<td>x</td>
+		<td>x</td>
+		<td>0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>1</td>
+		<td>0</td>
+		<td>0</td>
+		<td>1C0</td>
+
+		<td>1</td>
+		<td>0</td>
+		<td>0</td>
+		<td>0</td>
+		<td>2C0</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>1</td>
+		<td>0</td>
+		<td>1</td>
+		<td>1C1</td>
+
+		<td>1</td>
+		<td>0</td>
+		<td>0</td>
+		<td>1</td>
+		<td>2C1</td>
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>1</td>
+		<td>1</td>
+		<td>0</td>
+		<td>1C2</td>
+
+		<td>1</td>
+		<td>0</td>
+		<td>1</td>
+		<td>0</td>
+		<td>2C2</td>
+		
+
+	</tr>
+	<tr>
+		<td>0</td>
+		<td>1</td>
+		<td>1</td>
+		<td>1</td>
+		<td>1C3</td>
+		
+		<td>1</td>
+		<td>0</td>
+		<td>1</td>
+		<td>1</td>
+		<td>2C3</td>
+	</tr>
+		</table>
+		</center>
+			</div>
+
+</div>
+</div>
+
+
+<div >
+	
+		
+	<div id="showalt" class="dropdown-content" style="background-color:white;  border:4px solid #ff0909; visibility: hidden;" >
+		<p class="con" id="vg" style="text-align: center; font-size: large; font-weight: bold;">Connect Vcc and Gnd properly</p>
+        <p class="con" id="str" style="text-align: center; font-size: large; font-weight: bold;">Please connect the strobe input correctly</p>
+
+	</div>
+
+</div>
+  </div>
+
+  <div class="column" style="float:right;">
+    <div id="cmaind" style="background-color: #96baf0;    font-size: 16px;font-weight: bold; border:1px solid #3385ff;">
+<div class="ctitle" >
+			<p style="text-align:center;color:rgb(26, 0, 97)">CIRCUIT DIAGRAM</p>
+			
+			<div class="crkt" style="background-color:white; position:absolute;  border:2px solid #3385ff;">
+			
+			<img class="mimg" src="cir.JPG" alt="circuit image" />
+			<div id="b1r"></div>
+			<div id="b1g"></div>
+			<div id="b2r"></div>
+			<div id="b2g"></div>
+			<div id="b3r"></div>
+			<div id="b3g"></div>
+			<div id="b4r"></div>
+			<div id="b4g"></div>
+			<div id="b5r"></div>
+			<div id="b5g"></div>
+			<div id="b6r"></div>
+			<div id="b6g"></div>
+			<div id="b7r"></div>
+			<div id="b7g"></div>
+			<div id="b8r"></div>
+			<div id="b8g"></div>
+			<div id="b9r"></div>
+			<div id="b9g"></div>
+			<div id="b10r"></div>
+			<div id="b10g"></div>
+			<div id="b11r"></div>
+			<div id="b11g"></div>
+			<div id="b12r"></div>
+			<div id="b12g"></div>
+			<div id="b13r"></div>
+			<div id="b13g"></div>
+			<div id="b14r"></div>
+			<div id="b14g"></div>
+
+
+
+
+
+
+
+			<img id="b1" onclick="a1()" src="off.png" />
+			<img id="b2" onclick="a2()" src="off.png">
+<img id="b3" onclick="a3()" src="off.png">
+<img id="b4" onclick="a4()" src="off.png">
+ <img id="b5" onclick="a5()" src="off.png">
+<img id="b6" onclick="a6()" src="off.png">
+<img id="b7" onclick="a7()" src="off.png">
+<img id="b8" onclick="a8()" src="off.png" /> 
+<img id="b9" onclick="a9()" src="off.png">
+<img id="b10" onclick="a10()" src="off.png">
+<img id="b11" onclick="a11()" src="off.png">
+<img id="b12" onclick="a12()" src="off.png">
+<img id="b13" onclick="a13()" src="off.png">
+<img id="b14" onclick="a14()" src="off.png" />
+<img id="lon1"  src="lon.jpg"  />
+<img id="ron2"  src="ron.jpg"  />
+			</div>
+			
+			
+			</div>
+			
+
+			
+
+</div>
+
+
+
+	
+
+
+
+  </div>
+</div>
+
+</body>
+
+
+
+</html>

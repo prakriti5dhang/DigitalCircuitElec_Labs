@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>experiment Four A</title>
+<script>
+function ch(id){
+var spli =id.split("_");
+var image = document.getElementById(id);
+var gro = document.getElementById("off_8");
+var vcc = document.getElementById("off_9");
+var str1 = document.getElementById("off_5");
+var str2 = document.getElementById("off_10");
+var fir = document.getElementById("off_1");
+var las = document.getElementById("off_14");
+
+if(image.src.match("off")) {
+	image.src="on.jpg";
+	document.getElementById("div_"+spli[1]).className="green";
+} else {
+	image.src="off.jpg";
+	document.getElementById("div_"+spli[1]).className="red";
+}
+
+
+if(vcc.src.match("off") || gro.src.match("on")) {
+	document.getElementById("vg").style.display="block";
+} else {
+	document.getElementById("vg").style.display="none";
+	if(str1.src.match("on") && str2.src.match("on")) {
+		document.getElementById("str").style.display="block";
+	} else {
+		document.getElementById("str").style.display="none";
+		if(fir.src.match("on") && las.src.match("on") && str1.src.match("off") && str2.src.match("off")){
+			document.getElementById("allon").style.display="block";
+			document.getElementById("lon").style.display="none";
+			document.getElementById("ron").style.display="none";
+		} else if(fir.src.match("on") && str1.src.match("off")){
+			document.getElementById("allon").style.display="none";
+			document.getElementById("ron").style.display="block";
+			document.getElementById("lon").style.display="none";
+		} else if(fir.src.match("on") && str1.src.match("on") && las.src.match("off")){
+			document.getElementById("allon").style.display="none";
+			document.getElementById("ron").style.display="none";
+			document.getElementById("lon").style.display="none";
+		} else if(las.src.match("on") && str2.src.match("off")){
+			document.getElementById("allon").style.display="none";
+			document.getElementById("lon").style.display="block";
+			document.getElementById("ron").style.display="none";
+		} else if(las.src.match("on") && str2.src.match("on")){
+			document.getElementById("allon").style.display="none";
+			document.getElementById("lon").style.display="none";
+			document.getElementById("ron").style.display="none";
+		}else if(fir.src.match("on") && las.src.match("on") && str1.src.match("on") && str2.src.match("off")){
+			document.getElementById("allon").style.display="none";
+			document.getElementById("lon").style.display="none";
+			document.getElementById("ron").style.display="block";
+		}else if(fir.src.match("on") && las.src.match("on") && str2.src.match("on") && str1.src.match("off")){
+			document.getElementById("allon").style.display="none";
+			document.getElementById("ron").style.display="none";
+			document.getElementById("lon").style.display="block";
+		} else{
+			document.getElementById("allon").style.display="none";
+			document.getElementById("ron").style.display="none";
+			document.getElementById("lon").style.display="none";
+		}
+	}
+	}
+}
+</script>
+<link rel="stylesheet" href="style2.css" type="text/css">
+</head>
+<body>
+<img src="cir.jpg">
+<script>
+for(i=1;i<=14;i++){
+document.write('<img src="off.jpg" id=off_'+i+' class="off" onclick="ch(id)">');
+}
+for(j=1;j<=14;j++){
+document.write('<div id="div_'+j+'" class="red"> </div>');
+}
+</script>
+<img src="allon.jpg" id="allon">
+<img src="lon.jpg" id="lon">
+<img src="ron.jpg" id="ron">
+<p class="con" id="vg">connect Vcc and Gnd properly</p>
+<p class="con" id="str">Please connect the strobe input correctly</p>
+</body>
+</html>

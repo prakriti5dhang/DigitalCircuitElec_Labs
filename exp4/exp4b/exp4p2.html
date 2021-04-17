@@ -1,0 +1,492 @@
+<!--Lab:exp_4_Part2_Multiplexer
+	File name: exp4p2.html
+    Author:Prakriti Dhang--->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	table, th,td {
+		border: 1px solid black;
+  border-collapse: collapse;
+ 
+}
+th, td {
+  padding: 2px;
+  
+  text-align: center;  
+}
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+
+
+</style>
+<link rel="stylesheet" type="text/css" href="style_exp4p2.css">
+<script type="text/javascript" src="circuit_exp4p2.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" id="">
+</script>
+<!--script type="text/javascript" src="mathjax.js"></script-->
+</head>
+<body style="background-color: #0d213b;">
+	<div class="row">
+		<b><p style="text-align:center;color:rgb(54, 230, 78); font-size: large">Quad 2:1 Multiplexer(IC 74157)</p></b>
+	</div>
+<div class="row">
+  <div class="column" >
+    <div id="inst" style="background-color: #96baf0;   font-size: 16px;font-weight: bold; border:1px solid #3385ff;">
+        <div class="dropdown">
+			<p style="text-align:center;color:rgb(26, 0, 97)"> INSTRUCTION</p>
+			<div class="dropdown-content" style="background-color:white;  border:1px solid #3385ff;" >
+				<ol type="1">
+					<li>Apply \(V_{CC}\) and low level voltage to ground(GND)</li>
+					<li>Apply high level voltage to Strobe input.Check that all the LEDs are not glowing.</li>
+					<li>For all the combinations of the select inputs, A,B verify that both the LEDs are ON or not.</li>
+                    <li>Follow the truth table in the below section.</li>
+					<li><b>Note</b>: Red button symbolize as Low (L), Green button symbolize as High(H).</li>
+				</ol> 
+				<ul>
+					<li><b>Gate Level equation: \(A_{1}\)S'+\(B_{1}\)S= 1Y</b></li>
+					<li><b>Gate Level equation: \(A_{2}\)S'+\(B_{2}\)S= 2Y</b></li>
+					<li><b>Gate Level equation: \(A_{3}\)S'+\(B_{3}\)S= 3Y</b></li>
+					<li><b>Gate Level equation: \(A_{4}\)S'+\(B_{4}\)S= 4Y</b></li>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+	
+	<!--div id="reading" style="background-color: #96baf0;    font-size: 16px;font-weight: bold;">
+<div class="title">
+			<p style="text-align:center;color:white"> READINGS</p>
+			<div class="rtbl" style="background-color:white; border:2px solid #3385ff;">
+			<p> Strobe	<input type="text" value="" id="dec" placeholder="Strobe" style="background-color:#e6f5ff; width:50px"  readonly=""></p>
+	<p>Select Lines <input type="text" value="" id="inp" placeholder="Input" style="background-color:#e6f5ff; width:50px" readonly=""></p>
+	<center><input type="button" id="add"  value="Insert to Table" onclick="intbl()" style=" background-color: #d9e2f0;  cursor:pointer;font-size: 16px;font-weight: bold; "/></center>
+			<br></div>
+			</div>
+			</div-->
+	
+	<div id="tablein" style="background-color: #96baf0;   font-size: 16px;font-weight: bold; border:1px solid #3385ff;">
+<div class="tbtitle">
+			<p style="text-align:center;color:rgb(26, 0, 97)">TRUTH TABLE</p>
+			<div class="intbl" style="background-color:white; border:1px solid #3385ff;">
+				<table id="tablem"><tr> <td>
+				<input type="button" name="TR1" value="Truth Table 1"  class="btn_sub1" onclick="dist1();" style="background-color:rgb(146, 168, 238);border:2px solid #0a59cf;"/> <br><br>
+				<input type="button" name="TR2" value="Truth Table 2" class="btn_sub1" onclick="dist2();" style="background-color:rgb(146, 168, 238);border:2px solid #0a59cf;"/> <br><br>
+				<input type="button" name="TR3" value="Truth Table 3" class="btn_sub1" onclick="dist3();" style="background-color:rgb(146, 168, 238);border: 2px solid #0a59cf;" /><br><br>
+				<input type="button" name="TR4" value="Truth Table 4" class="btn_sub1" onclick="dist4();" style="background-color:rgb(146, 168, 238);border:2px solid #0a59cf;" /> <br><br>
+			</td>
+<!-- TRUTH TABLE 1 START-->
+<td>
+			<center>
+			<table id = "mytable1"  class="center" style="display: none;" >
+		<!--caption><b>Truth Table</b></caption-->
+		<tr> 
+			<th colspan="5">TRUTH TABLE 1</th>
+			
+			
+		</tr>
+		<tr>
+		
+		<th rowspan="2">Strobe </th>
+		<th rowspan="2">Select </th>
+		<th  colspan ="2">Inputs</th>
+        <th >Output</th>
+		
+		
+		<!--th>Outputs (abcdefg)</th-->
+	</tr>
+	<tr>
+		
+		<td>A1</td>
+		<td>B1</td>
+		<td>1Y</td>
+		
+	</tr>
+	<tr>
+		<td>H</td>
+		<td>x</td>
+		<td>x</td>
+		<td>x</td>
+		<td>L</td>
+
+		
+	</tr>
+	<tr>
+		<td>L</td>
+		<td>L</td>
+		<td>L</td>
+		<td>x</td>
+		<td>L</td>
+
+		
+	</tr>
+	<tr>
+		<td>L</td>
+		<td>L</td>
+		<td>H</td>
+		<td>x</td>
+		<td>H</td>
+
+		
+	</tr>
+	<tr>
+		<td>L</td>
+		<td>H</td>
+		<td>x</td>
+		<td>L</td>
+		<td>L</td>
+
+		
+	</tr>
+	<tr>
+		<td>L</td>
+		<td>H</td>
+		<td>x</td>
+		<td>H</td>
+		<td>H</td>
+
+		
+		
+
+	</tr>
+	
+		</table>
+		</center>
+		<center>
+<!-- TRUTH table 2 start -->
+		<table id = "mytable2"  style="display: none;" >
+			<!--caption><b>Truth Table</b></caption-->
+			<tr> 
+				<th colspan="5">TRUTH TABLE 2</th>
+				
+				
+			</tr>
+			<tr>
+			
+			<th rowspan="2">Strobe </th>
+			<th rowspan="2">Select </th>
+			<th  colspan ="2">Inputs</th>
+			<th >Output</th>
+			
+			
+			<!--th>Outputs (abcdefg)</th-->
+		</tr>
+		<tr>
+			
+			<td>A2</td>
+			<td>B2</td>
+			<td>2Y</td>
+			
+		</tr>
+		<tr>
+			<td>H</td>
+			<td>x</td>
+			<td>x</td>
+			<td>x</td>
+			<td>L</td>
+	
+			
+		</tr>
+		<tr>
+			<td>L</td>
+			<td>L</td>
+			<td>L</td>
+			<td>x</td>
+			<td>L</td>
+	
+			
+		</tr>
+		<tr>
+			<td>L</td>
+			<td>L</td>
+			<td>H</td>
+			<td>x</td>
+			<td>H</td>
+	
+			
+		</tr>
+		<tr>
+			<td>L</td>
+			<td>H</td>
+			<td>x</td>
+			<td>L</td>
+			<td>L</td>
+	
+			
+		</tr>
+		<tr>
+			<td>L</td>
+			<td>H</td>
+			<td>x</td>
+			<td>H</td>
+			<td>H</td>
+	
+			
+			
+	
+		</tr>
+		
+			</table>
+			</center>
+
+		<center>
+			<!-- TRUTH TABLE 3 START-->
+			<table id = "mytable3" style="display: none;" >
+				<!--caption><b>Truth Table</b></caption-->
+				<tr> 
+					<th colspan="5">TRUTH TABLE 3</th>
+					
+					
+				</tr>
+				<tr>
+				
+				<th rowspan="2">Strobe </th>
+				<th rowspan="2">Select </th>
+				<th  colspan ="2">Inputs</th>
+				<th >Output</th>
+				
+				
+				<!--th>Outputs (abcdefg)</th-->
+			</tr>
+			<tr>
+				
+				<td>A3</td>
+				<td>B3</td>
+				<td>3Y</td>
+				
+			</tr>
+			<tr>
+				<td>H</td>
+				<td>x</td>
+				<td>x</td>
+				<td>x</td>
+				<td>L</td>
+		
+				
+			</tr>
+			<tr>
+				<td>L</td>
+				<td>L</td>
+				<td>L</td>
+				<td>x</td>
+				<td>L</td>
+		
+				
+			</tr>
+			<tr>
+				<td>L</td>
+				<td>L</td>
+				<td>H</td>
+				<td>x</td>
+				<td>H</td>
+		
+				
+			</tr>
+			<tr>
+				<td>L</td>
+				<td>H</td>
+				<td>x</td>
+				<td>L</td>
+				<td>L</td>
+		
+				
+			</tr>
+			<tr>
+				<td>L</td>
+				<td>H</td>
+				<td>x</td>
+				<td>H</td>
+				<td>H</td>
+		
+				
+				
+		
+			</tr>
+			
+				</table>
+			</center>
+
+<center>
+				<!-- TRUTH TABLE 4 START-->
+				<table id = "mytable4" style="display: none;" >
+					<!--caption><b>Truth Table</b></caption-->
+					<tr> 
+						<th colspan="5">TRUTH TABLE 4</th>
+						
+						
+					</tr>
+					<tr>
+					
+					<th rowspan="2">Strobe </th>
+					<th rowspan="2">Select </th>
+					<th  colspan ="2">Inputs</th>
+					<th >Output</th>
+					
+					
+					<!--th>Outputs (abcdefg)</th-->
+				</tr>
+				<tr>
+					
+					<td>A4</td>
+					<td>B4</td>
+					<td>4Y</td>
+					
+				</tr>
+				<tr>
+					<td>H</td>
+					<td>x</td>
+					<td>x</td>
+					<td>x</td>
+					<td>L</td>
+			
+					
+				</tr>
+				<tr>
+					<td>L</td>
+					<td>L</td>
+					<td>L</td>
+					<td>x</td>
+					<td>L</td>
+			
+					
+				</tr>
+				<tr>
+					<td>L</td>
+					<td>L</td>
+					<td>H</td>
+					<td>x</td>
+					<td>H</td>
+			
+					
+				</tr>
+				<tr>
+					<td>L</td>
+					<td>H</td>
+					<td>x</td>
+					<td>L</td>
+					<td>L</td>
+			
+					
+				</tr>
+				<tr>
+					<td>L</td>
+					<td>H</td>
+					<td>x</td>
+					<td>H</td>
+					<td>H</td>
+			
+					
+					
+			
+				</tr>
+				
+					</table>
+				</center>
+			</td>	</tr>
+			</table>
+			</div>
+
+</div>
+</div>
+
+
+<div >
+	
+		
+	<div id="showalt" class="dropdown-content" style="background-color:white;  border:4px solid #fa0606; visibility: hidden;" >
+		<p class="con" id="v"  style="color:red;text-align: center; font-size: large; font-weight: bold;">Connect Vcc properly</p>
+		<p class="con" id="g" style="color:red;text-align: center;font-size: large; font-weight: bold;"> GND is connected. </p>
+        
+	</div>
+
+</div>
+  </div>
+
+  <div class="column" style="float:right;">
+    <div id="cmaind" style="background-color: #96baf0;    font-size: 16px;font-weight: bold; border:1px solid #3385ff;">
+<div class="ctitle" >
+			<p style="text-align:center;color:rgb(26, 0, 97)">CIRCUIT DIAGRAM</p>
+			
+			<div class="crkt" style="background-color:white; position:absolute;  border:2px solid #3385ff;">
+			
+			<img class="mimg" src="cir4b.jpg" alt="circuit image" />
+			<div id="b1r"></div>
+			<div id="b1g"></div>
+			<div id="b2r"></div>
+			<div id="b2g"></div>
+			<div id="b3r"></div>
+			<div id="b3g"></div>
+			<div id="b4r"></div>
+			<div id="b4g"></div>
+			<div id="b5r"></div>
+			<div id="b5g"></div>
+			<div id="b6r"></div>
+			<div id="b6g"></div>
+			<div id="b7r"></div>
+			<div id="b7g"></div>
+			<div id="b8r"></div>
+			<div id="b8g"></div>
+			<div id="b9r"></div>
+			<div id="b9g"></div>
+			<div id="b10r"></div>
+			<div id="b10g"></div>
+			<div id="b11r"></div>
+			<div id="b11g"></div>
+			<div id="b12r"></div>
+			<div id="b12g"></div>
+			
+
+
+
+
+
+
+
+			<img id="b1" onclick="a1()" src="off.png" />
+			<img id="b2" onclick="a2()" src="off.png">
+<img id="b3" onclick="a3()" src="off.png">
+<img id="b4" onclick="a4()" src="off.png">
+ <img id="b5" onclick="a5()" src="off.png">
+<img id="b6" onclick="a6()" src="off.png">
+<img id="b7" onclick="a7()" src="off.png">
+<img id="b8" onclick="a8()" src="off.png" /> 
+<img id="b9" onclick="a9()" src="off.png">
+<img id="b10" onclick="a10()" src="off.png">
+<img id="b11" onclick="a11()" src="off.png">
+<img id="b12" onclick="a12()" src="off.png">
+
+
+<img id="lon1"  src="lon1.png" style="visibility: hidden;" />
+<img id="lon2"  src="lon2.png" style="visibility: hidden;" />
+<img id="ron1"  src="ron1.png" style="visibility: hidden;" />
+<img id="ron2"  src="ron2.png" style="visibility: hidden;" />
+			</div>
+			
+			
+			</div>
+			
+
+			
+
+</div>
+
+
+
+	
+
+
+
+  </div>
+</div>
+
+</body>
+
+
+
+</html>
