@@ -1,4 +1,4 @@
-/*Lab:exp_5_Part1_Decoder
+/* /*Lab:exp_5_Part1_Decoder
 	File name: addtbl.js
   content: inert  into table, sorting teh table, remove duplicate row.
     Author:Prakriti Dhang */
@@ -161,3 +161,4 @@ function aintbl(){
             alert(e);
         }
     } */
+ 

@@ -41,11 +41,13 @@ function ledchng(){
         document.getElementById('led7').style.visibility='visible';
         
         //document.getElementById('inp').value='000' ;
-        document.getElementById('eq').innerHTML = "Equation: (Y0)'= complement of C'B'A' = C+B+A'";
+        document.getElementById('eq').innerHTML = "Equation: <span id=addbar> Y0 </span> = complement of C\u0305B\u0305A\u0305 = C+B+A";
+        
         decimal="0";
         sinp="000".split("");
         d1="01111111";
         d11=d1.split("");
+        
 
     }
 
@@ -74,7 +76,7 @@ function ledchng(){
         document.getElementById('led7').style.visibility='visible';
         
        // document.getElementById('inp').value='001' ;
-        document.getElementById('eq').innerHTML = "Equation: (Y1)'= complement of C'B'A = C+B+A'";
+        document.getElementById('eq').innerHTML = "Equation:<span id=addbar> Y1 </span>= complement of C\u0305B\u0305A = C+B+A\u0305";
         decimal="1";
         sinp="001".split("");
         d1="10111111";
@@ -105,7 +107,7 @@ function ledchng(){
         document.getElementById('led7').style.visibility='visible';
 
        // document.getElementById('inp').value='010' ;
-        document.getElementById('eq').innerHTML = "Equation: (Y2)'= complement of C'BA' = C+B'+A";
+        document.getElementById('eq').innerHTML = "Equation: <span id=addbar> Y2 </span>= complement of C\u0305BA\u0305 = C+B\u0305+A";
         decimal="2";
          sinp="010".split("");
         d1="11011111";
@@ -137,7 +139,7 @@ function ledchng(){
         document.getElementById('led7').src="led_onc.png";
         document.getElementById('led7').style.visibility='visible';
         //document.getElementById('inp').value='011' ;
-        document.getElementById('eq').innerHTML = "Equation: (Y3)'= complement of C'BA = C+B'+A'";
+        document.getElementById('eq').innerHTML = "Equation: <span id=addbar> Y3 </span>= complement of C\u0305BA = C+B\u0305+A\u0305";
         decimal="3";
         sinp="011".split("");
         d1="11101111";
@@ -166,7 +168,7 @@ function ledchng(){
         document.getElementById('led7').src="led_onc.png";
         document.getElementById('led7').style.visibility='visible';
         //document.getElementById('inp').value='100' ;
-        document.getElementById('eq').innerHTML = "Equation: (Y4)'= complement of CB'A' = C'+B+A";
+        document.getElementById('eq').innerHTML = "Equation: <span id=addbar> Y4 </span>= complement of CB\u0305A\u0305 = C\u0305+B+A";
         decimal="4";
          sinp="100".split("");
         d1="11110111";
@@ -195,7 +197,7 @@ function ledchng(){
         document.getElementById('led7').src="led_onc.png";
         document.getElementById('led7').style.visibility='visible';
         //document.getElementById('inp').value='101' ;
-        document.getElementById('eq').innerHTML = "Equation: (Y5)'= complement of CB'A = C'+B+A'";
+        document.getElementById('eq').innerHTML = "Equation: <span id=addbar> Y5 </span>= complement of CB\u0305A = C\u0305+B+A\u0305";
         decimal="5";
          sinp="101".split("");
         d1="11111011";
@@ -224,7 +226,7 @@ function ledchng(){
         document.getElementById('led7').src="led_onc.png";
         document.getElementById('led7').style.visibility='visible';
        // document.getElementById('inp').value='110' ;
-        document.getElementById('eq').innerHTML = "Equation: (Y6)'= complement of CBA' = C'+B'+A";
+        document.getElementById('eq').innerHTML = "Equation: <span id=addbar> Y6 </span>= complement of CBA\u0305 = C\u0305+B\u0305+A";
         decimal="6";
         sinp="110".split("");
         d1="11111101";
@@ -252,7 +254,7 @@ function ledchng(){
         document.getElementById('led7').src="led_onc.png";
         document.getElementById('led7').style.visibility='hidden';
         //document.getElementById('inp').value='111' ;
-        document.getElementById('eq').innerHTML = " Equation: (Y7)'= complement of CBA = C'+B'+A'";
+        document.getElementById('eq').innerHTML = " Equation: <span id=addbar> Y7 </span>= complement of CBA = C\u0305+B\u0305+A\u0305";
         decimal="7";
         sinp="111".split("");
         d1="11111110";
@@ -332,6 +334,23 @@ else{
  if(image2.src.match("on")){
     document.getElementById('gnd').style.visibility='visible';
     document.getElementById('showalt').style.visibility='visible';
+
+        document.getElementById('led0').src="led_onc.png";
+        document.getElementById('led0').style.visibility='hidden';
+        document.getElementById('led1').src="led_onc.png";
+        document.getElementById('led1').style.visibility='hidden';
+        document.getElementById('led2').src="led_onc.png";
+        document.getElementById('led2').style.visibility='hidden';
+        document.getElementById('led3').src="led_onc.png";
+        document.getElementById('led3').style.visibility='hidden';
+        document.getElementById('led4').src="led_onc.png";
+        document.getElementById('led4').style.visibility='hidden';
+        document.getElementById('led5').src="led_onc.png";
+        document.getElementById('led5').style.visibility='hidden';
+        document.getElementById('led6').src="led_onc.png";
+        document.getElementById('led6').style.visibility='hidden';
+        document.getElementById('led7').src="led_onc.png";
+        document.getElementById('led7').style.visibility='hidden';
     
 }
 else {
@@ -367,6 +386,7 @@ else
     //var i1='0';
     }
 ledchng();
+
 }
 function a2() {
     var image = document.getElementById('b2');		
@@ -440,6 +460,7 @@ else
     var i5='0'	;
     }
     ledchng();
+    
 }
 function a6() {
     var image = document.getElementById('b6');		
@@ -459,3 +480,5 @@ else
     }
     ledchng();
 }
+
+

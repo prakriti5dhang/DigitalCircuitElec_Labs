@@ -40,16 +40,17 @@
 
 
 .mimg{
-    
-    width:645px;
-	/*width:100%;*/  
+   
+    width:645px;  /* 645px */
+	
 }
 
 
 #b1{
 	position:absolute;
 	top: 90px;
-    right: 545px;
+  right: 545px;
+  cursor:pointer;
     
     
 }
@@ -58,6 +59,7 @@
 	position: absolute;
 	top: 90px;
     right: 515px;
+    cursor:pointer;
     
     
 }
@@ -65,6 +67,7 @@
 	position: absolute;
 	top:90px;
     right: 455px;
+    cursor:pointer;
     
     
     
@@ -73,6 +76,7 @@
 	position: absolute;
 	top: 90px;
     right: 410px;
+    cursor:pointer;
     
     
 }
@@ -80,6 +84,7 @@
 	position: absolute;
 	top: 90px;
     right: 365px;
+    cursor:pointer;
     
     
 }
@@ -89,6 +94,7 @@
 	position: absolute;
 	top: 90px;
     right: 325px;
+    cursor:pointer;
     
     
     
@@ -109,9 +115,9 @@
 
 #led0{
   position:absolute;
-  top:221px;
-  right:100px;
-  visibility: hidden;
+  top:222px;
+  right:98px;
+  visibility:hidden;
 }
 #led1{
   position:absolute;
@@ -217,7 +223,7 @@ border-right: 4px solid green;
             rotate(-62deg); 
 position: absolute;
 top: 22px;
-right: 525px;
+right: 520px;
 display:none;
 }
 
@@ -277,7 +283,7 @@ border-right: 4px solid green;
             rotate(-68deg); 
 position: absolute;
 top: 18px;
-right: 425px;
+right: 422px;
 display:none;
 }
 
@@ -291,7 +297,7 @@ position: absolute;
             translateX(10px)
             rotate(65deg); 
 top: 10px;
-right: 398px;
+right: 400px;
 display:block;
 /*bottom: 335px;
 right: 1058px;*/
@@ -321,7 +327,7 @@ position: absolute;
             translateX(10px)
             rotate(65deg); 
 top: 10px;
-right: 352px;
+right: 354px;
 display:block;
 /*bottom: 335px;
 right: 1058px;*/
@@ -329,7 +335,7 @@ right: 1058px;*/
 }
 #b6g
 {
-height: 21px;
+height: 24px;
 border-right: 4px solid rgb(0, 128, 0);
 -webkit-transform:
             translateY(-10px)
