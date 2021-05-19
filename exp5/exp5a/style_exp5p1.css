@@ -46,6 +46,21 @@
 }
 
 
+.blink{
+  text-decoration: blink;
+}
+
+
+.blink {
+-webkit-animation: blink 2s linear infinite;	
+ color:red;
+ 
+}
+@-webkit-keyframes blink {
+0% { opacity: 0; }
+}
+
+
 #b1{
 	position:absolute;
 	top: 90px;

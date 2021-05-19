@@ -9,13 +9,11 @@ var arr = [];
 var table;
 var clmns, vlt, columns, rest;
 var dataPoints = [];
-/*var d1;
-var d11=d1.split("");*/
+
 var table, rows, switching, i, x, y, shouldSwitch;
 function aintbl(){
     table = document.getElementById("mytable1");
-    //var y1 = document.getElementById("inp").value.split("");
-    //arr[1] = document.getElementById("out").value;
+
     
     arr[0]=decimal[0];
 
