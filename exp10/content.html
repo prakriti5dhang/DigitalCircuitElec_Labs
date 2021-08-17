@@ -1,0 +1,463 @@
+<!-- This file needs to be edited by the lab developer to suit the requirements of their lab in particular.-->
+<!-- Add class="default" to include any element as it is specified in default.html. Do not include class="default" to the elements that you want to edit -->
+<!DOCTYPE html>
+<html>
+    <head><script language="javascript" type="text/javascript" src="a.js"></script>
+        <title>Test Lab title</title>
+    </head>
+
+    <body>
+        <div id="experiment">
+            <!-- The Experiment Document Container-->
+            <!-- The lab Header contains the logo and the name of the lab, usually displayed on the top of the page-->
+
+            <header class="default" id="experiment-header">
+
+                <div class="logo" id="experiment-header-logo">
+                    <!-- Enclose the logo image of your lab or write it in text-->
+                    <img src="./images/logo.jpg"></div>
+
+                <div class="heading" id="experiment-header-heading">
+                    <!-- Write the name of your lab and link it to the home 
+          page of your lab (h1 tag is preferred while writing your 
+          lab name)-->
+                    <a href="../index.html">Digital Electronic Circuits</a>
+                </div><!-- Add any additional element you want to add to the lab 
+        header, For example : Help (Enclosing them with suitable 
+        div is recommended)-->
+            </header><!-- The lab article is the main content area where all the experiment content sits-->
+
+            <article id="experiment-article">
+                <!-- The lab article has an header, optional navigational 
+        menu, number of sections, an optional sidebar and a closing 
+        footer-->
+
+                <div class="breadcrumb" id="experiment-article-breadcrumb"></div>
+
+                <header class="heading" id="experiment-article-heading">
+                    Design of Arithmetic Logic Unit
+                </header><!-- Navigation menu is useful to organize the view of multiple sections inside the article-->
+
+                <nav class="default" id="experiment-article-navigation">
+                    <ul id="experiment-article-navigation-menu">
+                        <!-- The menu can be dynamically generated to contain 
+              the headings of your sections or instead write the 
+              menu items of your choice individually enclosedu in 
+              &lt;li&gt; tag as shown below-->
+                    </ul>
+                </nav><!-- All the sections of your lab or experiment can be 
+          enclosed together with a div element as shown below-->
+
+                <div id="experiment-article-sections">
+                    <!------------------------------- First section of the article---------------------------------->
+
+                    <section id="experiment-article-section-1">
+                        <div class="icon" id="experiment-article-section-1-icon">
+                            <!-- Enclose the icon image of your lab -->
+                            <img src="../images/introduction.jpg"></div>
+                        <!-- The heading for the section can be enclosed in a div tag. -->
+
+                        <div class="heading" id="experiment-article-section-1-heading">
+                            Introduction
+                        </div><!-- Write the section content inside a paragraph element, You can also include images with &lt;img&gt; tag -->
+
+                        <div class="content" id="experiment-article-section-1-content">                            
+                            <p><b>About the Experiment</b></p>
+                <br />
+                This experiment enables a student to learn
+                <ul>
+                    <li>	How to realize the functionality of 4-bit Arithmetic Logic Units </li>
+                    <li>	How to verify the 16 different logic operation and 16 different arithmetic operation performed by Arithmetic Logic Units</li>
+					<li>	How to verify the functionality of 4 select inputs and mode control inputs</li>
+                    
+                    
+                </ul>
+                
+                                            
+                        </div>
+                    </section>
+                    <!-------------------------- Second section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-2">
+                        <div class="icon" id="experiment-article-section-2-icon">
+                            <!-- Enclose the icon image of your lab. -->
+                            <img src="../images/theory.jpg"></div>
+                        <!-- The heading for the section can be enclosed in a div tag. -->
+
+                        <div class="heading" id="experiment-article-section-2-heading">
+                            Theory
+                        </div><!-- Write the section content inside a paragraph element, we can also include images with &lt;img&gt; tag -->
+
+                        <div class="content" id="experiment-article-section-2-content">                            
+                            <span style="font-weight:bold;">Arithmetic Logic Units:</span>&nbsp;The 4 bit Arithmetic Logic Units perform 16 different Arithmetic operation and 16 different logical operation.This Arithmetic Logic Units controlled by 4 select inputs and one mode control input.
+				<br />
+				
+				<br />
+				<div align="center">
+                            <img src="images/pin_configuration_1f3.png" style="width:300px;height:400px"/>
+							<br />
+							<br />
+							Figure 1:&nbsp;Pin configuration of 74181(4 bit Arithmetic Logic Unit)
+							
+							<br />
+							<br />
+							
+							<img src="images/pindesc.png" />
+							<br />
+							<br />
+							Figure 2:&nbsp;Pin description of 74181(4 bit Arithmetic Logic Unit)
+							
+							</div> 
+       
+                
+                <br />
+				<span style="font-weight:bold;">Functionality:</span>&nbsp;When the model control input(M) is high,all internal carries are disabled and device performs logical operation on individual bits as listed.When Mode control input is low the carries are enabled and the device performs arithmetic operaion on two four bit words.
+                THe Device includes full internal lookahead and provides for either ripple carry between devices using C <sub>n+4</sub>   output,for carry loclahead between packages using signals <span style="text-decoration:overline;">P </style></span>(Carry Propogate) and <span style="text-decoration:overline;">C </style></span> (Carry Generate).<span style="text-decoration:overline;">P </style></span> and <span style="text-decoration:overline;">G</style></span> are not affected by carry in.When speed requirement are not so much required, it can be used in a simple ripple carry mode by connecting the carry output signal (C<sub>n+4</sub> )signal to the carry input C<sub>n</sub> of the next unit.For high speed operation the device is used in the conjuction wuth the 182 carry lookahead circuit.One carry lookahead package is required for each group of four 181' devices. Carry lookahead can be provided in various angle and provide at various levels and can offer high speed capability over long wordslength.The A=B output from the device goes High,when all four output from the device is high and can be used to indicate logical equivalance over 4bit when the unit is in subtract mode. The A=B output is open collector and can be wired AND with other A=B outputs to give a comparison for more than 4bits.The A=B signal can be used with C<sub>n+4</sub> signal to indicate A< B and A >B  
+                
+                     
+<br /><br />
+
+The function table list the arithmetic operation that are performed without a carry in.An incoming carry adds a one to each operation.Thus the select code LHHS generates A minus B minus 1 (2s compliment notation) without a carry in and and generates A minus B when a carry is applied.
+Because subtraction is actually performed by complimentry addition (1s compliment),a carry out means borrow;thus a carry is generated when there is no under flow and no carry is generated when there is underflow.As indicated this device can be used with either active low inputs producing active low outputs or with ative high inputs producing active active high outputs.For either cause the table lists the operations that are performed to operends labled inside the logic symbol.
+
+
+<br /><br />
+
+
+
+<div align="center"> 
+
+<img src="images/functionaltable.png" style="width:500px;height:400px" />
+<br /><br />
+Figure 3:&nbsp;Functional Table of Arithmetic Logic Unit<br /><br /><br />
+
+</div>
+
+
+
+
+<div align="center"> 
+
+<img src="images/ALU.png" />
+<br /><br />
+Figure 4:&nbsp;Logic Diagram of Arithmetic Logic Unit<br /><br />
+
+</div>                            
+                        </div>
+                    </section>
+                    <!-------------------------- Third section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-3">
+                        <div class="icon" id="experiment-article-section-3-icon">
+                            <!-- Enclose the icon image of your lab. -->
+                            <img src="../images/objective.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-3-heading">
+                            Objective
+                        </div>
+
+                        <div class="content" id="experiment-article-section-3-content">                            
+                            <p><b>Aim of the Experiment</b></p>
+                <br />
+               The objective of the experiment is to fully understand the functionality of 4-bit Arithmetic Logic Units using 74181 which
+			   has 4 select inputs and one mode control input.Depending on the mode control input Arithmetic Logic Units perform either logical operation or arithmetic operation.<br />
+                        </div>
+                    </section>
+                    <!-------------------------- Fourth section of the article---------------------------------------->
+<section id="experiment-article-section-5">
+                        <div class="icon" id="experiment-article-section-5-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/procedure.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-5-heading">
+                            Procedure
+                        </div>
+
+                        <div class="content" id="experiment-article-section-5-content">                            
+                            <p><p>Please follow these steps to do the experiment.</p>
+                            <br />
+                            <br />
+                            
+                            <p style="font-weight:500px;">Part 1:</p>
+                         
+                        	<ul style="list-style:none">
+ 
+    <li class="expt1"> 1.&nbsp; At first apply high voltage to V<sub>cc</sub>.Then apply high voltage to M(mode control input) and low voltage to all the 4 select inputs.Logical operation will be performed.The output will be inverted A.<br/>
+   
+    </ul>    
+    <br />
+    </li>                      
+  <img src="images/alu1.png" />
+  <br />
+  <br />
+                              
+                               
+          <br />                    
+         <ul style="list-style:none">
+ 
+    <li class="expt1"> 2.&nbsp;  Next, apply high voltage to S0 and apply low voltage to all other select inputs.The output will be <span style="text-decoration:overline;">A + B</span>. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+  
+                                <br />
+                               <img src="images/alu2.png" />
+                              
+								  <br />
+                               <br />
+                                                       
+          <ul style="list-style:none">
+ 
+    <li class="expt1"> 3.&nbsp;  Now apply high voltage to S1 and low voltage to all other select inputs.The output will be <span style="text-decoration:overline;">A</span>B.<br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/alu3.png" />
+                                <br />
+                                <br />
+                             
+                                 <ul style="list-style:none">
+ 
+    <li class="expt1"> 4.&nbsp;  Next, apply high voltage to S0 and S1 and low voltage to other select inputs.The output will be logical 1 <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                               <img src="images/alu4.png" />
+                                <br />
+                                <br />
+                               
+                                 
+   <ul style="list-style:none">
+    <li class="expt1"> 5.&nbsp;  Apply high voltage to S2 and apply low voltage to all other select inputs.The output will be <span style="text-decoration:overline;">AB</span>.  <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+           
+
+<ul style="list-style:none">
+    <li class="expt1"> 6.&nbsp;  Apply all the combinations to all the select inputs and check the logical output.  <br/>
+    
+    </ul>    
+    <br />
+    </li>                      		                        <br />
+                             <img src="images/alu5.png" />
+                               
+                                <br />
+                                <br />
+								
+								<ul style="list-style:none">
+    <li class="expt1"> 7.&nbsp;  Apply low voltage to mode control input and high voltage to C<sub>in</sub>.Now the operation mode will be arithmetic mode. <br/>
+    
+    </ul>    
+    <br />
+    </li>
+	
+	
+	<ul style="list-style:none">     
+	
+	  <li class="expt1"> 8.&nbsp;  Next apply low voltages to all the select inputs.The output will be A + 1. <br/>
+    
+    </ul>    
+    <br />
+    </li>                   
+   
+                                <br />
+                             <img src="images/alu6.png" />
+							 <br />
+                              <br />
+								
+                                
+
+ <ul style="list-style:none">
+ 
+    <li class="expt1"> 9.&nbsp;Next, apply high voltage to S0 and low voltage to all other select inputs.The output will be A + B + 1.<br/>
+   
+    </ul>    
+    <br />
+    </li>                      
+  <img src="images/alu7.png" />
+                                <br />
+								<br />
+                               
+                              
+         <ul style="list-style:none">
+ 
+    <li class="expt1"> 10.&nbsp;  Apply high voltage to S1 and apply low voltages to all other select inputs.The output will be A + <span style="text-decoration:overline;">B</span>.<br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+  
+                                <br />
+                               <img src="images/alu8.png" />
+                                <br />
+                                <br />
+                               
+                                                       
+          <ul style="list-style:none">
+ 
+    <li class="expt1"> 11.&nbsp;  Now apply high voltage to S0 and S1 and low volage to all other select inputs.The output will be -1 + 1.It means outputput will be zero.<br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/alu9.png" />
+                                <br />
+                                <br />
+                             
+                                 <ul style="list-style:none">
+ 
+    <li class="expt1"> 12.&nbsp;  Next, apply high voltage to S2 and low voltage to all other select inputs.The output will be A plus A<span style="text-decoration:overline;">B</span>. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                               <img src="images/alu10.png" />
+                                <br />
+                                <br />                            
+                        </div>
+                    </section>
+                    
+                    <!-------------------------- Fifth section of the article---------------------------------------->
+<section id="experiment-article-section-4">
+                        <div class="icon" id="experiment-article-section-4-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/simulation.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-4-heading">
+                            Simulator</div>
+                        
+
+                        <div align="left">
+                        
+                            	<table width="100%" cellpadding="0px" cellspacing="0px" border="0px">
+                                
+                                	<!--<tr height="30px">
+                                    	<td colspan="2" valign="top"><p class="medium_black">Results Tabulation</p></td>
+                                    </tr> -->
+                                
+                                	<tr height="30px">
+                                    	<td align="left" style="padding-left:35px;">
+                                        	
+                                        </td>
+                                        <td align="right" valign="middle" style="padding-right:35px;">
+                                        <div id="help1">
+                                        	<img src="images/help.jpg" width="30px" style="cursor:pointer;" title="Help" onClick="window.open('content/help.html','helpWindow','width=900,height=1000,screenX=300,screenY=120')" />
+                                            </div>
+                                            
+                                           
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr height="15px"><td colspan="2"></td></tr>
+                                                     
+                                	<tr height="30px">
+                                    
+                                    	<td align="left" style="padding-left:35px;">
+                                        	<input type="button" name="part1" value="Part 1" class="btn_sub1" onclick="showDiv('1');" />
+                                            &nbsp;&nbsp;
+                                        <!--	<input type="button" name="part2" value="Part 2" class="btn_sub1" onclick="showDiv('2');" />
+                                           &nbsp;&nbsp;
+                                           <input type="button" name="part3" value="Part 3" class="btn_sub1" onclick="showDiv('3');" />
+										   &nbsp;&nbsp;
+                                           <input type="button" name="part3" value="Part 4" class="btn_sub1" onclick="showDiv('4');" />
+										   -->
+                                            
+                                        </td>
+                                        <td align="right" valign="middle" style="padding-right:35px;">
+                                        </td>
+                                        
+                                    </tr>
+                                                              
+                                </table>
+                                
+                        </div>
+                        
+                    	<div align="center" id="part1Div">
+                        
+                        <div align="center"><p class="faqs" style="font-weight: bold;">Part 1: Design of Arithmetic Logic Unit</p>
+                            <br> <a href="exp10a/exp10p1.html" target="_blank">Click here for the javascript simulator</a></div>
+                        
+                          <object width="700" height="400">
+                              <param name="movie" value="content/expt1.swf">
+                              <embed src="content/expt1.swf" width="700" height="420">
+                              </embed>
+                          </object>
+                          
+                        </div> 
+                          
+                          
+                    </section>
+                    
+
+                    <!-------------------------- Sixth section of the article---------------------------------------->
+
+                    
+                    <!-------------------------- Seventh section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-7">
+                       <div class="icon" id="experiment-article-section-7-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/quizzes.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-7-heading">
+                            Quizzes
+                        </div>
+
+                        <div class="content" id="experiment-article-section-5-content">                            
+                            <div id="vlab-quiz-wrapper">
+                                <p style="text-align:left; font-size:18px; font-weight:bold;">Test Your Knowledge!!</p><br/>
+                                <div id="vlab-quiz-question-answer-options"></div>                                
+                                <br/>
+                                <div id="vlab-quiz-trigger">
+                                    <button id="vqt-start" onclick="quizInitializeAllQuestion()" style="display: block;">Start</button>                                  
+                                </div>            
+                            </div>                      
+                        </div>
+                    </section>
+                    <!-------------------------- Eight section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-8">
+                        <div class="icon" id="experiment-article-section-8-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/reference.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-8-heading">
+                            Reference
+                        </div>
+
+                        <div class="content" id="experiment-article-section-8-content">   
+<p><b>Books</b></p>
+<ul>                         
+                            <li>Digital Principles and Applications, by Leach and Malvino.</li>
+                                <li>Digital Logic Design, Leach, by Malvino, and Saha</li>
+                                <li>Engineering Digital Design, by Richard F. Tinder.</li>
+                                <li>Digital Logic and Computer Design, by M. Morris Mano</li>                                
+                            	<li>Digital Systems: Principles and Applications, Neal S. Widmer , Ronald J. Tocci , Gregory L. Moss</li>     
+</ul>                      
+                        </div>
+                    </section>                   
+
+                </div>
+            </article>
+<footer class="default" id="lab-footer">
+                <!-- Put the content here-->
+                <div style="margin-left:40%; margin-right:40% ">
+                    Copyright &copy; 2011 Indian Institute of Technology Kharagpur,<a href="../license/index.html" target="_blank" style="margin:auto"> Licensing Terms </a>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
