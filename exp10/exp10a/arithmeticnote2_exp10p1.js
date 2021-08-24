@@ -56,7 +56,7 @@
              mmcn ="0 0 1".split(" ") ;
              eqalul = "A";
              document.getElementById('add').style.visibility='visible';
-             document.getElementById('eqalu').innerHTML = "Equation for Arithmetic Function: <span id=addbar> A </span>   ";
+             document.getElementById('eqalu').innerHTML = "Equation for Arithmetic Function: A   ";
              generate4bitbinaryalu();
              decA();
           }
