@@ -22,7 +22,7 @@
     var dec_valuenotBinp=0;
     var  s0,s1,s2,s3;
     var vcc, gnd;
-
+    var eqalua;
     function ledchngarth(){
 
 
@@ -54,8 +54,9 @@
             decimal ="0";
              inpS03="0000".split("");
              mmcn ="0 0 1".split(" ") ;
+             eqalul = "A";
              document.getElementById('add').style.visibility='visible';
-        
+             document.getElementById('eqalu').innerHTML = "Equation for Arithmetic Function: <span id=addbar> A </span>   ";
              generate4bitbinaryalu();
              decA();
           }
@@ -68,7 +69,9 @@
                decimal ="1";
                 inpS03="0001".split("");
                 mmcn ="0 0 1".split(" ") ;
+                eqalul = "A+B";
                 document.getElementById('add').style.visibility='visible';
+                document.getElementById('eqalu').innerHTML = "Equation for Arithmetic Function: A+B  ";
             //cn="1";
                // alert("cn" +cn);
                generate4bitbinaryalu();
@@ -80,7 +83,9 @@
                 decimal ="2";
                  inpS03="0010".split("");
                  mmcn ="0 0 1".split(" ") ;
+                 eqalul = "A+B\u0305";
                  document.getElementById('add').style.visibility='visible';
+                 document.getElementById('eqalu').innerHTML = "Equation for Arithmetic Function: A+B\u0305   ";
              //cn="1";
                 // alert("cn" +cn);
                 generate4bitbinaryalu();
@@ -93,7 +98,9 @@
                  decimal ="3";
                   inpS03="0011".split("");
                   mmcn ="0 0 1".split(" ") ;
+                  eqalul = "minus 1";
                   document.getElementById('add').style.visibility='visible';
+                  document.getElementById('eqalu').innerHTML = "Equation for Arithmetic Function: minus 1   ";
               //cn="1";
                  // alert("cn" +cn);
                  generate4bitbinaryalu();
@@ -104,7 +111,9 @@
                 decimal ="4";
                  inpS03="0100".split("");
                  mmcn ="0 0 1".split(" ") ;
+                 eqalul = "A plus AB\u0305";
                  document.getElementById('add').style.visibility='visible';
+                 document.getElementById('eqalu').innerHTML = "Equation for Arithmetic Function: A plus AB\u0305   ";
              //cn="1";
                 // alert("cn" +cn);
                 generate4bitbinaryalu();
@@ -116,7 +125,9 @@
                 decimal ="5";
                  inpS03="0101".split("");
                  mmcn ="0 0 1".split(" ") ;
+                 eqalul = "(A+B) plus AB\u0305";
                  document.getElementById('add').style.visibility='visible';
+                 document.getElementById('eqalu').innerHTML = "Equation for Arithmetic Function: (A+B) plus AB\u0305   ";
              //cn="1";
                 // alert("cn" +cn);
                 generate4bitbinaryalu();
@@ -128,7 +139,9 @@
                 decimal ="6";
                  inpS03="0110".split("");
                  mmcn ="0 0 1".split(" ") ;
+                 eqalul = "A minus B minus 1";
                  document.getElementById('add').style.visibility='visible';
+                 document.getElementById('eqalu').innerHTML = "Equation for Arithmetic Function: A minus B minus 1   ";
              //cn="1";
                 // alert("cn" +cn);
                 generate4bitbinaryalu();
@@ -140,8 +153,10 @@
                 
                 decimal ="7";
                  inpS03="0111".split("");
-                 mmcn =" 0 0 1".split(" ") ;
+                 mmcn ="0 0 1".split(" ") ;
+                 eqalul = "AB minus 1";
                  document.getElementById('add').style.visibility='visible';
+                 document.getElementById('eqalu').innerHTML = "Equation for Arithmetic Function: AB minus 1   ";
              //cn="1";
                 // alert("cn" +cn);
                 generate4bitbinaryalu();
@@ -153,7 +168,9 @@
                 decimal ="8";
                  inpS03="1000".split("");
                  mmcn ="0 0 1".split(" ") ;
+                 eqalul = "A plus AB";
                  document.getElementById('add').style.visibility='visible';
+                 document.getElementById('eqalu').innerHTML = "Equation for Arithmetic Function: A plus AB  ";
              //cn="1";
                 // alert("cn" +cn);
                 generate4bitbinaryalu();
@@ -165,7 +182,9 @@
                 decimal ="9";
                  inpS03="1001".split("");
                  mmcn ="0 0 1".split(" ") ;
+                 eqalul = "A plus B";
                  document.getElementById('add').style.visibility='visible';
+                 document.getElementById('eqalu').innerHTML = "Equation for Arithmetic Function: A plus B   ";
              //cn="1";
                 // alert("cn" +cn);
                 generate4bitbinaryalu();
@@ -177,7 +196,9 @@
                 decimal ="10";
                  inpS03="1010".split("");
                  mmcn ="0 0 1".split(" ") ;
+                 eqalul = "(A+B\u0305) plus AB";
                  document.getElementById('add').style.visibility='visible';
+                 document.getElementById('eqalu').innerHTML = "Equation for Arithmetic Function: (A+B\u0305) plus AB   ";
              //cn="1";
                 // alert("cn" +cn);
                 generate4bitbinaryalu();
@@ -189,7 +210,9 @@
                 decimal ="11";
                  inpS03="1011".split("");
                  mmcn ="0 0 1".split(" ") ;
+                 eqalul = "AB minus 1";
                  document.getElementById('add').style.visibility='visible';
+                 document.getElementById('eqalu').innerHTML = "Equation for Arithmetic Function: AB minus 1  ";
              //cn="1";
                 // alert("cn" +cn);
                 generate4bitbinaryalu();
@@ -201,7 +224,9 @@
                 decimal ="12";
                  inpS03="1100".split("");
                  mmcn ="0 0 1".split(" ") ;
+                 eqalul = "A plus A (Note 1)";
                  document.getElementById('add').style.visibility='visible';
+                 document.getElementById('eqalu').innerHTML = "Equation for Arithmetic Function: A plus A  (Note 1)  ";
              //cn="1";
                 // alert("cn" +cn);
                 generate4bitbinaryalu();
@@ -213,7 +238,9 @@
                 decimal ="13";
                  inpS03="1101".split("");
                  mmcn ="0 0 1".split(" ") ;
+                 eqalul = "(A+B) plus A";
                  document.getElementById('add').style.visibility='visible';
+                 document.getElementById('eqalu').innerHTML = "Equation for Arithmetic Function: (A+B) plus A  ";
              //cn="1";
                 // alert("cn" +cn);
                 generate4bitbinaryalu();
@@ -225,7 +252,9 @@
                 decimal ="14";
                  inpS03="1110".split("");
                  mmcn ="0 0 1".split(" ") ;
+                 eqalul = "(A+B\u0305) plus A";
                  document.getElementById('add').style.visibility='visible';
+                 document.getElementById('eqalu').innerHTML = "Equation for Arithmetic Function: (A+B\u0305) plus A   ";
              //cn="1";
                 // alert("cn" +cn);
                 generate4bitbinaryalu();
@@ -236,7 +265,9 @@
                 decimal ="15";
                  inpS03="1111".split("");
                  mmcn ="0 0 1".split(" ") ;
+                 eqalul = "A minus 1";
                  document.getElementById('add').style.visibility='visible';
+                 document.getElementById('eqalu').innerHTML = "Equation for Arithmetic Function:  A minus 1  ";
              //cn="1";
                 // alert("cn" +cn);
                 generate4bitbinaryalu();
@@ -703,8 +734,8 @@
               binpA= A.join("");
               binpB= B.join("");
              
-             alert("A30: " +binpA);
-            alert("B30: " +binpB);
+             //alert("A30: " +binpA);
+            //alert("B30: " +binpB);
             
              binarytodecimal_Ainp();
              binarytodecimal_Binp();
@@ -724,7 +755,7 @@
             .replace(/[^01]/gi, ''), 2);	
             }
             dec_valueAinp=bin_to_dec(bstrAinp);
-            alert("A decimal " +dec_valueAinp);
+           // alert("A decimal " +dec_valueAinp);
             
         }
         
@@ -738,7 +769,7 @@
             .replace(/[^01]/gi, ''), 2);	
             }
             dec_valueBinp=bin_to_dec(bstrBinp);
-            alert("B decimal  " +dec_valueBinp);
+           // alert("B decimal  " +dec_valueBinp);
             
         }
         
@@ -787,7 +818,7 @@
         
             notA.push(notA3,notA2,notA1,notA0);
               notA30 =notA.join(""); // notA3 notA2 notA1 notA0
-            alert("notA30 " +notA30);
+            //alert("notA30 " +notA30);
             
         
          }
@@ -836,7 +867,7 @@
         
            notB.push(notB3,notB2,notB1,notB0);
              notB30 =notB.join(""); // notB3 notB2 notB1 notB0
-            alert("notB30 " +notB30);
+            //alert("notB30 " +notB30);
             
         
         }
@@ -948,7 +979,7 @@ function decA_minus1(){
             .replace(/[^01]/gi, ''), 2);	
             }
             dec_valuenotAinp=bin_to_dec(bstrnotAinp);
-            alert("decnotA " +dec_valuenotAinp);
+            //alert("decnotA " +dec_valuenotAinp);
          }
         
         /* Binary to decimal notB */
@@ -959,7 +990,7 @@ function decA_minus1(){
             .replace(/[^01]/gi, ''), 2);	
             }
             dec_valuenotBinp=bin_to_dec(bstrnotBinp);
-            alert("decnotB " +dec_valuenotBinp);
+            //alert("decnotB " +dec_valuenotBinp);
         }
         
 
@@ -990,7 +1021,7 @@ function decA_minus1(){
            var binaryStr2 = binaryStr1.reverse();  //F3,F2,F1,F0
             binaryStrF03 = binaryStr2.join(""); //F3F2F1F0
             //alert("F30c " +binaryStr2);
-            alert("F30 arithmetic " +binaryStrF03);
+            //alert("F30 arithmetic " +binaryStrF03);
    
             Cn4=binaryStr2[0];
             F3=binaryStr2[1];

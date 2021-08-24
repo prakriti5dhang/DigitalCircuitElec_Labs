@@ -27,7 +27,7 @@
 
      
       if ((m.src.match("green")) && (cn.src.match("red")) ){
-          alert("logic");
+         // alert("logic");
          //ledchng();
          calllogic();
          ///loadLib("circuit_exp10p1");
@@ -39,7 +39,7 @@
      if ((cn.src.match("green")) && (m.src.match("red"))){
 
         //ledchngarth();
-        alert("arithmetic");
+       // alert("arithmetic");
         callarithmetic();
        // loadLib("arithmeticnote2_exp10p1");
        // <script type="text/javascript" src="arithmeticnote2_exp10p1.js"></script>
@@ -90,6 +90,311 @@ else
     }
     ledchngcall();
 }
+
+
+
+/*function a1() {
+    var image = document.getElementById('b1');	
+
+    if (image.src.match("red")) 
+{
+    image.src = "green.JPG";
+    document.getElementById('b1r').style.display="none";
+    document.getElementById('b1g').style.display="block";
+ B0 =1;
+    
+    } 
+else
+{
+    image.src = "red.JPG";
+    document.getElementById('b1r').style.display="block";
+    document.getElementById('b1g').style.display="none";
+     B0=0;
+    }
+
+
+}
+function a2() {
+    var image = document.getElementById('b2');		
+    if (image.src.match("red")) 
+{
+    image.src = "green.JPG";
+    document.getElementById('b2r').style.display="none";
+    document.getElementById('b2g').style.display="block";
+     A0=1	;	
+    } 
+else
+{
+    image.src = "red.JPG";
+    document.getElementById('b2r').style.display="block";
+    document.getElementById('b2g').style.display="none";
+     A0=0;
+    }
+    
+}
+function a3() {
+    var image = document.getElementById('b3');		
+    if (image.src.match("red")) 
+{
+    image.src = "green.JPG";
+    document.getElementById('b3r').style.display="none";
+    document.getElementById('b3g').style.display="block";
+     S3=1	;
+    } 
+else
+{
+    image.src = "red.JPG";
+    document.getElementById('b3r').style.display="block";
+    document.getElementById('b3g').style.display="none";
+     S3=0	;
+    }
+    
+}
+function a4() {
+    var image = document.getElementById('b4');		
+    if (image.src.match("red")) 
+{
+    image.src = "green.JPG";
+    document.getElementById('b4r').style.display="none";
+    document.getElementById('b4g').style.display="block";
+     S2=1	;	
+    } 
+else
+{
+    image.src = "red.JPG";
+    document.getElementById('b4r').style.display="block";
+    document.getElementById('b4g').style.display="none";
+     S2=0	;
+    }
+    
+}
+
+function a5() {
+    var image = document.getElementById('b5');		
+    if (image.src.match("red")) 
+{
+    image.src = "green.JPG";
+    document.getElementById('b5r').style.display="none";
+    document.getElementById('b5g').style.display="block";
+     S1=1	;
+    } 
+else
+{
+    image.src = "red.JPG";
+    document.getElementById('b5r').style.display="block";
+    document.getElementById('b5g').style.display="none";
+     S1=0	;
+    }
+    
+    
+}
+function a6() {
+    var image = document.getElementById('b6');		
+    if (image.src.match("red")) 
+{
+    image.src = "green.JPG";
+    document.getElementById('b6r').style.display="none";
+    document.getElementById('b6g').style.display="block";
+    S0="1"	;	
+    } 
+else
+{
+    image.src = "red.JPG";
+    document.getElementById('b6r').style.display="block";
+    document.getElementById('b6g').style.display="none";
+     S0="0";
+    }
+    
+}
+
+function a7() {
+    var image = document.getElementById('b7');		
+    if (image.src.match("red")) 
+{
+    image.src = "green.JPG";
+    document.getElementById('b7r').style.display="none";
+    document.getElementById('b7g').style.display="block";
+     cn="1"	;	
+    } 
+else
+{
+    image.src = "red.JPG";
+    document.getElementById('b7r').style.display="block";
+    document.getElementById('b7g').style.display="none";
+     cn="0";
+    }
+    
+}
+
+
+function a8() {
+    var image = document.getElementById('b8');		
+    if (image.src.match("red")) 
+{
+    image.src = "green.JPG";
+    document.getElementById('b8r').style.display="none";
+    document.getElementById('b8g').style.display="block";
+     m="1"	;	
+    } 
+else
+{
+    image.src = "red.JPG";
+    document.getElementById('b8r').style.display="block";
+    document.getElementById('b8g').style.display="none";
+     m="0";
+    }
+    
+}
+
+function a9() {
+    var image = document.getElementById('b9');		
+    if (image.src.match("red")) 
+{
+    image.src = "green.JPG";
+    document.getElementById('b9r').style.display="none";
+    document.getElementById('b9g').style.display="block";
+     A1=1	;	
+    } 
+else
+{
+    image.src = "red.JPG";
+    document.getElementById('b9r').style.display="block";
+    document.getElementById('b9g').style.display="none";
+     A1=0;
+    }
+    
+}
+
+function a10() {
+    var image = document.getElementById('b10');		
+    if (image.src.match("red")) 
+{
+    image.src = "green.JPG";
+    document.getElementById('b10r').style.display="none";
+    document.getElementById('b10g').style.display="block";
+     B1=1	;	
+    } 
+else
+{
+    image.src = "red.JPG";
+    document.getElementById('b10r').style.display="block";
+    document.getElementById('b10g').style.display="none";
+     B1=0;
+    }
+    
+}
+function a11() {
+    var image = document.getElementById('b11');		
+    if (image.src.match("red")) 
+{
+    image.src = "green.JPG";
+    document.getElementById('b11r').style.display="none";
+    document.getElementById('b11g').style.display="block";
+     A2=1	;	
+    } 
+else
+{
+    image.src = "red.JPG";
+    document.getElementById('b11r').style.display="block";
+    document.getElementById('b11g').style.display="none";
+     A2=0;
+    }
+    
+}
+
+function a12() {
+    var image = document.getElementById('b12');		
+    if (image.src.match("red")) 
+{
+    image.src = "green.JPG";
+    document.getElementById('b12r').style.display="none";
+    document.getElementById('b12g').style.display="block";
+     B2=1	;	
+    } 
+else
+{
+    image.src = "red.JPG";
+    document.getElementById('b12r').style.display="block";
+    document.getElementById('b12g').style.display="none";
+     B2=0;
+    }
+    
+}
+
+function a13() {
+    var image = document.getElementById('b13');		
+    if (image.src.match("red")) 
+{
+    image.src = "green.JPG";
+    document.getElementById('b13r').style.display="none";
+    document.getElementById('b13g').style.display="block";
+     A3=1	;	
+    } 
+else
+{
+    image.src = "red.JPG";
+    document.getElementById('b13r').style.display="block";
+    document.getElementById('b13g').style.display="none";
+     A3=0;
+    }
+    
+}
+
+
+function a14() {
+    var image = document.getElementById('b14');		
+    if (image.src.match("red")) 
+{
+    image.src = "green.JPG";
+    document.getElementById('b14r').style.display="none";
+    document.getElementById('b14g').style.display="block";
+     B3=1	;	
+    } 
+else
+{
+    image.src = "red.JPG";
+    document.getElementById('b14r').style.display="block";
+    document.getElementById('b14g').style.display="none";
+     B3=0;
+    }
+    
+}
+function a15() {
+    var image = document.getElementById('b15');		
+    if (image.src.match("red")) 
+{
+    image.src = "green.JPG";
+    document.getElementById('b15r').style.display="none";
+    document.getElementById('b15g').style.display="block";
+    
+    } 
+else
+{
+    image.src = "red.JPG";
+    document.getElementById('b15r').style.display="block";
+    document.getElementById('b15g').style.display="none";
+   
+    }
+    
+}
+function a16() {
+    var image = document.getElementById('b16');		
+    if (image.src.match("red")) 
+{
+    image.src = "green.JPG";
+    document.getElementById('b16r').style.display="none";
+    document.getElementById('b16g').style.display="block";
+   
+    } 
+else
+{
+    image.src = "red.JPG";
+    document.getElementById('b16r').style.display="block";
+    document.getElementById('b16g').style.display="none";
+    
+    }
+    
+}*/
 
 
 

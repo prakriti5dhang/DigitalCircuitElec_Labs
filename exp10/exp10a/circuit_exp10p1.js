@@ -23,7 +23,7 @@
     var dec_valuenotBinp=0;
     var  s0,s1,s2,s3;
     var vcc, gnd;
-
+   var eqalul;
    // alert("insert into function ledchng");
 
 function ledchng(){
@@ -57,8 +57,9 @@ function ledchng(){
     decimal ="0";
      inpS03="0000".split("");
      mmcn ="1 0 0".split(" ") ;
+     eqalul = "A\u0305";
      document.getElementById('add').style.visibility='visible';
-
+     document.getElementById('eqalu').innerHTML = "Equation for Logic Function: <span id=addbar> A </span>   ";
      generate4bitbinaryalu();
      not_decA();
   }
@@ -70,7 +71,9 @@ function ledchng(){
        decimal ="1";
         inpS03="0001".split("");
         mmcn ="1 0 0".split(" ") ;
+        eqalul = "A\u0305+B\u0305";
         document.getElementById('add').style.visibility='visible';
+        document.getElementById('eqalu').innerHTML = "Equation for Logic Function: A\u0305+B\u0305   ";
     //cn="1";
        // alert("cn" +cn);
        generate4bitbinaryalu();
@@ -82,7 +85,9 @@ function ledchng(){
         decimal ="2";
          inpS03="0010".split("");
          mmcn ="1 0 0".split(" ") ;
+         eqalul = "A\u0305B";
          document.getElementById('add').style.visibility='visible';
+         document.getElementById('eqalu').innerHTML = "Equation for Logic Function: A\u0305B   ";
      //cn="1";
         // alert("cn" +cn);
         generate4bitbinaryalu();
@@ -95,7 +100,9 @@ function ledchng(){
          decimal ="3";
           inpS03="0011".split("");
           mmcn ="1 0 0".split(" ") ;
+          eqalul="Logic 0";
           document.getElementById('add').style.visibility='visible';
+          document.getElementById('eqalu').innerHTML = "Equation for Logic Function: Logic 0   ";
       //cn="1";
          // alert("cn" +cn);
          generate4bitbinaryalu();
@@ -106,7 +113,9 @@ function ledchng(){
         decimal ="4";
          inpS03="0100".split("");
          mmcn ="1 0 0".split(" ") ;
+         eqalul="A\u0305B\u0305";
          document.getElementById('add').style.visibility='visible';
+         document.getElementById('eqalu').innerHTML = "Equation for Logic Function: A\u0305B\u0305 ";
      //cn="1";
         // alert("cn" +cn);
         generate4bitbinaryalu();
@@ -118,7 +127,10 @@ function ledchng(){
         decimal ="5";
          inpS03="0101".split("");
          mmcn ="1 0 0".split(" ") ;
+         eqalul="B\u0305";
          document.getElementById('add').style.visibility='visible';
+         document.getElementById('eqalu').innerHTML = "Equation for Logic Function: B\u0305 ";
+         
      //cn="1";
         // alert("cn" +cn);
         generate4bitbinaryalu();
@@ -130,7 +142,9 @@ function ledchng(){
         decimal ="6";
          inpS03="0110".split("");
          mmcn ="1 0 0".split(" ") ;
+         eqalul="A xor B";
          document.getElementById('add').style.visibility='visible';
+         document.getElementById('eqalu').innerHTML = "Equation for Logic Function: A xor B";
      //cn="1";
         // alert("cn" +cn);
         generate4bitbinaryalu();
@@ -143,7 +157,9 @@ function ledchng(){
         decimal ="7";
          inpS03="0111".split("");
          mmcn ="1 0 0".split(" ") ;
+         eqalul="AB\u0305";
          document.getElementById('add').style.visibility='visible';
+         document.getElementById('eqalu').innerHTML = "Equation for Logic Function: AB\u0305 ";
      //cn="1";
         // alert("cn" +cn);
         generate4bitbinaryalu();
@@ -155,7 +171,9 @@ function ledchng(){
         decimal ="8";
          inpS03="1000".split("");
          mmcn ="1 0 0".split(" ") ;
+         eqalul="A\u0305+B";
          document.getElementById('add').style.visibility='visible';
+         document.getElementById('eqalu').innerHTML = "Equation for Logic Function: A\u0305+B ";
      //cn="1";
         // alert("cn" +cn);
         generate4bitbinaryalu();
@@ -167,7 +185,9 @@ function ledchng(){
         decimal ="9";
          inpS03="1001".split("");
          mmcn ="1 0 0".split(" ") ;
+         eqalul="A\u0305 xor B\u0305";
          document.getElementById('add').style.visibility='visible';
+         document.getElementById('eqalu').innerHTML = "Equation for Logic Function: A\u0305 xor B\u0305 ";
      //cn="1";
         // alert("cn" +cn);
         generate4bitbinaryalu();
@@ -179,7 +199,9 @@ function ledchng(){
         decimal ="10";
          inpS03="1010".split("");
          mmcn ="1 0 0".split(" ") ;
+         eqalul="B";
          document.getElementById('add').style.visibility='visible';
+         document.getElementById('eqalu').innerHTML = "Equation for Logic Function: B ";
      //cn="1";
         // alert("cn" +cn);
         generate4bitbinaryalu();
@@ -191,7 +213,9 @@ function ledchng(){
         decimal ="11";
          inpS03="1011".split("");
          mmcn ="1 0 0".split(" ") ;
+         eqalul="AB";
          document.getElementById('add').style.visibility='visible';
+         document.getElementById('eqalu').innerHTML = "Equation for Logic Function: AB ";
      //cn="1";
         // alert("cn" +cn);
         generate4bitbinaryalu();
@@ -203,7 +227,9 @@ function ledchng(){
         decimal ="12";
          inpS03="1100".split("");
          mmcn ="1 0 0".split(" ") ;
+         eqalul="Logic 1";
          document.getElementById('add').style.visibility='visible';
+         document.getElementById('eqalu').innerHTML = "Equation for Logic Function: Logic 1 ";
      //cn="1";
         // alert("cn" +cn);
         generate4bitbinaryalu();
@@ -215,7 +241,9 @@ function ledchng(){
         decimal ="13";
          inpS03="1101".split("");
          mmcn ="1 0 1".split(" ") ;
+         eqalul="A+ B\u0305";
          document.getElementById('add').style.visibility='visible';
+         document.getElementById('eqalu').innerHTML = "Equation for Logic Function: A+ B\u0305 ";
      //cn="1";
         // alert("cn" +cn);
         generate4bitbinaryalu();
@@ -227,7 +255,9 @@ function ledchng(){
         decimal ="14";
          inpS03="1110".split("");
          mmcn ="1 0 0".split(" ") ;
+         eqalul="A+B";
          document.getElementById('add').style.visibility='visible';
+         document.getElementById('eqalu').innerHTML = "Equation for Logic Function: A+B ";
      //cn="1";
         // alert("cn" +cn);
         generate4bitbinaryalu();
@@ -238,7 +268,9 @@ function ledchng(){
         decimal ="15";
          inpS03="1111".split("");
          mmcn ="1 0 0".split(" ") ;
+         eqalul="A";
          document.getElementById('add').style.visibility='visible';
+         document.getElementById('eqalu').innerHTML = "Equation for Logic Function: A ";
      //cn="1";
         // alert("cn" +cn);
         generate4bitbinaryalu();
@@ -725,7 +757,7 @@ function binarytodecimal_Ainp(){
 	.replace(/[^01]/gi, ''), 2);	
 	}
 	dec_valueAinp=bin_to_dec(bstrAinp);
-	alert("A decimal " +dec_valueAinp);
+	//alert("A decimal " +dec_valueAinp);
 	
 }
 
@@ -739,7 +771,7 @@ function binarytodecimal_Binp(){
 	.replace(/[^01]/gi, ''), 2);	
 	}
 	dec_valueBinp=bin_to_dec(bstrBinp);
-	alert("B decimal  " +dec_valueBinp);
+	//alert("B decimal  " +dec_valueBinp);
 	
 }
 
@@ -788,7 +820,7 @@ function binarytodecimal_Binp(){
 
     notA.push(notA3,notA2,notA1,notA0);
       notA30 =notA.join(""); // notA3 notA2 notA1 notA0
-    alert("notA30 " +notA30);
+    //alert("notA30 " +notA30);
     
 
  }
@@ -837,7 +869,7 @@ function binarytodecimal_Binp(){
 
    notB.push(notB3,notB2,notB1,notB0);
      notB30 =notB.join(""); // notB3 notB2 notB1 notB0
-    alert("notB30 " +notB30);
+    //alert("notB30 " +notB30);
     
 
 }
@@ -850,7 +882,7 @@ function binary_todec_notA(){
 	.replace(/[^01]/gi, ''), 2);	
 	}
 	dec_valuenotAinp=bin_to_dec(bstrnotAinp);
-    alert("decnotA " +dec_valuenotAinp);
+    //alert("decnotA " +dec_valuenotAinp);
  }
 
 /* Binary to decimal notB */
@@ -861,7 +893,7 @@ function binary_todec_notB(){
 	.replace(/[^01]/gi, ''), 2);	
 	}
 	dec_valuenotBinp=bin_to_dec(bstrnotBinp);
-    alert("decnotB " +dec_valuenotBinp);
+    //alert("decnotB " +dec_valuenotBinp);
 }
 
 
@@ -893,7 +925,7 @@ function decA_add_decB_carry(){ //A+B+1
 function decA_or_decB_bar(){ // (A'+B')
    
     dec_sum=(dec_valuenotAinp | dec_valuenotBinp);
-    alert("Sum decimalbar " +dec_sum);
+    //alert("Sum decimalbar " +dec_sum);
    convertToBinary(dec_sum);
     //ledf03on();
 }
@@ -902,7 +934,7 @@ function decA_or_decB_bar(){ // (A'+B')
 function decAbar_decB(){ // (A'B)
    
     dec_sum=dec_valuenotAinp & dec_valueBinp;
-    alert("Sum decimalbar " +dec_sum);
+   // alert("Sum decimalbar " +dec_sum);
    convertToBinary(dec_sum);
    
 }
@@ -911,7 +943,7 @@ function decAbar_decB(){ // (A'B)
 function logic0(){ // logic 0
    
     dec_sum=0;
-    alert("Sum decimalbar " +dec_sum);
+    //alert("Sum decimalbar " +dec_sum);
    convertToBinary(dec_sum);
    
 }
@@ -920,7 +952,7 @@ function logic0(){ // logic 0
 function decAB_bar(){ // (AB)'
    
     dec_sum=(dec_valuenotAinp & dec_valuenotBinp);
-    alert("Sum decimalbar " +dec_sum);
+    //alert("Sum decimalbar " +dec_sum);
    convertToBinary(dec_sum);
    
 }
@@ -929,7 +961,7 @@ function decAB_bar(){ // (AB)'
 function decB_bar(){ // B'
    
     dec_sum= dec_valuenotBinp;
-    alert("Sum decimalbar " +dec_sum);
+    //alert("Sum decimalbar " +dec_sum);
    convertToBinary(dec_sum);
    
 }
@@ -938,7 +970,7 @@ function decB_bar(){ // B'
 function decA_xor_decB(){ // (A xor B)
    
     dec_sum=(dec_valueAinp ^ dec_valueBinp);
-    alert("Sum decimalbar " +dec_sum);
+    //alert("Sum decimalbar " +dec_sum);
    convertToBinary(dec_sum);
    
 }
@@ -946,7 +978,7 @@ function decA_xor_decB(){ // (A xor B)
 function decAB_bar(){ // AB'
    
     dec_sum=(dec_valueAinp & dec_valuenotBinp);
-    alert("Sum decimalbar " +dec_sum);
+    //alert("Sum decimalbar " +dec_sum);
    convertToBinary(dec_sum);
    
 }
@@ -956,7 +988,7 @@ function decAB_bar(){ // AB'
 function decAbar_or_decB(){ // A'+B
    
     dec_sum=(dec_valuenotAinp | dec_valueBinp);
-    alert("Sum decimalbar " +dec_sum);
+    //alert("Sum decimalbar " +dec_sum);
    convertToBinary(dec_sum);
    
 }
@@ -965,7 +997,7 @@ function decAbar_or_decB(){ // A'+B
 function decAbar_xor_decBbar(){ // A' xor B'
    
     dec_sum=(dec_valuenotAinp ^ dec_valuenotBinp);
-    alert("Sum decimalbar " +dec_sum);
+    //alert("Sum decimalbar " +dec_sum);
    convertToBinary(dec_sum);
    
 }
@@ -974,7 +1006,7 @@ function decAbar_xor_decBbar(){ // A' xor B'
 function decB(){ // B
    
     dec_sum= dec_valueBinp;
-    alert("Sum decimalbar " +dec_sum);
+    //alert("Sum decimalbar " +dec_sum);
    convertToBinary(dec_sum);
    
 }
@@ -983,7 +1015,7 @@ function decB(){ // B
 function decAB(){ // AB
    
     dec_sum=(dec_valueAinp & dec_valueBinp);
-    alert("Sum decimalbar " +dec_sum);
+    //alert("Sum decimalbar " +dec_sum);
    convertToBinary(dec_sum);
    
 }     
@@ -991,7 +1023,7 @@ function decAB(){ // AB
 function logic1(){ // logic 1
    
     dec_sum=1;
-    alert("Sum decimalbar " +dec_sum);
+    //alert("Sum decimalbar " +dec_sum);
    convertToBinary(dec_sum);
    
 }
@@ -1000,7 +1032,7 @@ function logic1(){ // logic 1
 function decA_or_decBbar(){ // A+B'
    
     dec_sum=(dec_valueAinp | dec_valuenotBinp);
-    alert("Sum decimalbar " +dec_sum);
+   // alert("Sum decimalbar " +dec_sum);
    convertToBinary(dec_sum);
    
 }
@@ -1009,7 +1041,7 @@ function decA_or_decBbar(){ // A+B'
 function decA_or_decB(){ // A+B
    
     dec_sum=(dec_valueAinp | dec_valueBinp);
-    alert("Sum decimalbar " +dec_sum);
+   // alert("Sum decimalbar " +dec_sum);
    convertToBinary(dec_sum);
    
 }
@@ -1018,7 +1050,7 @@ function decA_or_decB(){ // A+B
 function decA(){ // A
    
     dec_sum=dec_valueAinp ;
-    alert("Sum decimalbar " +dec_sum);
+    //alert("Sum decimalbar " +dec_sum);
    convertToBinary(dec_sum);
    
 }
@@ -1050,7 +1082,7 @@ function convertToBinary(dec_sum) {
           var binaryStr2 = binaryStr1.reverse();  //F3,F2,F1,F0
            binaryStrF03 = binaryStr2.join(""); //F3F2F1F0
            //alert("F30c " +binaryStr2);
-           alert("F30 logic " +binaryStrF03);
+          // alert("F30 logic " +binaryStrF03);
   
            F3=binaryStr2[0];
            F2=binaryStr2[1];
