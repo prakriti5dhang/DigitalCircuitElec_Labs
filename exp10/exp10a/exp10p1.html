@@ -66,15 +66,26 @@
             <div class="dropdown">
                 <p style="text-align:center;color:rgb(26,0,97)"> INSTRUCTION</p>
                 <div class="dropdown-content" style="background-color:white;border:1px solid #3385ff">
+                    
                     <ol type="1">
-                        <li>Apply \(V_{CC}\) and low level voltage to ground(GND). Then apply high voltage to M(mode control input) and low voltage to all the 4 select inputs.Logical operation will be performed.The output will be inverted A</li>
-                        <li> Next, apply high voltage to S0 and apply low voltage to all other select inputs.The output will be <span style="text-decoration:overline"> A + B</span>.
+                        <li> Apply high voltage to M(mode control input) and low volatge to \(C_{n}\). 
+                        <li> Apply \(V_{CC}\) and low level voltage to ground(GND).</li>
+                        <li>Then apply low voltage to all the 4 select inputs (\(S_{3}\) \(S_{2}\) \(S_{1}\) \(S_{0}\)). Logical operation will be performed. The output will be inverted A.</li></li>
+                        <li> Next, apply high voltage to \(S_{0}\) and apply low voltage to all other select inputs(\(S_{3}\) \(S_{2}\) \(S_{1}\)). Logical operation will be performed. The output will be <span style="text-decoration:overline"> A + B</span>.
                         </li>
-                        <li>Now apply high voltage to S1 and low voltage to all other select inputs.The output will be <span style="text-decoration:overline">A</span>B.
+                        <li>Now apply high voltage to\(S_{1}\) and low voltage to all other select inputs(\(S_{3}\) \(S_{2}\) \(S_{0}\)). Logical operation will be performed. The output will be <span style="text-decoration:overline">A</span>B.
                         </li>
-                        <li>Apply all the combinations to all the select inputs and check the logical output.</li>
+                        <li> To check the outputs for arithmetic operations, apply high voltage to \(C_{n}\) and low volatge to M. Then apply low voltage to all the 4 select inputs(\(S_{3}\) \(S_{2}\) \(S_{1}\) \(S_{0}\)). Arithemetic operation will be performed.The output will be A</li>
+                        <li> Apply high voltage to \(S_{0}\) and apply low voltage to all other select inputs(\(S_{3}\) \(S_{2}\) \(S_{1}\)). Arithmetic operation will be performed. The output will be  A + B.
+                        </li>
+                        <li>For Arithmetic operation A+ <span style="text-decoration:overline">B</span>, apply high voltage to \(S_{1}\) and low voltage to all other select inputs(\(S_{3}\) \(S_{2}\) \(S_{0}\)). 
+                        </li>
+                        <li>Apply all the combinations to all the select inputs(\(S_{3}\) \(S_{2}\) \(S_{1}\)) to check the Logical and Arithmetic operation output.</li>
                         <li><b>Note</b>: Red symbolize as Low (L), Green symbolize as High(H).</li>
                     </ol> 
+    
+
+                     
     
                 </div>
             </div>
