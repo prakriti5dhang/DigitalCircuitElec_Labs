@@ -64,12 +64,14 @@ div.intbl{
                 <p style="text-align:center;color:rgb(26,0,97)"> INSTRUCTION</p>
                 <div class="dropdown-content" style="background-color:white;border:1px solid #3385ff">
                     <ol type="1">
-                        <li>Apply \(V_{CC}\) and low level voltage to ground(GND). Then apply high voltage to M(mode control input) and low voltage to all the 4 select inputs.Logical operation will be performed.The output will be inverted A</li>
-                        <li> Next, apply high voltage to S0 and apply low voltage to all other select inputs.The output will be <span style="text-decoration:overline"> A + B</span>.
+                        <li> Apply low voltage to M (mode control input) and \(C_{n}\). </li>
+                        <li>Apply \(V_{CC}\) and low level voltage to ground(GND).</li>
+                        <li>Apply low voltage to all the 4 select inputs (\(S_{3}\) \(S_{2}\) \(S_{1}\) \(S_{0}\)). Arithmetic operation (Note 1) will be performed.The output will be A minus 1</li>
+                        <li> Next,apply high voltage to \(S_{0}\) and apply low voltage to all other select inputs (\(S_{3}\) \(S_{2}\) \(S_{1}\)).The output will be  AB minus 1.
                         </li>
-                        <li>Now apply high voltage to S1 and low voltage to all other select inputs.The output will be <span style="text-decoration:overline">A</span>B.
+                        <li>Now apply high voltage to \(S_{0}\) and low voltage to all other select inputs (\(S_{3}\) \(S_{2}\) \(S_{1}\) ).The output will be A<span style="text-decoration:overline">B</span> minus 1.
                         </li>
-                        <li>Apply all the combinations to all the select inputs and check the logical output.</li>
+                        <li>Apply all the combinations to all the select inputs (\(S_{3}\) \(S_{2}\) \(S_{1}\) \(S_{0}\)) and check the output.</li>
                         <li><b>Note</b>: Red symbolize as Low (L), Green symbolize as High(H).</li>
                     </ol> 
     
