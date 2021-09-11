@@ -1,0 +1,214 @@
+
+<!--Lab:exp_8_Part2_Flip Flop J-K flipflop
+	File name: exp8p2.html
+    Author:Prakriti Dhang--->
+
+    <!DOCTYPE HTML>
+    <html>
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+         
+        <style>
+        table,th,td{
+            border:1px solid black;
+        border-collapse:collapse
+    }
+    
+   
+        th,td
+        {
+            padding:2px;
+            text-align: center;
+            
+        }
+
+        ol li{
+            padding-left:1em;
+            padding-bottom: 0.5em;
+        }
+        .responsive {
+  width: 100%;
+  height: auto;
+        }
+        </style>
+        <link rel="stylesheet" type="text/css" href="style_exp8p2.css">
+       
+        <!--script type="text/javascript" src="calljsfile_exp10p1.js"></script-->
+       
+        <!--script type="text/javascript" src="circuit_exp10p1.js"></script-->
+        
+        <script type="text/javascript" src="ledonoff_exp8p2.js"></script>
+       
+        
+        
+    
+    
+        <script type="text/javascript" src="addtbl10p1.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" id="">
+        </script>
+    
+    </head>
+    <body style="background-color:#0d213b" >
+    
+    
+      
+        <div class="row">
+            <img src="../../images/logo.jpg" class="responsive"/>
+        </div>
+        
+    
+        
+        
+            <div class="row">
+                <b><h2 style="text-align:center;color:rgb(54,230,78);">Analysis and Synthesis of Sequential Circuits using J-K Flip-Flops </h2></b>
+            </div>
+        
+        <div class="row">
+          <div class="column">
+            <div id="inst" style="background-color:#96baf0;font-size:16px;font-weight:bold;border:1px solid #3385ff">
+                <div class="dropdown">
+                    <p style="text-align:center;color:rgb(26,0,97)"> INSTRUCTION</p>
+                    <div class="dropdown-content" style="background-color:white;border:1px solid #3385ff">
+                        <ol type="1">
+                            <li >Apply \(V_{CC1 }\) and \(V_{CC2}\), so that clock start button will be enabled. Apply low level voltage to ground(GND1) and (GND2). </li>
+                            <li>Next, start the clock pulse by clicking on the "Clock Start" button and after generation of some clock pulses stop the clock pulse by clicking on the"clock Stop" button .
+                            </li>
+                            <li>Now apply high voltage to J input and low voltage to K input and set "No of clock pulses" to 1. See the changes at output(Q and <span style="text-decoration: overline"> Q</span>) at positive clock edge.
+                            </li>
+                            <li>Now apply high voltage to K input and low voltage to J input and start the clock pulse. See the changes at output(Q and <span style="text-decoration: overline"> Q</span>) at positive clock edge.</li>
+                            <li>Next,apply low voltage to both the inputs(J and K) and see the changes at output(Q and <span style="text-decoration: overline"> Q</span>) at positive clock edge.
+                            </li>
+                            <li>Next,apply high voltage to both the inputs(J and K) and start the clock pulse again. See both the outputs(Q and <span style="text-decoration: overline"> Q</span>) will be zero. It is "not allowed" condition.</li>
+                            <li><b>Note</b>: Red symbolize as Low (L), Green symbolize as High(H).</li>
+                        </ol> 
+        
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+            <div id="tablein" style="background-color:#96baf0;font-size:16px;font-weight:bold;border:1px solid #3385ff">
+        <div class="tbtitle">
+                    <p style="text-align:center;color:rgb(26,0,97)">TRUTH TABLE 
+                        <input type="button" id="add"  value="Add to Table"  onclick="aintbl()" style=" background-color: #d9e2f0;  float:right; cursor: pointer;font-size: 16px;font-weight: bold; border:3px solid rgb(26, 0, 97); visibility: hidden;"/></p>
+                    <div class="intbl" style="background-color:white;border:1px solid #3385ff">
+                        <p id="equationd" style="text-align:center;"><b></b></p>
+                    <center>
+                    <table id="mytabled">
+                
+                <tr> 
+                    <th> Clock</th>
+                    <th>J</th>
+                    <th>K</th>
+                    <th>Q</th>
+                    <th>\(Q_{t+1}\)</th>
+                    
+                    
+                    
+        
+                    
+                </tr>
+                
+            
+           
+           
+           
+            
+                </table>
+                </center>
+                    </div>
+        
+        </div>
+        </div>
+        
+        
+        <div>
+            
+                
+            <div id="showalt" class="dropdown-content blink" style="background-color:white;border:4px solid #ff0909; visibility: hidden;">
+                <p class="con" id="v" style="text-align:center;font-size:large;font-weight:bold">Connect Vcc </p>
+                <p class="con" id="gnd" style="text-align:center;font-size:large;font-weight:bold">Please disconnect GND </p>
+        
+            </div>
+        
+        </div>
+          </div>
+        
+          <div class="column" style="float:right">
+            <div id="cmaind" style="background-color:#96baf0;font-size:16px;font-weight:bold;border:1px solid #3385ff">
+        <div class="ctitle">
+                    <p style="text-align:center;color:rgb(26,0,97)">CIRCUIT DIAGRAM</p>
+                    
+                    <div class="crkt" style="background-color:white; position:absolute; border:2px solid #3385ff;">
+                        <input type="button" id="clk"  value="Clock Start"  onclick="clockstrt()" style=" background-color: #d9e2f0;  float:right; cursor: pointer;font-size: 16px;font-weight: bold; border:3px solid rgb(26, 0, 97);"/>
+                        <input type="number" min="0"  max="1" id="textclk" value="" placeholder="No. of clock pulses" style=" float:right; cursor: pointer;font-size: 16px;font-weight: bold; border:2px solid rgb(26, 0, 97);"/>
+                    <img class="mimg" src="jk1.jpg" alt="circuit image"/>
+                    
+                    
+                    <div id="red"  ></div>
+                    <div id="green"  ></div>
+        
+        
+                    <div id="b1g"  ></div>
+                    <div id="b1r"  ></div>
+    
+                    <div id="b2g"  ></div>
+                    <div id="b2r"  ></div>
+    
+                    <div id="b3g"  ></div>
+                    <div id="b3r"  ></div>
+                    <div id="b4g"  ></div>
+                    <div id="b4r"  ></div>
+    
+                    <div id="b5g"  ></div>
+                    <div id="b5r"  ></div>
+                    
+                    <div id="b6g"  ></div>
+                    <div id="b6r"  ></div>
+                    
+                    
+    
+                    <img id="b1" onclick="a1()" src="red.JPG"  />
+                    <img id="b2" onclick="a2()" src="red.JPG"  />
+                    <img id="b3" onclick="a3()" src="red.JPG"  />
+                    <img id="b4" onclick="a4()" src="red.JPG"  />
+                    <img id="b5" onclick="a5()" src="red.JPG"  />
+                    <img id="b6" onclick="a6()" src="red.JPG"  />
+                   
+    
+    
+        <img id="lon1" src="ledon.png">
+        <img id="loff1" src="loff.png">
+    
+        <img id="lon2" src="ledon.png">
+        <img id="loff2" src="loff.png">
+    
+        
+    
+    
+                    </div>
+                    
+                    
+                    </div>
+                    
+        
+                    
+        
+        </div>
+        
+        
+        
+            
+        
+        
+        
+          </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        </body></html>
