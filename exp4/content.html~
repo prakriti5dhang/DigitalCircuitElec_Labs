@@ -1,0 +1,1687 @@
+<!-- This file needs to be edited by the lab developer to suit the requirements of their lab in particular.-->
+<!-- Add class="default" to include any element as it is specified in default.html. Do not include class="default" to the elements that you want to edit -->
+<!DOCTYPE html>
+<html>
+    <head><script language="javascript" type="text/javascript" src="a.js"></script>
+        <title>Test Lab title</title>
+    </head>
+
+    <body>
+        <div id="experiment">
+            <!-- The Experiment Document Container-->
+            <!-- The lab Header contains the logo and the name of the lab, usually displayed on the top of the page-->
+
+            <header class="default" id="experiment-header">
+
+                <div class="logo" id="experiment-header-logo">
+                    <!-- Enclose the logo image of your lab or write it in text-->
+                    <img src="./images/logo.jpg"></div>
+
+                <div class="heading" id="experiment-header-heading">
+                    <!-- Write the name of your lab and link it to the home 
+          page of your lab (h1 tag is preferred while writing your 
+          lab name)-->
+                    <a href="../index.html">Digital Electronic Circuits</a>
+                </div><!-- Add any additional element you want to add to the lab 
+        header, For example : Help (Enclosing them with suitable 
+        div is recommended)-->
+            </header><!-- The lab article is the main content area where all the experiment content sits-->
+
+            <article id="experiment-article">
+                <!-- The lab article has an header, optional navigational 
+        menu, number of sections, an optional sidebar and a closing 
+        footer-->
+
+                <div class="breadcrumb" id="experiment-article-breadcrumb"></div>
+
+                <header class="heading" id="experiment-article-heading">
+                    Analysis and Synthesis of Logic Functions using Multiplexers
+                </header><!-- Navigation menu is useful to organize the view of multiple sections inside the article-->
+
+                <nav class="default" id="experiment-article-navigation">
+                    <ul id="experiment-article-navigation-menu">
+                        <!-- The menu can be dynamically generated to contain 
+              the headings of your sections or instead write the 
+              menu items of your choice individually enclosedu in 
+              &lt;li&gt; tag as shown below-->
+                    </ul>
+                </nav><!-- All the sections of your lab or experiment can be 
+          enclosed together with a div element as shown below-->
+
+                <div id="experiment-article-sections">
+                    <!------------------------------- First section of the article---------------------------------->
+
+                    <section id="experiment-article-section-1">
+                        <div class="icon" id="experiment-article-section-1-icon">
+                            <!-- Enclose the icon image of your lab -->
+                            <img src="../images/introduction.jpg"></div>
+                        <!-- The heading for the section can be enclosed in a div tag. -->
+
+                        <div class="heading" id="experiment-article-section-1-heading">
+                            Introduction
+                        </div><!-- Write the section content inside a paragraph element, You can also include images with &lt;img&gt; tag -->
+
+                        <div class="content" id="experiment-article-section-1-content">                            
+                            <p><b>About the Experiment</b></p>
+                <br />
+                This experiment enables a student to learn
+                <ul>
+                    <li>	How to realize functionality of Dual 4 Line to 1 Line Multiplexer using 74153 IC</li>
+                    <li>	How Dual 4 Line to 1 Line Multiplexer select the particular input to be sent 
+ to the output IY{1 = 1, 2}. </li>
+                    <li>	How Each of the strobe signals IG {I = 1, 2} acts as an enable signal for the corresponding
+                    4-to-1 M
+multiplexer.</li>
+
+<li>	How to realize functionality of Quad 2 Line to 1 Line Multiplexer using 74157 IC</li>
+                    <li>	How Quad 2 Line to 1 Line Multiplexer select the particular input to be sent 
+ to the output IY{1 = 1, 2, 3, 4}. </li>
+                    <li>	How the strobe signal acts as an enable signal for each of the four 
+                    4-to-1 M
+multiplexers.</li>
+                </ul>
+                
+                                            
+                        </div>
+                    </section>
+                    <!-------------------------- Second section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-2">
+                        <div class="icon" id="experiment-article-section-2-icon">
+                            <!-- Enclose the icon image of your lab. -->
+                            <img src="../images/theory.jpg"></div>
+                        <!-- The heading for the section can be enclosed in a div tag. -->
+
+                        <div class="heading" id="experiment-article-section-2-heading">
+                            Theory
+                        </div><!-- Write the section content inside a paragraph element, we can also include images with &lt;img&gt; tag -->
+
+                        <div class="content" id="experiment-article-section-2-content">                            
+                            74153 is a dual 4 line-to-1 line multiplexer. It has the schematic representation shown
+in Fig 1. Selection lines A and B select the particular input to be multiplexed and
+applied to the output IY{1 = 1, 2}.
+Each of the strobe signals IG {I = 1, 2} acts as an enable signal for the corresponding
+multiplexer.
+Figure 2(a) &amp; 2(b) shows the multiplex function of 74153 in terms of select lines. Note that each
+of the on-chip multiplexers act independently from the other, while sharing the same
+select lines A and B.
+                            <br />
+                            <div align="center">
+                            <img src="images/74153.jpg"  style="width:500px;height:400px;"/> 
+                            <br />
+                            Figure 1(74153)
+                            <br />
+                            <br />
+                            
+                           
+                             <table width="50%"  border="0" cellspacing="1px" cellpadding="2" bgcolor="#999999">
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>Strobe</td>
+                             <td colspan="2">Select Lines</td>
+                             <td>Outputs</td>
+                             </tr>
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>1G</td>
+                             <td >A</td>
+                             <td >B</td>
+                             <td>1Y</td>
+                             </tr>
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>1</td>
+                             <td >x</td>
+                             <td >x</td>
+                             <td>0</td>
+                             </tr>
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>0</td>
+                             <td >0</td>
+                             <td >0</td>
+                             <td>1C0</td>
+                             </tr>
+                             
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>0</td>
+                             <td >0</td>
+                             <td >1</td>
+                             <td>1C1</td>
+                             </tr>
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>0</td>
+                             <td >1</td>
+                             <td >0</td>
+                             <td>1C2</td>
+                             </tr>
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>0</td>
+                             <td >1</td>
+                             <td >1</td>
+                             <td>1C3</td>
+                             </tr>
+                             
+                             </table>
+                             <br />
+                             Figure 2(a)&nbsp;x:don't care state
+                             <br />
+                             <br />
+                             
+                             
+                              <table width="50%"  border="0" cellspacing="1px" cellpadding="2" bgcolor="#999999">
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>Strobe</td>
+                             <td colspan="2">Select Lines</td>
+                             <td>Outputs</td>
+                             </tr>
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>2G</td>
+                             <td >A</td>
+                             <td >B</td>
+                             <td>2Y</td>
+                             </tr>
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>1</td>
+                             <td >x</td>
+                             <td >x</td>
+                             <td>0</td>
+                             </tr>
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>0</td>
+                             <td >0</td>
+                             <td >0</td>
+                             <td>2C0</td>
+                             </tr>
+                             
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>0</td>
+                             <td >0</td>
+                             <td >1</td>
+                             <td>2C1</td>
+                             </tr>
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>0</td>
+                             <td >1</td>
+                             <td >0</td>
+                             <td>2C2</td>
+                             </tr>
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>0</td>
+                             <td >1</td>
+                             <td >1</td>
+                             <td>2C3</td>
+                             </tr>
+                             
+                             </table>
+                             <br />
+                             Figure 2(b)&nbsp;x:don't care state
+                            <br /><br />
+                             <img src="images/exp4.png"  style="width:500px;height:400px;"/>
+                             <br />
+                            
+                             </div>
+                            <br />
+                            
+                           The above circuit diagram shows the detail gate level structure of 74153(Dual 4 line to 1 line Multiplexer)
+                            <br />
+                            <br />
+                            
+                            
+                            
+                            74157 is a quad 2 line-to-1 line multiplexer. It has the schematic representation shown
+in Fig 3. Select line  select the particular input to be multiplexed and
+applied to the output IY{1 = 1, 2, 3, 4}.
+Strobe signal acts as an enable signal for each of the four multiplexers. 
+
+Figure 4(a) &amp; 4(b) &amp; 4(c) &amp; 4(d) shows the multiplex function of 74157 in terms of select lines. Note that each
+of the on-chip multiplexers act independently from the other, while sharing the same
+select line.
+
+
+
+<div align="center">
+                            <img src="images/74157.jpg"  style="width:500px;height:400px;"/> 
+                            <br />
+                            Figure 3(74157)
+                            <br />
+                            <br />
+                            
+                           
+                             <table width="50%"  border="0" cellspacing="1px" cellpadding="2" bgcolor="#999999">
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td rowspan="2">Strobe</td>
+                             <td rowspan="2">Select</td>
+                             <td colspan="2">Inputs</td>
+                             <td>Outputs</td>
+                             </tr>
+                             
+                             <tr bgcolor="#FFFFCC">
+                             
+                             <td >A1</td>
+                             <td >B1</td>
+                             <td>1Y</td>
+                             </tr>
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>H</td>
+                             <td >x</td>
+                             <td >x</td>
+                             <td>x</td>
+                             <td>L</td>
+                             </tr>
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >L</td>
+                             <td>x</td>
+                             <td>L</td>
+                             </tr>
+                             
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >H</td>
+                             <td>x</td>
+                             <td>H</td>
+                             </tr>
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >H</td>
+                             <td >x</td>
+                             <td>L</td>
+                             <td>L</td>
+                             </tr>
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >H</td>
+                             <td >x</td>
+                             <td>H</td>
+                             <td>H</td>
+                             </tr>
+                             
+                             </table>
+                             <br />
+                             Figure 4(a)&nbsp;x:don't care state
+                             <br />
+                             <br />
+                             
+                             
+                              <table width="50%"  border="0" cellspacing="1px" cellpadding="2" bgcolor="#999999">
+                             
+                            <tr bgcolor="#FFFFCC">
+                             <td rowspan="2">Strobe</td>
+                             <td rowspan="2">Select</td>
+                             <td colspan="2">Inputs</td>
+                             <td>Outputs</td>
+                             </tr>
+                             
+                             <tr bgcolor="#FFFFCC">
+                             
+                             <td >A2</td>
+                             <td >B2</td>
+                             <td>2Y</td>
+                             </tr>
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>H</td>
+                             <td >x</td>
+                             <td >x</td>
+                             <td>x</td>
+                             <td>L</td>
+                             </tr>
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >L</td>
+                             <td>x</td>
+                             <td>L</td>
+                             </tr>
+                             
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >H</td>
+                             <td>x</td>
+                             <td>H</td>
+                             </tr>
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >H</td>
+                             <td >x</td>
+                             <td>L</td>
+                             <td>L</td>
+                             </tr>
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >H</td>
+                             <td >x</td>
+                             <td>H</td>
+                             <td>H</td>
+                             </tr>
+                             
+                             
+                             </table>
+                             <br />
+                             Figure 4(b)&nbsp;x:don't care state
+                            <br /><br />
+                            
+                            
+                            <table width="50%"  border="0" cellspacing="1px" cellpadding="2" bgcolor="#999999">
+                             
+                            <tr bgcolor="#FFFFCC">
+                             <td rowspan="2">Strobe</td>
+                             <td rowspan="2">Select</td>
+                             <td colspan="2">Inputs</td>
+                             <td>Outputs</td>
+                             </tr>
+                             
+                             <tr bgcolor="#FFFFCC">
+                             
+                             <td >A3</td>
+                             <td >B3</td>
+                             <td>3Y</td>
+                             </tr>
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>H</td>
+                             <td >x</td>
+                             <td >x</td>
+                             <td>x</td>
+                             <td>L</td>
+                             </tr>
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >L</td>
+                             <td>x</td>
+                             <td>L</td>
+                             </tr>
+                             
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >H</td>
+                             <td>x</td>
+                             <td>H</td>
+                             </tr>
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >H</td>
+                             <td >x</td>
+                             <td>L</td>
+                             <td>L</td>
+                             </tr>
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >H</td>
+                             <td >x</td>
+                             <td>H</td>
+                             <td>H</td>
+                             </tr>
+                             
+                             
+                             </table>
+                             
+                             <br />
+                             Figure 4(c)&nbsp;x:don't care state
+                            <br /><br />
+                            
+                            
+                             <table width="50%"  border="0" cellspacing="1px" cellpadding="2" bgcolor="#999999">
+                             
+                            <tr bgcolor="#FFFFCC">
+                             <td rowspan="2">Strobe</td>
+                             <td rowspan="2">Select</td>
+                             <td colspan="2">Inputs</td>
+                             <td>Outputs</td>
+                             </tr>
+                             
+                             <tr bgcolor="#FFFFCC">
+                             
+                             <td >A4</td>
+                             <td >B4</td>
+                             <td>4Y</td>
+                             </tr>
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>H</td>
+                             <td >x</td>
+                             <td >x</td>
+                             <td>x</td>
+                             <td>L</td>
+                             </tr>
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >L</td>
+                             <td>x</td>
+                             <td>L</td>
+                             </tr>
+                             
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >H</td>
+                             <td>x</td>
+                             <td>H</td>
+                             </tr>
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >H</td>
+                             <td >x</td>
+                             <td>L</td>
+                             <td>L</td>
+                             </tr>
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >H</td>
+                             <td >x</td>
+                             <td>H</td>
+                             <td>H</td>
+                             </tr>
+                             
+                             
+                             </table>
+                            
+                            
+                            
+                            
+                            <br />
+                             Figure 4(d)&nbsp;x:don't care state
+                            <br /><br />
+                            
+                            <img src="images/74157circuit.gif"  style="width:500px;height:400px;"/>
+                             <br />
+                            
+                            The above circuit diagram shows the detail gate level structure of 74157(Quad 2 line to 1 line Multiplexer)
+                            <br />
+                            <br />
+                            
+               
+                            
+                             </div>
+                             
+                             74151 is a 8 line-to-1 line multiplexer. It has the schematic representation shown
+in Fig 5. Three select lines(A,B,C)  select the particular input to be multiplexed and
+applied to the output Y,  <font style="text-decoration:overline">Y</font> is the inverted output of the original outpu(Y).  
+<font style="text-decoration:overline">Strobe</font> signal or <font style="text-decoration:overline">Enable</font> signal
+should be low to ensure proper multiplexing operation.If Enable is made high,then the output Y will always be low irrespective
+of any logic levels asserted by select lines A, B, C and the eight inputs.  
+
+
+<br />
+<br />
+
+An 8-to-1 Multiplexer can be used to implement any 3-variable switching function. 
+<br />
+For example, consider the function
+<br />
+F (A,B,C) = &Sigma m (0,3,5)
+<br />
+Then the inputs D0, D3 and D5 should be set to logic 1 while the remaining five  inputs we set to logic '0'.
+<br />
+Thus, for A = 0, B = 0, C = 0  Y = D0 = '1'
+<br />
+for A = 0, B = 1, C = 1, Y = D1, = '1'
+<br />
+for A = 1, B = 0, C = 1, Y = D5, = '1'
+<br />
+For the remaining combination of A, B, C Y = '0'.
+<br />
+<br />
+                            
+
+
+                       <div align="center">
+
+                           
+<img src="images/74151.jpg"  style="width:500px;height:400px;"/>
+<br />
+Figure 5(a)
+
+<br /><br />
+
+
+
+<table width="50%"  border="0" cellspacing="1px" cellpadding="2" bgcolor="#999999">
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td rowspan="2">Strobe</td>
+                             <td colspan="3">Select Lines</td>
+                             <td colspan="8" align="center">Inputs</td>
+                             <td colspan="2">Outputs</td>
+                             </tr>
+                             
+                             <tr bgcolor="#FFFFCC">
+                             
+                             <td >A</td>
+                             <td >B</td>
+                             <td >C</td>
+                             <td >D0</td>
+                             <td >D1</td>
+                             <td >D2</td>
+                             <td >D3</td>
+                             <td >D4</td>
+                             <td >D5</td>
+                             <td >D6</td>
+                             <td >D7</td>
+                             <td>Y</td>
+                             <td><font style="text-decoration:overline">Y</font></td>
+                             </tr>
+                             
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>H</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td>L</td>
+                             <td>H</td>
+                             </tr>
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >L</td>
+                             <td >L</td>
+                             <td >H</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td>H</td>
+                             <td>L</td>
+                             </tr>
+                             
+                             
+                             
+                            
+                             
+                             
+                            <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >L</td>
+                             <td >L</td>
+                             <td >L</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td>L</td>
+                             <td>H</td>
+                             </tr>
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >L</td>
+                             <td >H</td>
+                             <td >X</td>
+                             <td >H</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td>H</td>
+                             <td>L</td>
+                             </tr>
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >L</td>
+                             <td >H</td>
+                             <td >X</td>
+                             <td >L</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td>L</td>
+                             <td>H</td>
+                             </tr>
+                            
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >H</td>
+                             <td >L</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >H</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td>H</td>
+                             <td>L</td>
+                             </tr>
+                             
+                             
+                               <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >H</td>
+                             <td >L</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >L</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td>L</td>
+                             <td>H</td>
+                             </tr>
+                             
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >H</td>
+                             <td >H</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >H</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td>H</td>
+                             <td>L</td>
+                             </tr>
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >H</td>
+                             <td >H</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >L</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td>L</td>
+                             <td>H</td>
+                             </tr>
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >H</td>
+                             <td >L</td>
+                             <td >L</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >H</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td>H</td>
+                             <td>L</td>
+                             </tr>
+                             
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >H</td>
+                             <td >L</td>
+                             <td >L</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >L</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td>L</td>
+                             <td>H</td>
+                             </tr>
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >H</td>
+                             <td >L</td>
+                             <td >H</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >H</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td>H</td>
+                             <td>L</td>
+                             </tr>
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >H</td>
+                             <td >L</td>
+                             <td >H</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >L</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td>L</td>
+                             <td>H</td>
+                             </tr>
+                             
+                             
+                              
+                             <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >H</td>
+                             <td >H</td>
+                             <td >L</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >H</td>
+                             <td >X</td>
+                             <td>H</td>
+                             <td>L</td>
+                             </tr>
+                             
+                             
+                                
+                             <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >H</td>
+                             <td >H</td>
+                             <td >L</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >L</td>
+                             <td >X</td>
+                             <td>L</td>
+                             <td>H</td>
+                             </tr>
+                             
+                             
+                             
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >H</td>
+                             <td >H</td>
+                             <td >H</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >H</td>
+                             <td>H</td>
+                             <td>L</td>
+                             </tr>
+                             
+                             
+                               
+                              <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >H</td>
+                             <td >H</td>
+                             <td >H</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >X</td>
+                             <td >L</td>
+                             <td>L</td>
+                             <td>H</td>
+                             </tr>
+                             
+                             </table>
+                             
+                             
+                             <br />
+                             Figure 5(b):&nbsp;Truth Table
+
+                                                  
+                        </div>
+                    </section>
+                    <!-------------------------- Third section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-3">
+                        <div class="icon" id="experiment-article-section-3-icon">
+                            <!-- Enclose the icon image of your lab. -->
+                            <img src="../images/objective.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-3-heading">
+                            Objective
+                        </div>
+
+                        <div class="content" id="experiment-article-section-3-content">                            
+                            <p><b>Aim of the Experiment</b></p>
+                <br />
+               The principal objective of this experiment(Part 1) is to fully understand the functionality of a Dual 4 line to 1 line Multiplexer(IC 74153) and to show the multiplex function of 74153 in terms of select lines. Note that each
+of the on-chip multiplexers act independently from the other, while sharing the same
+select lines.<br /><br />
+
+
+               The principal objective of this experiment(Part 2) is to fully understand the functionality of a Quad 2 line to 1 line Multiplexer(IC 74157) and to show the multiplex function of 74157 in terms of select line. Note that each
+of the on-chip multiplexers act independently from the other, while sharing the same
+select line.
+                           
+                        </div>
+                    </section>
+                    <!-------------------------- Fourth section of the article---------------------------------------->
+<section id="experiment-article-section-5">
+                        <div class="icon" id="experiment-article-section-5-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/procedure.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-5-heading">
+                            Procedure
+                        </div>
+
+                        <div class="content" id="experiment-article-section-5-content">                            
+                            <p><p>Please follow these steps to do the experiment.</p>
+                            <br />
+                            <br />
+                            
+                            <p style="font-weight:500px;">Part 1:</p>
+                         
+                        	<ol>
+                            
+                                <li class="expt1">	At first go through the structure of 74153.Then apply high level voltage to Vcc and low level voltage to GND. If Vcc and ground are not connected properly then error message will be shown and no output will be generated.
+</li>
+
+</ul>
+
+<br />
+<img src="images/step1.jpg"/>
+<br />
+
+<ul style="list-style:none">
+                            	<li class="expt1">	2. &nbsp;Next,  apply high level voltage to Strobe1G  or strobe 2G. If STROBE 1G is high 2nd Multiplexer  is activated . If STROBE 2G is high then 1st Multiplexer is activated.
+.</li>
+                                </ul>
+                                
+                                <br />
+                                
+                                <img src="images/step2.jpg"/>
+                                <br />
+                                
+                                <ul style="list-style:none">
+                                <li class="expt1">	3. &nbsp;Next, apply low level voltage to the select inputs A and B (A Most significant Bit,B Less significant bit). Then apply a high level voltage to 2C0. Now check that how Dual 4 Line to 1 Line Multiplexer select the particular input to be multiplexed and to be
+applied to the output IY{1 = 1, 2}. </li>
+</ul>
+
+<br />
+<img src="images/step3.jpg"/>
+<br />
+
+<ul style="list-style:none">
+<li class="expt1">	4. &nbsp;For all the combinations of the select inputs A,B verify that both the LEDs are glowing 
+                                or not glowing. If the LED glows, it indicates that the corresponding output has reached logic 1 level. Similarly
+                                a dark LED indicates low level output voltage.</li>
+                                </ul>
+                                <br />
+                                <img src="images/step4.jpg"/>
+                               
+
+
+<ul style="list-style:none">
+
+<li class="expt1">	5. &nbsp;If both the Strobe inputs are low then both Multiplexers are activated. </li>
+
+</ul>
+<br />
+
+
+<img src="images/step5.jpg"/>
+<br />
+<br />
+       
+       
+       <p style="font-weight:500px;">Part 2:</p>                         
+                                
+                              
+                                <ul style="list-style:none">
+                            
+                                <li class="expt1">	1. &nbsp;At first go through the structure of 74157.Then apply high level voltage to Vcc and low level voltage to GND. If Vcc and ground are not connected properly then error message will be shown and no output will be generated.
+</li>
+
+</ul>
+<br />
+
+<img src="images/exp41.jpg"/>
+<br />
+
+
+                            	<ul style="list-style:none">
+                                
+                                <li class="expt1">	2. &nbsp;Next,  apply high level voltage to Strobe input.Now check that all the LEDs are not  glowing.Soall the outputs are at low state
+.</li>
+</ul>
+<br />
+ <img src="images/exp42.jpg"/>
+ <br />
+ 
+ 
+                                 <ul style="list-style:none">
+                                <li class="expt1">	3. &nbsp;Next,  apply low level voltage to the Strobe input  and also apply low level voltage to the Select input.  Then apply high level voltage to A1,A2,A3,A4.Now check that all the LEDs are glowing.Because inputs are properly multiplexed to the outputs of the four multiplexers according to the voltage applied to the select input. </li>
+                                </ul>
+                                <br />
+                                <img src="images/exp43.jpg"/>
+                                <br />
+
+<ul style="list-style:none">
+<li class="expt1">	4. &nbsp;Next,  apply low level voltage to the Strobe input  and apply high level voltage to the Select input. Then apply high level voltage to B1,B2,B3,B4. Now check that all the LEDs are glowing.Because inputs are properly multiplexed to the outputs of the four multiplexers according to the voltage applied to the select input. </li>
+</ul>
+ <br />
+ <img src="images/exp44.jpg"/>
+ <br />
+ 
+ 
+<ul style="list-style:none">
+<li class="expt1">	5. &nbsp;If the LED glows, it indicates that the corresponding output has reached logic 1 level. Similarly
+                                a dark LED indicates low level output voltage.  </li>
+                                </ul>
+                                
+                               <br />
+                               <br />
+                                
+                                <p style="font-weight:500px;">Part 3:</p>
+                                
+                                <ul style="list-style:none">
+                                <li class="expt1">1.&nbsp;At first click on the Browse Block button</li>
+                                <li class="expt1">2.&nbsp;Next, drag the mux block and drop it onto the bread board.</li>
+                                
+                                
+                                </ul>
+                                <br />
+                               
+                                <img src="images/syn.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/syn1.jpg"/>
+                                <br />
+                                <br />
+                               
+                                
+                                <img src="images/syn2.jpg"/>
+                                <br />
+                                
+                                <ul style="list-style:none">
+                               
+                                <li class="expt1">3.&nbsp;Next, drag the Bus block and drop it onto the bread board.</li>
+                                
+                                
+                                </ul>
+                                <br />
+                                
+                                
+                                <img src="images/syn3.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/syn4.jpg"/>
+                                <br />
+                                
+                                
+                                 <ul style="list-style:none">
+                               
+                                <li class="expt1">4.&nbsp;Next, drag the Voltage block and drop it onto the bread board.</li>
+                                
+                                
+                                </ul>
+                                
+                                <br />
+                               
+                                <img src="images/syn5.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/syn6.jpg"/>
+                                <br />
+                                
+                                
+                               <ul style="list-style:none">
+                               
+                                <li class="expt1">5.&nbsp;Next, drag the Ground block and drop it onto the bread board.</li>
+                                
+                                
+                                </ul>
+                                
+                                <br />
+                               
+                                <img src="images/syn7.jpg"/>
+                                <br />
+                                <br />
+                                
+                                <img src="images/syn8.jpg"/>
+                                <br /> 
+                                
+                                
+                                <ul style="list-style:none">
+                                
+                                
+                               
+                                <li class="expt1">5.&nbsp;Next, make a connection from voltage block to positive end of the bus block.</li>
+                                
+                                
+                                </ul>
+                                
+                                
+                                <br />
+                               
+                                <img src="images/syn9.jpg"/>
+                               
+                                
+                                <br />
+                                <br />
+                                <img src="images/syn10.jpg"/>
+                                <br /> 
+                                <br />
+                                
+                                
+                                <img src="images/syn11.jpg"/>
+                                
+                                
+                                 <br /> 
+                                
+                                
+              <ul style="list-style:none">
+                               
+                                <li class="expt1">6.&nbsp;Next, make a connection from ground block to negitive end of the bus block.</li>
+                                
+                                
+                                </ul>
+                                
+                                 
+                                <br />
+                                <br />
+                                <img src="images/syn12.jpg"/>
+                                <br /> 
+                                <br />
+                                
+                               
+                                <img src="images/syn13.jpg"/>
+                                
+                                
+                                 <br />
+                                 <br /> 
+                                 
+                                 <p>The 14 switches constituting the Bus Block are denoted as A,B,C...N as one goes bottomwards starting with the top switch A .</p>
+                                
+                                 <ul style="list-style:none">
+                               
+                                <li class="expt1">7.&nbsp;Next, make a connection from switch A to D7 of the MUX block.</li>
+                                
+                                
+                                </ul>
+                                <br />
+                                
+                                <img src="images/syn14.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/syn15.jpg"/>
+                                
+                                 <br />
+                                 
+                                  <ul style="list-style:none">
+                               
+                                <li class="expt1">8.&nbsp;Next, make a connection from switch B to D6 of the MUX block.</li>
+                                
+                                
+                                </ul>
+                                
+                                  <br />
+                                
+                                <img src="images/syn16.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/syn17.jpg"/>
+                                
+                                 <br />
+                                 
+                                 
+                                  <ul style="list-style:none">
+                               
+                                <li class="expt1">8.&nbsp;Next, make a connection from switch C to D5 of the MUX block.</li>
+                                
+                                
+                                </ul>
+                                
+                                 <br />
+                                
+                                <img src="images/syn18.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/syn19.jpg"/>
+                                
+                                 <br />
+                                 
+                                 
+                                  <ul style="list-style:none">
+                               
+                                <li class="expt1">9.&nbsp;Next, make a connection from switch D to D4 of the MUX block.</li>
+                                
+                                
+                                </ul>
+                                
+                                 <br />
+                                
+                                <img src="images/syn20.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/syn21.jpg"/>
+                                 
+                                
+                                 <br />
+                                 
+                                 
+                                  <ul style="list-style:none">
+                               
+                                <li class="expt1">10.&nbsp;Next, make a connection from switch E to VCC of the MUX block.</li>
+                                
+                                
+                                </ul>
+                                
+                                 <br />
+                                
+                                <img src="images/syn22.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/syn23.jpg"/>
+                                <br />
+                                 
+                                 
+                                 
+                                  <ul style="list-style:none">
+                               
+                                             <li class="expt1">11.&nbsp;Next, make a connection from switch F to D3 of the MUX block.</li>
+                                
+                                
+                                   </ul>
+                                
+                                 <br />
+                                
+                                <img src="images/syn24.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/syn25.jpg"/>
+                                <br />
+                                
+                                
+                                <ul style="list-style:none">
+                               
+                                             <li class="expt1">12.&nbsp;Next, make a connection from switch G to D2 of the MUX block.</li>
+                                
+                                
+                                   </ul>
+                                
+                                 <br />
+                                
+                                <img src="images/syn26.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/syn27.jpg"/>
+                                <br />
+                        
+                        
+                        
+                        
+                        
+                                        <ul style="list-style:none">
+                               
+                                             <li class="expt1">13.&nbsp;Next, make a connection from switch H to D1 of the MUX block.</li>
+                                
+                                
+                                        </ul>
+                                
+                                 <br />
+                                
+                                <img src="images/syn28.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/syn29.jpg"/>
+                                <br />
+                                
+                                
+                                
+                                          <ul style="list-style:none">
+                               
+                                             <li class="expt1">14.&nbsp;Next, make a connection from switch I to D0 of the MUX block.</li>
+                                
+                                
+                                        </ul>
+                                
+                                 <br />
+                                
+                                <img src="images/syn30.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/syn31.jpg"/>
+                                <br />
+                                
+                                
+                                 <ul style="list-style:none">
+                               
+                                             <li class="expt1">15.&nbsp;Next, make a connection from switch J to STROBE of the MUX block.</li>
+                                
+                                
+                                        </ul>
+                                
+                                 <br />
+                                
+                                <img src="images/syn32.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/syn33.jpg"/>
+                                <br />
+                                
+                                
+                                 <ul style="list-style:none">
+                               
+                                             <li class="expt1">15.&nbsp;Next, make a connection from switch K to GND of the MUX block.</li>
+                                
+                                
+                                        </ul>
+                                
+                                 <br />
+                                
+                                <img src="images/syn34.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/syn35.jpg"/>
+                                <br />
+                                
+                                
+                                 <ul style="list-style:none">
+                               
+                                             <li class="expt1">16.&nbsp;Next, make a connection from switch L to C input of the MUX block.</li>
+                                
+                                
+                                        </ul>
+                                
+                                 <br />
+                                
+                                <img src="images/syn36.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/syn37.jpg"/>
+                                <br />
+                                
+                                
+                                  <ul style="list-style:none">
+                               
+                                             <li class="expt1">17.&nbsp;Next, make a connection from switch M to B input of the MUX block.</li>
+                                
+                                
+                                        </ul>
+                                
+                                 <br />
+                                
+                                <img src="images/syn38.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/syn39.jpg"/>
+                                <br />
+                                
+                                
+                                <ul style="list-style:none">
+                               
+                                             <li class="expt1">18.&nbsp;Next, make a connection from switch N to A input of the MUX block.</li>
+                                
+                                
+                                        </ul>
+                                
+                                 <br />
+                                
+                                <img src="images/.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/syn41.jpg"/>
+                                <br />
+                                
+                                
+                                
+                                <ul style="list-style:none">
+                               
+                                             <li class="expt1">17.&nbsp;Next, apply high level voltage to VCC and apply low level voltage to GND  and also apply low level voltage to the three select inputs A(MSB),B and C(LSB).</li>
+                                             
+                                             
+                                             
+                                             <li class="expt1">19.&nbsp;Next, apply high level voltage to D0 input.</li>
+                                             
+                                             <li class="expt1">20.&nbsp;Now check that output Y attains logic high state.</li>
+                                
+                                
+                                        </ul>
+                                
+                                 <br />
+                                
+                                <img src="images/syn42.jpg"/>
+                                <br />
+                               
+                               
+                                <ul style="list-style:none">
+                               
+                                             
+                                             
+                                             <li class="expt1">21.&nbsp;Next,  apply low level voltage to  A(MSB) and  B and apply high level voltage to C(LSB).</li>
+                                             
+                                             <li class="expt1">22.&nbsp;Next, apply high level voltage to D1 input.</li>
+                                             
+                                             <li class="expt1">23.&nbsp;Now check that output Y attains logic high state.</li>
+                                
+                                
+                                        </ul>
+                                
+                                 <br />
+                                
+                                <img src="images/syn43.jpg"/>
+                                <br />
+                               
+                               
+                               
+                               <ul style="list-style:none">
+                               
+                                             
+                                             
+                                             <li class="expt1">24.&nbsp;Next,  apply high level voltage to B and apply low level voltage to A(MSB)&nbsp; C(LSB).</li>
+                                             
+                                             <li class="expt1">25.&nbsp;Next, apply high level voltage to D2 input.</li>
+                                             
+                                             <li class="expt1">26.&nbsp;Now check that output Y attains logic high state.</li>
+                                
+                                
+                                        </ul>
+                                
+                                 <br />
+                                
+                                <img src="images/syn44.jpg"/>
+                                <br />
+                                
+                                
+                                
+                                
+                                 <ul style="list-style:none">
+                               
+                                             
+                                             
+                                             <li class="expt1">27.&nbsp;Next, apply high level voltage to C and B high and apply low level voltage to A(MSB).</li>
+                                             
+                                             <li class="expt1">28.&nbsp;Next, apply high level voltage to D3.</li>
+                                             
+                                             <li class="expt1">29.&nbsp;Now check that output Y attains logic high state.</li>
+                                
+                                
+                                        </ul>
+                                
+                                 <br />
+                                
+                                <img src="images/syn45.jpg"/>
+                                <br />
+                                
+                                 <ul style="list-style:none">
+                                 <li class="expt1">
+                                30.&nbsp;For all the combinations of the select inputs A,B,C verify that both the LEDs are glowing 
+                                or not glowing. If the LED glows, it indicates that the corresponding output has reached logic 1 level. Similarly
+                                a dark LED indicates low level output voltage.
+                                </li>
+                                </ul></ol></p>                            
+                        </div>
+                    </section>
+                    
+                    <!-------------------------- Fifth section of the article---------------------------------------->
+<section id="experiment-article-section-4">
+                        <div class="icon" id="experiment-article-section-4-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/simulation.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-4-heading">
+                            Simulator</div>
+                        
+
+                        <table width="100%" cellpadding="0px" cellspacing="0px" border="0px">
+                                
+                                	<!--<tr height="30px">
+                                    	<td colspan="2" valign="top"><p class="medium_black">Results Tabulation</p></td>
+                                    </tr> -->
+                                
+                                	<tr height="30px">
+                                    	<td align="left" style="padding-left:35px;">
+                                        	
+                                        </td>
+                                        <td align="right" valign="middle" style="padding-right:35px;">
+                                        <div id="help1">
+                                        	<img src="images/help.jpg" width="30px" style="cursor:pointer;" title="Help" onClick="window.open('content/help.html','helpWindow','width=850,height=580,screenX=300,screenY=120')" />
+                                            </div>
+                                            
+                                            <div id="help2" style="display:none">
+                                        	<img src="images/help.jpg" width="30px" style="cursor:pointer;" title="Help" onClick="window.open('content/help1.html','helpWindow','width=850,height=580,screenX=300,screenY=120')" />
+                                            </div>
+                                            
+                                            
+                                            <div id="help3" style="display:none">
+                                        	<img src="images/help.jpg" width="30px" style="cursor:pointer;" title="Help" onClick="window.open('content/help2.html','helpWindow','width=750,height=550,screenX=300,screenY=120')" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr height="15px"><td colspan="2"></td></tr>
+                                                     
+                                	<tr height="30px">
+                                    
+                                    	<td align="left" style="padding-left:35px;">
+                                        	<input type="button" name="part1" value="Part 1" class="btn_sub1" onclick="showDiv('1');" />
+                                            &nbsp;&nbsp;
+                                        	<input type="button" name="part2" value="Part 2" class="btn_sub1" onclick="showDiv('2');" />
+                                            &nbsp;&nbsp;
+                                            <input type="button" name="part2" value="Part 3" class="btn_sub1" onclick="showDiv('3');" />
+                                            
+                                        </td>
+                                        <td align="right" valign="middle" style="padding-right:35px;">
+                                        </td>
+                                        
+                                    </tr>
+                                                              
+                                </table>
+                                
+                        
+                        
+                    	<div align="center" id="part1Div">
+                        
+                        <div align="center"><p class="faqs">Part 1 of the Experiment</p></div>
+                        
+                          <object width="800" height="600">
+                              <param name="movie" value="content/expt1.swf">
+                              <embed src="content/expt1.swf" width="800" height="600">
+                              </embed>
+                          </object>
+                          
+                        </div>  
+                        
+                    	<div align="center" id="part2Div" style="display:none;">
+                        
+                         <div align="center"><p class="faqs">Part 2 of the Experiment</p></div>
+                        
+                         <object width="800" height="600">
+                              <param name="movie" value="content/expt2.swf">
+                              <embed src="content/expt2.swf" width="800" height="600">
+                              </embed>
+                          </object>
+                          
+                        </div>  
+                        
+                        <div align="center" id="part3Div" style="display:none;">
+                        
+                         <div align="center"><p class="faqs">Part 3 of the Experiment</p></div>
+                        
+                         <object width="800" height="600">
+                              <param name="movie" value="content/expt3.swf">
+                              <embed src="content/expt3.swf" width="800" height="600">
+                              </embed>
+                          </object>
+                          
+                        </div>  
+                    </section>
+                    
+
+                    <!-------------------------- Sixth section of the article---------------------------------------->
+
+                    
+                    <!-------------------------- Seventh section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-7">
+                        <div class="icon" id="experiment-article-section-7-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/quizzes.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-7-heading">
+                            Quizzes
+                        </div>
+
+                        <div class="content" id="experiment-article-section-7-content">                            
+                            <p>Not now</p>                           
+                        </div>
+                    </section>
+                    <!-------------------------- Eight section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-8">
+                        <div class="icon" id="experiment-article-section-8-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/reference.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-8-heading">
+                            Reference
+                        </div>
+
+                        <div class="content" id="experiment-article-section-8-content">                            
+                            <li>Digital Principles and Applications, by Leach and Malvino.</li>
+                                <li>Digital Logic Design, Leach, by Malvino, and Saha</li>
+                                <li>Engineering Digital Design, by Richard F. Tinder.</li>
+                                <li>Digital Logic and Computer Design, by M. Morris Mano</li>                                
+                            	<li>Digital Systems: Principles and Applications, Neal S. Widmer , Ronald J. Tocci , Gregory L. Moss</li>                           
+                        </div>
+                    </section>                   
+
+                </div>
+            </article>
+<footer class="default" id="lab-footer">
+                <!-- Put the content here-->
+                <div style="margin-left:40%; margin-right:40% ">
+                    Copyright &copy; 2011 Indian Institute of Technology Kharagpur,<a href="../license/index.html" target="_blank" style="margin:auto"> Licensing Terms </a>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

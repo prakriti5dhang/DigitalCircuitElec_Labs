@@ -1,0 +1,1609 @@
+<!-- This file needs to be edited by the lab developer to suit the requirements of their lab in particular.-->
+<!-- Add class="default" to include any element as it is specified in default.html. Do not include class="default" to the elements that you want to edit -->
+<!DOCTYPE html>
+<html>
+    <head><script language="javascript" type="text/javascript" src="a.js"></script>
+        <title>Test Lab title</title>
+    </head>
+
+    <body>
+        <div id="experiment">
+            <!-- The Experiment Document Container-->
+            <!-- The lab Header contains the logo and the name of the lab, usually displayed on the top of the page-->
+
+            <header class="default" id="experiment-header">
+
+                <div class="logo" id="experiment-header-logo">
+                    <!-- Enclose the logo image of your lab or write it in text-->
+                    <img src="./images/logo.jpg"></div>
+
+                <div class="heading" id="experiment-header-heading">
+                    <!-- Write the name of your lab and link it to the home 
+          page of your lab (h1 tag is preferred while writing your 
+          lab name)-->
+                    <a href="../index.html">Digital Electronic Circuits</a>
+                </div><!-- Add any additional element you want to add to the lab 
+        header, For example : Help (Enclosing them with suitable 
+        div is recommended)-->
+            </header><!-- The lab article is the main content area where all the experiment content sits-->
+
+            <article id="experiment-article">
+                <!-- The lab article has an header, optional navigational 
+        menu, number of sections, an optional sidebar and a closing 
+        footer-->
+
+                <div class="breadcrumb" id="experiment-article-breadcrumb"></div>
+
+                <header class="heading" id="experiment-article-heading">
+                    Analysis and Synthesis of Logic Functions using Decoders
+                </header><!-- Navigation menu is useful to organize the view of multiple sections inside the article-->
+
+                <nav class="default" id="experiment-article-navigation">
+                    <ul id="experiment-article-navigation-menu">
+                        <!-- The menu can be dynamically generated to contain 
+              the headings of your sections or instead write the 
+              menu items of your choice individually enclosedu in 
+              &lt;li&gt; tag as shown below-->
+                    </ul>
+                </nav><!-- All the sections of your lab or experiment can be 
+          enclosed together with a div element as shown below-->
+
+                <div id="experiment-article-sections">
+                    <!------------------------------- First section of the article---------------------------------->
+
+                    <section id="experiment-article-section-1">
+                        <div class="icon" id="experiment-article-section-1-icon">
+                            <!-- Enclose the icon image of your lab -->
+                            <img src="../images/introduction.jpg"></div>
+                        <!-- The heading for the section can be enclosed in a div tag. -->
+
+                        <div class="heading" id="experiment-article-section-1-heading">
+                            Introduction
+                        </div><!-- Write the section content inside a paragraph element, You can also include images with &lt;img&gt; tag -->
+
+                        <div class="content" id="experiment-article-section-1-content">                            
+                            <p><b>About the Experiment</b></p>
+                <br />
+                This experiment enables a student to learn
+                <ul>
+                    <li>	How to realize functionality of a 3-to-8 line active low Decoder viz. 74138 IC. That is on setting the two active low and one active high enable inputs to proper level, one can verify that one and only one of the eight active low outputs is asserted based on the values assigned to three select input.</li>
+                   
+                           
+                           <li>How to cascade two 74138 IC's to implement a 4-to-6 active low decoder.</li>
+                  
+
+
+                    
+                </ul>
+                
+                                            
+                        </div>
+                    </section>
+                    <!-------------------------- Second section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-2">
+                        <div class="icon" id="experiment-article-section-2-icon">
+                            <!-- Enclose the icon image of your lab. -->
+                            <img src="../images/theory.jpg"></div>
+                        <!-- The heading for the section can be enclosed in a div tag. -->
+
+                        <div class="heading" id="experiment-article-section-2-heading">
+                            Theory
+                        </div><!-- Write the section content inside a paragraph element, we can also include images with &lt;img&gt; tag -->
+
+                        <div class="content" id="experiment-article-section-2-content">                            
+                            <p>Part1</p>
+            <br />
+                        
+IC 74138 works as a 3-to-8 active low decoder,based on the values assigned to three select inputs of the three enable inputs, G1 must be made high value while <font style="text-decoration:overline">G</font>2A and <font style="text-decoration:overline">G</font>2B must be low. The eight active low inputs (<font style="text-decoration:overline">Y</font>0 to <font style="text-decoration:overline">Y</font>7) correspond to eight maxterms (M0 to M7) or in other words, component of the corresponding minterms m0-m7. For example, <font style="text-decoration:overline">Y0</font> = component of <font style="text-decoration:overline">C</font>&nbsp;<font style="text-decoration:overline">B</font>&nbsp;<font style="text-decoration:overline">A</font> = C+B+A. <br />
+                            <div align="center">
+                            <img src="images/74138.jpg" style="width:500px;height:400px;" /> 
+                            <br />
+                            Figure 1&nbsp;(IC 74138)
+                            <br />
+                            <br />
+                            
+                           
+                             <table width="50%"  border="0" cellspacing="1px" cellpadding="2" bgcolor="#999999">
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td><font style="text-decoration:overline">G2A</font></td>
+                             <td><font style="text-decoration:overline">G2B</font></td>
+                             <td>G1</td>
+                             <td>C</td>
+                             <td>B</td>
+                             <td>A</td>
+                             <td><font style="text-decoration:overline">Y0</font></td>
+                             <td><font style="text-decoration:overline">Y1</font></td>
+                             <td><font style="text-decoration:overline">Y2</font></td>
+                             <td><font style="text-decoration:overline">Y3</font></td>
+                             <td><font style="text-decoration:overline">Y4</font></td>
+                             <td><font style="text-decoration:overline">Y5</font></td>
+                             <td><font style="text-decoration:overline">Y6</font></td>
+                             <td><font style="text-decoration:overline">Y7</font></td>
+                             
+                             </tr>
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >H</td>
+                             <td>0</td>
+                             <td>0</td>
+                             <td>0</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             
+                             
+                             </tr>
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >H</td>
+                             <td>0</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             
+                             
+                             </tr>
+                             
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >H</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             
+                             
+                             </tr>
+                             
+                             
+                            <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >H</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             
+                             
+                             </tr>
+                             
+                               <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >H</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                            
+                             
+                             </tr>
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >H</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             
+                             
+                             </tr>
+                             
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >H</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             
+                             
+                             </tr>
+                             
+                             
+                               <tr bgcolor="#FFFFCC">
+                             <td>L</td>
+                             <td >L</td>
+                             <td >H</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>0</td>
+                             
+                             
+                             </tr>
+                             </table>
+                             <br />
+                             Figure 2&nbsp;: Truth table for 3 to 8 decoder
+                             <br />
+                             <br />
+                             
+                             <p class="big" align="left">Part2</p>
+                             
+                             <p align="left">Cascading two 74138 IC(Two 3 to 8 active low decoder) we can achieve a 4 to 16 active low decoder.
+                              </p>
+                              <p align="left"><font style="text-decoration:overline">G2A</font> and <font style="text-decoration:overline">G2B</font> inputs of the first IC(74138) and G1 input of 2nd IC(74138) are shorted and it acts as MSB of 4 binary select input .
+                              <font style="text-decoration:overline">G2A</font> &amp;<font style="text-decoration:overline">G2B</font> of second IC(74138) is kept low.G1 of 1st IC is kept always high.</p>
+                             
+                             <br />
+                             
+                             <img src="images/dual-74138.JPG" style="width:700px;height:600px;"/> 
+                             
+                             <p>Figure 3&nbsp;: 4 to 16 decoder  cascadeding two 3 to 8 decoder
+                             </p>
+                             <br />
+                             <br />
+                             <table width="80%"  border="0" cellspacing="1px" cellpadding="2" bgcolor="#999999">
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td colspan="4" width="30%">Select Inputs</font></td>
+                             <td colspan="8">1st Decoder</font></td>
+                             <td colspan="8">2nd Decoder</font></td>
+                             </tr>
+                             <tr bgcolor="#FFFFCC">
+                             <td width="20%">D</td>
+                             <td width="20%">C</td>
+                             <td width="20%">B</td>
+                             <td width="20%">A</td>
+                             <td><font style="text-decoration:overline">Y0</font></td>
+                             <td><font style="text-decoration:overline">Y1</font></td>
+                             <td><font style="text-decoration:overline">Y2</font></td>
+                             <td><font style="text-decoration:overline">Y3</font></td>
+                             <td><font style="text-decoration:overline">Y4</font></td>
+                             <td><font style="text-decoration:overline">Y5</font></td>
+                             <td><font style="text-decoration:overline">Y6</font></td>
+                             <td><font style="text-decoration:overline">Y7</font></td>
+                             <td><font style="text-decoration:overline">Y0</font></td>
+                             <td><font style="text-decoration:overline">Y1</font></td>
+                             <td><font style="text-decoration:overline">Y2</font></td>
+                             <td><font style="text-decoration:overline">Y3</font></td>
+                             <td><font style="text-decoration:overline">Y4</font></td>
+                             <td><font style="text-decoration:overline">Y5</font></td>
+                             <td><font style="text-decoration:overline">Y6</font></td>
+                             <td><font style="text-decoration:overline">Y7</font></td>
+                             
+                            
+                             </tr>
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td >0</td>
+                             <td>0</td>
+                             <td >0</td>
+                             <td>0</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             
+                             
+                             </tr>
+                             
+                             
+                           <tr bgcolor="#FFFFCC">
+                             <td>0</td>
+                             <td >0</td>
+                             <td >0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             
+                             
+                             </tr>
+                             
+                             
+                             <tr bgcolor="#FFFFCC">
+                             <td>0</td>
+                             <td >0</td>
+                             <td >1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             
+                             
+                             </tr>
+                             
+                           <tr bgcolor="#FFFFCC">
+                             <td>0</td>
+                             <td >0</td>
+                             <td >1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             
+                             
+                             </tr>
+                             
+                                <tr bgcolor="#FFFFCC">
+                             <td>0</td>
+                             <td >1</td>
+                             <td >0</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             
+                             
+                             </tr>
+                             
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>0</td>
+                             <td >1</td>
+                             <td >0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             
+                             
+                             </tr>
+                             
+                             
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>0</td>
+                             <td >1</td>
+                             <td >1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             
+                             
+                             </tr>
+                             
+                                  <tr bgcolor="#FFFFCC">
+                             <td>0</td>
+                             <td >1</td>
+                             <td >1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             
+                             
+                             </tr>
+                             
+                             
+                             
+                             
+                             
+                                  <tr bgcolor="#FFFFCC">
+                             <td>1</td>
+                             <td >0</td>
+                             <td >0</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             
+                             
+                             </tr>
+                             
+                             
+                             
+                             
+                               <tr bgcolor="#FFFFCC">
+                             <td>1</td>
+                             <td >0</td>
+                             <td >0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             
+                             
+                             </tr>
+                             
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>1</td>
+                             <td >0</td>
+                             <td >1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             
+                             
+                             </tr>
+                             
+                             
+                                <tr bgcolor="#FFFFCC">
+                             <td>1</td>
+                             <td >0</td>
+                             <td >1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             
+                             
+                             </tr>
+                             
+                             
+                             
+                               <tr bgcolor="#FFFFCC">
+                             <td>1</td>
+                             <td >1</td>
+                             <td >0</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             
+                             
+                             </tr>
+                             
+                             
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>1</td>
+                             <td >1</td>
+                             <td >0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             
+                             
+                             </tr>
+                             
+                             
+                               <tr bgcolor="#FFFFCC">
+                             <td>1</td>
+                             <td >1</td>
+                             <td >1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>0</td>
+                             <td>1</td>
+                             
+                             
+                             </tr>
+                             
+                             
+                              <tr bgcolor="#FFFFCC">
+                             <td>1</td>
+                             <td >1</td>
+                             <td >1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>1</td>
+                             <td>0</td>
+                             
+                             
+                             </tr>
+                             
+                             
+                             
+                             
+                             
+                             </table>
+                             
+                             
+                             <br />
+                              <p>Figure 4&nbsp;: Truth table for 4 to 16 decoder</p>
+                              
+                              
+                              
+                              
+                             </div>
+                             
+                             
+                        <br />
+                             <br />
+
+<p class="big">Part 3</p>
+
+A decoder with active high outputs generates minterms. Whereas, a decoder with active low outputs generates maxterms (i.e.  complements of
+the corresponding minterm).
+Thus, if a function is specified as a sum of minterms or equivalently as a product of maxterms, 
+
+it can be realized by a decoder with active low outputs and additional AND/NAND gates. 
+<br />
+
+For example, consider the following
+<br />
+
+F1 (A,B,C) = &Sigma; m (1,2)
+<br />
+
+F2 (A,B,C) = &Sigma; m (0,1,2,3,4,5)
+
+<br />
+
+<div align="center">
+
+<img src="images/decoder-syn.JPG" style="width:400px;height:300px;"/>
+     
+</div>                           
+                        </div>
+                    </section>
+                    <!-------------------------- Third section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-3">
+                        <div class="icon" id="experiment-article-section-3-icon">
+                            <!-- Enclose the icon image of your lab. -->
+                            <img src="../images/objective.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-3-heading">
+                            Objective
+                        </div>
+
+                        <div class="content" id="experiment-article-section-3-content">                            
+                            <p><b>Aim of the Experiment</b></p>
+                <br />
+               The objective of Part 1 of the experiment is to fully understand the functionality of active low 3 line to 8 line Decoder using 74138 IC and to show how according to select inputs and three enable inputs the active low outputs(<font style="text-decoration:overline">Y0</font>
+                           to<font style="text-decoration:overline">Y7</font>) will be enabled or disabled.<br /><br />
+                           
+                           
+                   The objective of Part 2 of the experiment is to understand the functionality of an active 4-to-16 active low decoder implemented by cascading two 74138 ICs.<br />
+                           
+                        </div>
+                    </section>
+                    <!-------------------------- Fourth section of the article---------------------------------------->
+<section id="experiment-article-section-5">
+                        <div class="icon" id="experiment-article-section-5-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/procedure.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-5-heading">
+                            Procedure
+                        </div>
+
+                        <div class="content" id="experiment-article-section-5-content">                            
+                            <p><p>Please follow these steps to do the experiment.</p>
+                            <br />
+                            <br />
+                            
+                            <p style="font-weight:500px;">Part 1:</p>
+                         <br />
+                            <br />
+                            
+                            
+                         
+                        	<ul style="list-style:none">
+                            
+                                <li class="expt1">	1.&nbsp;At first go through the structure of 74138.
+                                Then apply  high level voltage to VCC  and apply low level voltage  to GND  and also apply  high level voltage to G1.
+</li>
+                            	
+                                </ul>
+                                <br />
+                                
+                                <img src="images/expt5.jpg"/>
+                                <br />
+                               
+                                <ul style="list-style:none">
+                            
+                                <li class="expt1">	2.&nbsp;Next, apply low level voltage  to all the three select inputs (C B A).
+                                Now check that <font style="text-decoration:overline">Y0</font> is at low state. Other outputs are at high state.
+</li>
+</ul>
+
+ <br />
+                                
+                                <img src="images/expt5.jpg"  />
+                                <br />
+                            	 <ul style="list-style:none">
+                            
+                                <li class="expt1">	3.&nbsp;Next,  apply low level voltage  to C  and  B  and apply  high level voltage to A.
+                                Now check that <font style="text-decoration:overline">Y1</font> is at low state. Other outputs are at high state.
+</li>
+</ul>
+<br />
+
+<img src="images/expt51.jpg"  />
+                                <br />
+
+                                
+                                <ul style="list-style:none">
+                            
+                                <li class="expt1">	4.&nbsp;Next,  apply low level voltage  to  C  and A  and apply  high level voltage to B.
+                                Now check that <font style="text-decoration:overline">Y2</font> is at low state. Other outputs are at high state.
+</li>
+</ul>
+<br />
+                                
+   <img src="images/expt52.jpg"  />
+                                <br />   
+                                
+                                
+                                <ul style="list-style:none">
+                            
+                                <li class="expt1">	5.&nbsp;Next,  apply low level voltage  to  C  and apply  high level voltage to B  and A.
+                                Now check that <font style="text-decoration:overline">Y3</font> is at low state. Other outputs are at high state.
+</li>
+</ul>
+<br />
+                                
+   <img src="images/expt53.jpg"  />
+                                <br /> 
+                                
+                                
+                                 <ul style="list-style:none">
+                            
+                                <li class="expt1">	6.&nbsp;Next,  apply  high level voltage to  C  and apply low level voltage  to B and A.
+                                Now check that <font style="text-decoration:overline">Y4</font> is at low state. Other outputs are at high state.
+</li>
+</ul>
+<br />
+                                
+   <img src="images/expt54.jpg"  />
+                                <br /> 
+                                
+                                
+                                <ul style="list-style:none">
+                            
+                                <li class="expt1">	7.&nbsp;Next,  apply  high level voltage to C and A and apply low level voltage  to B.
+                                Now check that <font style="text-decoration:overline">Y5</font> is at low state. Other outputs are at high state.
+</li>
+</ul>
+<br />
+                                
+   <img src="images/expt55.jpg"  />
+                                <br />                                        
+                        
+                        
+                        
+                         <ul style="list-style:none">
+                            
+                                <li class="expt1">	8.&nbsp;Next,  apply  high level voltage to  C and B high  and apply low level voltage  to A.
+                                Now check that <font style="text-decoration:overline">Y6</font> is at low state. Other outputs are at high state.
+</li>
+</ul>
+<br />
+                                
+   <img src="images/expt56.jpg"  />
+                                <br />  
+                                
+                                
+                                 
+                         <ul style="list-style:none">
+                            
+                                <li class="expt1">	9.&nbsp;Next,  apply  high level voltage to all the select inputs (C,B,A).
+                                Now check that <font style="text-decoration:overline">Y7</font> is at low state. Other outputs are at high state.
+</li>
+</ul>
+<br />
+                                
+   <img src="images/expt57.jpg"  />
+                                <br /> 
+                                <br />
+                                <p>Please follow these steps to do the experiment(Part2).</p>
+                                <br />
+                                
+                        	<ul style="list-style:none">
+                            
+                                <li class="expt1">	1.&nbsp;At first  apply  high level voltage to VCC  and apply low level voltage to GND andapply  high level voltage to  G1 input of 1st decoder.
+</li>
+                            	
+                                </ul>
+                                <br />
+                                
+                                <img src="images/expt58.jpg" />
+                                <br />
+                                
+                                <ul style="list-style:none">
+                            
+                                 <li class="expt1">	2.&nbsp;Next,  apply low level voltage to all the four select inputs (MSB,C B A).
+                                Now check that <font style="text-decoration:overline">Y0</font> (1st Decoder) is at low state. Other outputs are at high state.
+</li>
+                            	
+                                </ul>
+                                <br />
+                                
+                                <img src="images/expt58.jpg"  />
+                                <br />
+                                
+                                
+                                 <ul style="list-style:none">
+                            
+                                 <li class="expt1">	3.&nbsp;Next,  apply  high level voltage to  A and apply low level voltage to all other select inputs (MSB,C B).
+                                Now check that <font style="text-decoration:overline">Y1</font> (1st Decoder) is at low state. Other outputs are at high state.
+</li>
+                            	
+                                </ul>
+                                <br />
+                                
+                                <img src="images/expt59.jpg"  />
+                                <br />
+                                
+                                
+                                <ul style="list-style:none">
+                            
+                                 <li class="expt1">4.&nbsp;Next,  apply  high level voltage to B  and apply low level voltage to all other select inputs (MSB,C, A ).
+                                Now check that <font style="text-decoration:overline">Y2</font> (1st Decoder) is at low state. Other outputs are at high state.
+</li>
+                            	
+                                </ul>
+                                <br />
+                                
+                                <img src="images/expt510.jpg"  />
+                                <br />
+                                
+                                
+                                
+                                  <ul style="list-style:none">
+                            
+                                 <li class="expt1">5.&nbsp;Next, apply  high level voltage to A and B and apply low level voltage to all other select inputs (MSB,C )low.
+                                Now check that <font style="text-decoration:overline">Y3</font> (1st Decoder) is at low state. Other outputs are at high state.
+</li>
+                            	
+                                </ul>
+                                <br />
+                                
+                                <img src="images/expt511.jpg"  />
+                                <br />
+                                
+                                 <ul style="list-style:none">
+                            
+                                 <li class="expt1">6.&nbsp;Next,  apply high level voltage to C and apply low level voltage to all other select inputs (MSB,B,A ).
+                                Now check that <font style="text-decoration:overline">Y4</font> (1st Decoder) is at low state. Other outputs are at high state.
+</li>
+                            	
+                                </ul>
+                                <br />
+                                
+                                <img src="images/expt512.jpg"  />
+                                <br />
+                                 
+                                 
+                                 
+                                  <ul style="list-style:none">
+                            
+                                 <li class="expt1">7.&nbsp;Next, apply high level voltage to C  and A  and apply low level voltage to all other select inputs (MSB,B ).
+                                Now check that <font style="text-decoration:overline">Y5</font> (1st Decoder) is at low state. Other outputs are at high state.
+</li>
+                            	
+                                </ul>
+                                <br />
+                                
+                                <img src="images/expt513.jpg"  />
+                                <br />
+                                     
+                                     
+                                     
+                                     
+                                  <ul style="list-style:none">
+                            
+                                 <li class="expt1">8.&nbsp;Next,  apply high level voltage to C  and B   and apply low level voltage to all other select inputs (MSB,A ).
+                                Now check that <font style="text-decoration:overline">Y6</font> (1st Decoder) is at low state. Other outputs are at high state.
+</li>
+                            	
+                                </ul>
+                                <br />
+                                
+                                <img src="images/expt514.jpg"  />
+                                <br />    
+                                
+                                
+                                
+                                      
+                                  <ul style="list-style:none">
+                            
+                                 <li class="expt1">9.&nbsp;Next,  apply high level voltage to C , B  and A high  and  apply low level voltage to   (MSB)input.
+                                Now check that <font style="text-decoration:overline">Y7</font> (1st Decoder) is at low state. Other outputs are at high state.
+</li>
+                            	
+                                </ul>
+                                <br />
+                                
+                                <img src="images/expt515.jpg"  />
+                                <br />  
+                                
+                                
+                                 <ul style="list-style:none">
+                            
+                                 <li class="expt1">10.&nbsp;Next,  apply high level voltage to MSB  and  apply low level voltage to all other select inputs (C,B,A).
+                                Now check that <font style="text-decoration:overline">Y0</font> (2nd Decoder) is at low state. Other outputs are at high state.
+</li>
+                            	
+                                </ul>
+                                <br />
+                                
+                                <img src="images/expt516.jpg"  />
+                                <br />  
+                                
+                                
+                                <ul style="list-style:none">
+                            
+                                 <li class="expt1">11.&nbsp;Next, apply high level voltage to MSB and A  and apply low level voltage to all other select inputs (C,B).
+                                Now check that <font style="text-decoration:overline">Y1</font>(2nd Decoder) is at low state. Other outputs are at high state.
+</li>
+                            	
+                                </ul>
+                                <br />
+                                
+                                <img src="images/expt517.jpg" />
+                                <br />      
+                                
+                                
+                                
+                                 
+                                <ul style="list-style:none">
+                            
+                                 <li class="expt1">12.&nbsp;Next,  apply high level voltage to MSB and B  and apply low level voltage to all other select inputs(C,A).
+                                Now check that <font style="text-decoration:overline">Y2</font> (2nd Decoder) is at low state. Other outputs are at high state.
+</li>
+                            	
+                                </ul>
+                                <br />
+                                
+                                <img src="images/expt518.jpg"  />
+                                <br />     
+                                
+                                  
+                                <ul style="list-style:none">
+                            
+                                 <li class="expt1">13.&nbsp;Next,  apply high level voltage to  MSB , B and A  and apply low level voltage to  the input (C).
+                                Now check that <font style="text-decoration:overline">Y3</font> (2nd Decoder) is at low state. Other outputs are at high state.
+</li>
+                            	
+                                </ul>
+                                <br />
+                                
+                                <img src="images/expt519.jpg"  />
+                                <br />  
+                                
+                                
+                                  <ul style="list-style:none">
+                            
+                                 <li class="expt1">14.&nbsp;Next,  apply high level voltage to MSB and C  and apply low level voltage to all other select inputs (B,A).
+                                Now check that <font style="text-decoration:overline">Y4</font> (2nd Decoder) is at low state. Other outputs are at high state.
+</li>
+                            	
+                                </ul>
+                                <br />
+                                
+                                <img src="images/expt520.jpg"  />
+                                <br />   
+                                
+                                 <ul style="list-style:none">
+                            
+                                 <li class="expt1">15.&nbsp;Next,  apply high level voltage to MSB , C and A  and apply low level voltage to the select input (B).
+                                Now check that <font style="text-decoration:overline">Y5</font> (2nd Decoder) is at low state. Other outputs are at high state.
+</li>
+                            	
+                                </ul>
+                                <br />
+                                
+                                <img src="images/expt521.jpg"  />
+                                <br />   
+                                
+                                
+                                
+                                 <ul style="list-style:none">
+                            
+                                 <li class="expt1">16.&nbsp;Next,  apply high level voltage to MSB , C and B  and apply low level voltage to  the input (A).
+                                Now check that <font style="text-decoration:overline">Y6</font> (2nd Decoder) is at low state. Other outputs are at high state.
+</li>
+                            	
+                                </ul>
+                                <br />
+                                
+                                <img src="images/expt522.jpg" />
+                                <br />      
+                                
+                                
+                                
+                                 <ul style="list-style:none">
+                            
+                                 <li class="expt1">17.&nbsp;Next,  apply high level voltage to all the select inputs (MSB,C,B,A).
+                                Now check that <font style="text-decoration:overline">Y7</font> (2nd Decoder) is at low state. Other outputs are at high state.
+</li>
+                            	
+                                </ul>
+                                <br />
+                                
+                                <img src="images/expt523.jpg"  />
+                                <br /> 
+                              <br />
+                              
+                              <p style="font-weight:500px;">Part 3:</p>
+                                
+              <ul style="list-style:none">
+                                <li class="expt1">1.&nbsp;At first click on the Browse Block button</li>
+                                <li class="expt1">2.&nbsp;Next, drag the Decoder block and drop it onto the bread board.</li>
+                                <li class="expt1">2.&nbsp;Next, drag the mux block and drop it onto the bread board.</li>
+              
+                                
+                                </ul>
+                                <br />
+                               
+                                <img src="images/exp5-syn.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/exp5-syn1.jpg"/>
+                                <br />
+                                <br />
+                               
+                                
+                                <img src="images/exp5-syn2.jpg"/>
+                                <br />
+                                
+                                <ul style="list-style:none">
+                               
+                                <li class="expt1">3.&nbsp;Next, drag the Bus block and drop it onto the bread board.</li>
+                                
+                                
+                                </ul>
+                                <br />
+                                
+                                
+                                <img src="images/exp5-syn3.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/exp5-syn4.jpg"/>
+                                <br />
+                                
+                                
+                                 <ul style="list-style:none">
+                               
+                                <li class="expt1">4.&nbsp;Next, drag the Voltage block and drop it onto the bread board.</li>
+                                
+                                
+                                </ul>
+                                
+                                <br />
+                               
+                                <img src="images/exp5-syn5.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/exp5-syn6.jpg"/>
+                                <br />
+                                
+                                
+                               <ul style="list-style:none">
+                               
+                                <li class="expt1">5.&nbsp;Next, drag the Ground block and drop it onto the bread board.</li>
+                                
+                                
+              </ul>
+                                
+                                <br />
+                               
+                                <img src="images/exp5-syn7.jpg"/>
+                                <br />
+                                <br />
+                                
+                                <img src="images/exp5-syn8.jpg"/>
+                                <br /> 
+                                
+                                
+                                <ul style="list-style:none">
+                                
+                                
+                               
+                                <li class="expt1">5.&nbsp;Next, make a connection from voltage block to positive end of the bus block.</li>
+                                
+                                
+                                </ul>
+                                
+                                
+                                <br />
+                               
+                                <img src="images/exp5-syn9.jpg"/>
+                               
+                                
+                                <br />
+                                <br />
+                                <img src="images/exp5-syn10.jpg"/>
+                               
+                                 <br /> 
+                                
+                                
+              <ul style="list-style:none">
+                               
+                                <li class="expt1">6.&nbsp;Next, make a connection from ground block to negitive end of the bus block.</li>
+                                
+                                
+              </ul>
+                                
+                                 
+                                <br />
+                                <br />
+                                <img src="images/exp5-syn12.jpg"/>
+                                <br /> 
+                                <br />
+                                
+                               
+                                <img src="images/exp5-syn13.jpg"/>
+                                
+                                
+                                 <br />
+                                 <br /> 
+                                 
+                                 <p>The 4 switches constituting the Bus Block are denoted as A,B,C and D as one goes bottomwards starting with the top switch A .</p>
+                                
+                                 <ul style="list-style:none">
+                               
+                                <li class="expt1">7.&nbsp;Next, make a connection from switch A to A of the Decoder block.</li>
+                                
+                                
+                                </ul>
+                                <br />
+                                
+                                <img src="images/exp5-syn14.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/exp5-syn15.jpg"/>
+                                
+                                 <br />
+                                 
+                                  <ul style="list-style:none">
+                               
+                                <li class="expt1">8.&nbsp;Next, make a connection from switch B to B of the Decoder block.</li>
+                                
+                                
+                                </ul>
+                                
+                                  <br />
+                                
+                                <img src="images/exp5-syn16.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/exp5-syn17.jpg"/>
+                                
+                                 <br />
+                                 
+                                 
+                                  <ul style="list-style:none">
+                               
+                                <li class="expt1">9.&nbsp;Next, make a connection from switch C to C of the Decoder block.</li>
+                                
+                                
+                                </ul>
+                                
+                                 <br />
+                                
+                                <img src="images/exp5-syn18.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/exp5-syn19.jpg"/>
+                                
+                                 <br />
+                                 
+                                 
+                                  <ul style="list-style:none">
+                               
+                                <li class="expt1">10.&nbsp;Next, make a connection from switch D to G1 of the MUX block.</li>
+                                
+                                
+                                </ul>
+                                
+                                 <br />
+                                
+                                <img src="images/exp5-syn20.jpg"/>
+                                <br />
+                                <br />
+                               
+                                <img src="images/exp5-syn21.jpg"/>
+                                 
+                                
+                                 <br />
+                                 
+                                 
+                                  
+                                
+                                
+                                
+                                <ul style="list-style:none">
+                               
+                                             <li class="expt1">11.&nbsp;Next, apply high level voltage to G1.</li>
+                                             
+                                             
+                                             
+                                             <li class="expt1">12.&nbsp;Next, apply low level voltage to (A, B, C) input.</li>
+                                             
+                                             <li class="expt1">13.&nbsp;Now check that output F2 attains logic high state.</li>
+                                
+                                
+              </ul>
+                                
+                                 <br />
+                                
+                                <img src="images/exp5-syn42.jpg"/>
+                                <br />
+                               
+                               
+                                <ul style="list-style:none">
+                               
+                                             
+                                             
+                                             <li class="expt1">14.&nbsp;Next,  apply low level voltage to  A(MSB) and  B and apply high level voltage to C(LSB).</li>
+                                             
+                                             
+                                             
+                                             <li class="expt1">15.&nbsp;Now check that output F1 and  F2 both attain logic high state.</li>
+                                
+                                
+              </ul>
+                                
+                                 <br />
+                                
+                                <img src="images/exp5-syn43.jpg"/>
+                                <br />
+                               
+                               
+                               
+                               <ul style="list-style:none">
+                               
+                                             
+                                             
+                                             <li class="expt1">16.&nbsp;Next,  apply high level voltage to B and apply low level voltage to A(MSB)&nbsp; C(LSB).</li>
+                                             
+                                             
+                                             
+                                             <li class="expt1">17.&nbsp;Now check that output F1 and  F2 both attain logic high state.</li>
+                                
+                                
+              </ul>
+                                
+                                 <br />
+                                
+                                <img src="images/exp5-syn44.jpg"/>
+                                <br />
+                                
+                                
+                                
+                                
+                                 <ul style="list-style:none">
+                               
+                                             
+                                             
+                                             <li class="expt1">18.&nbsp;Next, apply high level voltage to C and B and apply low level voltage to A(MSB).</li>
+                                             
+                                             
+                                             
+                                             <li class="expt1">19.&nbsp;Now check that that output F2 attains logic high state.</li>
+                                
+                                
+              </ul>
+                                
+                                 <br />
+                                
+                                <img src="images/exp5-syn45.jpg"/>
+                                <br />
+                                
+                                 <ul style="list-style:none">
+                                 <li class="expt1">
+                                20.&nbsp;For all the combinations of the select inputs A,B,C verify that both the LEDs are glowing 
+                                or not glowing. If the LED glows, it indicates that the corresponding output has reached logic 1 level. Similarly
+                                a dark LED indicates low level output voltage.
+                                </li>
+                                </ul></p>                            
+                        </div>
+                    </section>
+                    
+                    <!-------------------------- Fifth section of the article---------------------------------------->
+<section id="experiment-article-section-4">
+                        <div class="icon" id="experiment-article-section-4-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/simulation.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-4-heading">
+                            Simulator</div>
+                        
+
+                        <div align="left">
+                        
+                            	<table width="100%" cellpadding="0px" cellspacing="0px" border="0px">
+                                
+                                	<!--<tr height="30px">
+                                    	<td colspan="2" valign="top"><p class="medium_black">Results Tabulation</p></td>
+                                    </tr> -->
+                                
+                                	<tr height="30px">
+                                    	<td align="left" style="padding-left:35px;">
+                                        	
+                                        </td>
+                                        <td align="right" valign="middle" style="padding-right:35px;">
+                                        <div id="help1">
+                                        	<img src="images/help.jpg" width="30px" style="cursor:pointer;" title="Help" onClick="window.open('content/help.html','helpWindow','width=850,height=580,screenX=300,screenY=120')" />
+                                            </div>
+                                            
+                                            <div id="help2" style="display:none">
+                                        	<img src="images/help.jpg" width="30px" style="cursor:pointer;" title="Help" onClick="window.open('content/help1.html','helpWindow','width=900,height=900,screenX=300,screenY=120')" />
+                                            </div>
+                                            
+                                            <div id="help3" style="display:none">
+                                        	<img src="images/help.jpg" width="30px" style="cursor:pointer;" title="Help" onClick="window.open('content/help2.html','helpWindow','width=750,height=490,screenX=300,screenY=120')" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr height="15px"><td colspan="2"></td></tr>
+                                                     
+                                	<tr height="30px">
+                                    
+                                    	<td align="left" style="padding-left:35px;">
+                                        	<input type="button" name="part1" value="Part 1" class="btn_sub1" onclick="showDiv('1');" />
+                                            &nbsp;&nbsp;
+                                        	<input type="button" name="part2" value="Part 2" class="btn_sub1" onclick="showDiv('2');" />
+                                            &nbsp;&nbsp;
+                                            <input type="button" name="part3" value="Part 3" class="btn_sub1" onclick="showDiv('3');" />
+                                            
+                                        </td>
+                                        <td align="right" valign="middle" style="padding-right:35px;">
+                                        </td>
+                                        
+                                    </tr>
+                                                              
+                                </table>
+                                
+                        </div>
+                        
+                    	<div align="center" id="part1Div">
+                        
+                        <div align="center"><p class="faqs">Part 1 of the Experiment</p></div>
+                        
+                          <object width="800" height="820">
+                              <param name="movie" value="expt1.swf">
+                              <embed src="content/expt1.swf" width="800" height="820">
+                              </embed>
+                          </object>
+                          
+                        </div>  
+                        
+                    	<div align="center" id="part2Div" style="display:none;">
+                        
+                         <div align="center"><p class="faqs">Part 2 of the Experiment</p></div>
+                        
+                         <object width="800" height="820">
+                              <param name="movie" value="expt2.swf">
+                              <embed src="content/expt2.swf" width="800" height="820">
+                              </embed>
+                          </object>
+                          
+                        </div>  
+                        
+                        
+                        <div align="center" id="part3Div" style="display:none;">
+                        
+                         <div align="center"><p class="faqs">Part 3 of the Experiment</p></div>
+                        
+                         <object width="800" height="500">
+                              <param name="movie" value="expt3.swf">
+                              <embed src="content/expt3.swf" width="800" height="500">
+                              </embed>
+                          </object>
+                          
+                        </div>  
+                    </section>
+                    
+
+                    <!-------------------------- Sixth section of the article---------------------------------------->
+
+                    
+                    <!-------------------------- Seventh section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-7">
+                        <div class="icon" id="experiment-article-section-7-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/quizzes.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-7-heading">
+                            Quizzes
+                        </div>
+
+                        <div class="content" id="experiment-article-section-7-content">                            
+                            <p>Not now</p>                           
+                        </div>
+                    </section>
+                    <!-------------------------- Eight section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-8">
+                        <div class="icon" id="experiment-article-section-8-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/reference.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-8-heading">
+                            Reference
+                        </div>
+
+                        <div class="content" id="experiment-article-section-8-content">                            
+                            <li>Digital Principles and Applications, by Leach and Malvino.</li>
+                                <li>Digital Logic Design, Leach, by Malvino, and Saha</li>
+                                <li>Engineering Digital Design, by Richard F. Tinder.</li>
+                                <li>Digital Logic and Computer Design, by M. Morris Mano</li>                                
+                            	<li>Digital Systems: Principles and Applications, Neal S. Widmer , Ronald J. Tocci , Gregory L. Moss</li>                            
+                        </div>
+                    </section>                   
+
+                </div>
+            </article>
+<footer class="default" id="lab-footer">
+                <!-- Put the content here-->
+                <div style="margin-left:40%; margin-right:40% ">
+                    Copyright &copy; 2011 Indian Institute of Technology Kharagpur,<a href="../license/index.html" target="_blank" style="margin:auto"> Licensing Terms </a>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

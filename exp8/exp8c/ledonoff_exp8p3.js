@@ -231,7 +231,9 @@ Author:Prakriti Dhang*/
             document.getElementById('red').style.display="none";
             document.getElementById('green').style.display="block";
             document.getElementById('clk').value="Clock Stop";
-            S0="1"	;	
+            document.getElementById('graphshowd').style.display="block";
+            document.getElementById('clk').style.background="red";
+            drawGridd();
             } 
         else
         {
@@ -239,9 +241,11 @@ Author:Prakriti Dhang*/
             document.getElementById('red').style.display="block";
             document.getElementById('green').style.display="none";
             document.getElementById('clk').value="Clock Start";
-             S0="0";
+            document.getElementById('clk').style.background="#d9e2f0";
             }
             ledchng();
         }
         
-        
+        function graphclose(){
+            document.getElementById('graphshowd').style.display="none";
+        }	

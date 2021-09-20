@@ -38,6 +38,7 @@
         <!--script type="text/javascript" src="circuit_exp10p1.js"></script-->
         
         <script type="text/javascript" src="ledonoff_exp8p3.js"></script>
+        <script type="text/javascript" src="grid_axis_d.js"></script>
        
         
         
@@ -46,7 +47,14 @@
         <script type="text/javascript" src="addtbl10p3.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" id="">
         </script>
-    
+    <script src="../js/jquery-1.12.4.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+
+    <script>
+        $( function() {
+$( "#draggable" ).draggable();
+} );
+</script>
     </head>
     <body style="background-color:#0d213b" >
     
@@ -122,8 +130,10 @@
             
                 
             <div id="showalt" class="dropdown-content blink" style="background-color:white;border:4px solid #ff0909; visibility: hidden;">
-                <p class="con" id="v" style="text-align:center;font-size:large;font-weight:bold">Connect Vcc </p>
-                <p class="con" id="gnd" style="text-align:center;font-size:large;font-weight:bold">Please disconnect GND </p>
+                <p class="con" id="v1" style="text-align:center;font-size:large;font-weight:bold">Connect Vcc1 </p>
+                <p class="con" id="v2" style="text-align:center;font-size:large;font-weight:bold">Connect Vcc2 </p>
+                <p class="con" id="gnd2" style="text-align:center;font-size:large;font-weight:bold">Please disconnect GND 1 </p>
+                <p class="con" id="gnd2" style="text-align:center;font-size:large;font-weight:bold">Please disconnect GND 2 </p>
         
             </div>
         
@@ -198,7 +208,31 @@
         </div>
         
         
-        
+        <div id="draggable"  style="top:5px; position:absolute; left: 28px;">
+                              
+            <div id="graphshowd" draggable="true"   id="draggable"  id="drag1" style="top:80px; position:absolute; left: 28px; width: 580px; cursor:pointer; background:#96baf0;font-size:16px;font-weight:bold;border:1px solid #3385ff; display: none; ">
+                      <div class="grphtitle">
+                    <p style="text-align:center;color:rgb(26,0,97)">GRAPH <span  onclick="graphclose()" style="cursor:pointer;  font-size:30px;position:absolute;top: 5px;right:10px;">&#10006;</span>
+                                     <div class="graphdisplay" style="background-color:white;border:1px solid #3385ff">
+                                        <img id="graphd" src="d_graph_clk_axis.jpg">
+                                        <br>
+                                        &nbsp;&nbsp;&nbsp;<canvas id="myCanvasclk" width="500" height="100" style="border:1px solid"></canvas><img id="graphd" src="d_y_axis.jpg"><!-- clock pulse -->
+                                       
+                                        <img id="graphd" src="d_graph_d_axis.jpg"><br>
+                                        &nbsp;&nbsp;&nbsp;<canvas id="myCanvasd" width="500" height="100" style="border:1px solid"></canvas><img id="graphd" src="d_y_axis.jpg"> <!-- D -->
+
+                                       
+
+                                        <img id="graphd" src="d_graph_q_axis.jpg"><br>
+                                        &nbsp;&nbsp;&nbsp;<canvas id="myCanvasq" width="500" height="100" style="border:1px solid"></canvas><img id="graphd" src="d_y_axis.jpg"><!-- Q -->
+
+                                        <img id="graphd" src="d_graph_qb_axis.jpg"><br>
+                                        &nbsp;&nbsp;&nbsp;<canvas id="myCanvasqbar" width="500" height="100" style="border:1px solid"></canvas><img id="graphd" src="d_y_axis.jpg"> <!-- Qbar -->
+                                  </div>
+                      
+                      </div>
+                      </div>
+          </div>
         
         
         

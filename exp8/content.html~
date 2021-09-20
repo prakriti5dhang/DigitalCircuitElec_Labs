@@ -1,0 +1,816 @@
+<!-- This file needs to be edited by the lab developer to suit the requirements of their lab in particular.-->
+<!-- Add class="default" to include any element as it is specified in default.html. Do not include class="default" to the elements that you want to edit -->
+<!DOCTYPE html>
+<html>
+    <head><script language="javascript" type="text/javascript" src="a.js"></script>
+        <title>Test Lab title</title>
+    </head>
+
+    <body>
+        <div id="experiment">
+            <!-- The Experiment Document Container-->
+            <!-- The lab Header contains the logo and the name of the lab, usually displayed on the top of the page-->
+
+            <header class="default" id="experiment-header">
+
+                <div class="logo" id="experiment-header-logo">
+                    <!-- Enclose the logo image of your lab or write it in text-->
+                    <img src="./images/logo.jpg"></div>
+
+                <div class="heading" id="experiment-header-heading">
+                    <!-- Write the name of your lab and link it to the home 
+          page of your lab (h1 tag is preferred while writing your 
+          lab name)-->
+                    <a href="../index.html">Digital Electronic Circuits</a>
+                </div><!-- Add any additional element you want to add to the lab 
+        header, For example : Help (Enclosing them with suitable 
+        div is recommended)-->
+            </header><!-- The lab article is the main content area where all the experiment content sits-->
+
+            <article id="experiment-article">
+                <!-- The lab article has an header, optional navigational 
+        menu, number of sections, an optional sidebar and a closing 
+        footer-->
+
+                <div class="breadcrumb" id="experiment-article-breadcrumb"></div>
+
+                <header class="heading" id="experiment-article-heading">
+                   Analysis and Synthesis of Sequential Circuits using Basic Flip-Flops
+                </header><!-- Navigation menu is useful to organize the view of multiple sections inside the article-->
+
+                <nav class="default" id="experiment-article-navigation">
+                    <ul id="experiment-article-navigation-menu">
+                        <!-- The menu can be dynamically generated to contain 
+              the headings of your sections or instead write the 
+              menu items of your choice individually enclosedu in 
+              &lt;li&gt; tag as shown below-->
+                    </ul>
+                </nav><!-- All the sections of your lab or experiment can be 
+          enclosed together with a div element as shown below-->
+
+                <div id="experiment-article-sections">
+                    <!------------------------------- First section of the article---------------------------------->
+
+                    <section id="experiment-article-section-1">
+                        <div class="icon" id="experiment-article-section-1-icon">
+                            <!-- Enclose the icon image of your lab -->
+                            <img src="../images/introduction.jpg"></div>
+                        <!-- The heading for the section can be enclosed in a div tag. -->
+
+                        <div class="heading" id="experiment-article-section-1-heading">
+                            Introduction
+                        </div><!-- Write the section content inside a paragraph element, You can also include images with &lt;img&gt; tag -->
+
+                        <div class="content" id="experiment-article-section-1-content">                            
+                            <p><b>About the Experiment</b></p>
+                <br />
+                This experiment enables a student to learn
+                <ul>
+                    <li>	How to realize the functionality of sequential circuits using basic flip-flops </li>
+                    <li>	How to verify the operation of a combinational circuit using flip-flop(D Flip-Flop)</li>
+                    
+                    
+                </ul>
+                
+                                            
+                        </div>
+                    </section>
+                    <!-------------------------- Second section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-2">
+                        <div class="icon" id="experiment-article-section-2-icon">
+                            <!-- Enclose the icon image of your lab. -->
+                            <img src="../images/theory.jpg"></div>
+                        <!-- The heading for the section can be enclosed in a div tag. -->
+
+                        <div class="heading" id="experiment-article-section-2-heading">
+                            Theory
+                        </div><!-- Write the section content inside a paragraph element, we can also include images with &lt;img&gt; tag -->
+
+                        <div class="content" id="experiment-article-section-2-content">                            
+                            Sequential Circuits:&nbsp; The logic circuits whose outputs at any instant of time depend not only on the present input but also
+			 on the past outputs are called sequential circuits.<br /><br />
+			 The simplest kind of sequential circuit which is capable of storing one bit of information is called latch.The operation of basic 
+			 latch can be modified, by providing an additional control input that determines, when the state of the circuit is to be changed.<br />
+			 The latch with additional control input is called the Flip-Flop.The additional control input is either the clock or enable input.<br />
+			 <br />
+			 Different types of Flip-Flop:&nbsp; There are four basic types, namely, S-R, J-K, D and T Flip-Flops. 
+			 
+             <br />
+          <br />
+           
+             <div align="center" class="big" style="text-decoration:underline;" > S-R Flip-Flop </div>
+                      
+                            <br />
+                            <div align="center">
+                            <img src="images/SRFF.jpg" style="width:200px;height:100px"/> 
+                            <br />
+                             Figure 1:&nbsp;Clocked NOR-based S-R Flip-Flop                            
+                            <br />
+                            <br />
+                             </div>
+                             <div align="center">
+                            <img src="images/srff1.jpg" style="width:200px;height:100px" /> 
+                            <br />
+                            Figure 2:&nbsp;NAND-based S-R Flip-Flop
+                            <br />
+                            <br />
+                             </div>
+                             <div align="center">
+                            <img src="images/typical waveform 1.jpg" /> 
+                            <br />
+                            Figure 3:&nbsp;Typical wave-form in S-R Flip-Flop
+                            <br />
+                            <br />
+                             </div>
+                             <div align="center">
+                            <img src="images/srff char table.jpg" style="width:500px;height:600px" /> 
+                            <br />
+                            Figure 4:&nbsp;S-R Flip-Flop characteristic Table
+                            <br />
+                            <br />
+                             </div>
+                             NOTE :: &nbsp;clk, S and R signals are input signals <br />
+                             
+                              <font style="text-decoration:overline">Q</font>and Q  : Output signals
+                              
+   
+ 
+                                                    </div>
+                                                     <div align="center" class="big" style="text-decoration:underline" > J-K Flip-Flop </div>
+                                                       <div align="left">
+  <br/>
+                            <div align="center">
+                            <img src="images/JKFF.jpg" /> 
+                            <br />
+                            Figure 1:&nbsp;J-K Flip-Flop using S-R Flip-Flop
+                            <br />
+                            <br />
+                             </div>
+                             <br />
+                             <div align="center">
+                            <img src="images/jkff1.jpg" /> 
+                            <br />
+                            Figure 2:&nbsp;NAND based J-K Flip-Flop 
+                            <br />
+                            <br />
+                             </div>
+                             <br />
+                             <div align="center">
+                            <img src="images/typical waveform 2.jpg" /> 
+                            <br />
+                            Figure 3:&nbsp;Typical wave-form in J-K Flip-Flop 
+                            <br />
+                            <br />
+                             </div>
+                             <br />
+                             <div align="center">
+                            <img src="images/jkff char table.jpg" /> 
+                            <br />
+                            Figure 4:&nbsp;J-K Flip-Flop characteristic Table
+                            <br />
+                            <br />
+                             </div>
+                             <div align="center" class="big" style="text-decoration:underline" > D Flip-Flop </div> 
+                             <div align="left">
+
+ <br/>
+  <div align="center">
+                            <img src="images/dff.jpg" />
+                             <br />
+                            Figure 1:&nbsp;D Flip-Flop
+                            </div>
+                            <br />
+                             <div align="center">
+                            <img src="images/dff1.jpg" /> 
+                            <br />
+                            Figure 2:&nbsp;NAND-based D Flip-Flop
+                            <br />
+                            <br />
+                             </div>
+                             <br />
+                             <div align="center">
+                            <img src="images/function table of dff.jpg" /> 
+                            <br />
+                            Figure 3:&nbsp;D Flip-Flop characteristic Table
+                            <br />
+                            <br />
+                             </div>
+                              <div align="center" class="big" style="text-decoration:underline" > Synthesis using Flip-Flop  </div> 
+                            <div align="left">&nbsp; As a simple exersise,students can verify the operation of a serial (sequential)adder(1 bit full adder)
+							Carry output of a one bit full adder can be fed back to the input of a D Flip-Flop.The output of this Flip=Flop can be fed back to the carry input of that adder. </div>
+ <br/>
+  <div align="center">
+                            <img src="images/1.jpg" />
+                             <br />
+                           Figure 1:&nbsp;Verification of the functionality of a combinational circuit using seqential element(Flip-Flop)
+                            </div>
+            	<br/>
+				
+				<div align="center">
+                            <img src="images/exp8-synthesis.jpg" />
+                             <br />
+                            Figure 2:&nbsp;Gate diagram of combinational circuit(1 bit full adder)
+                            </div>
+							<br />
+  <div align="center">
+                            <img src="images/truth table 1 bit.jpg" />
+                             <br />
+                            Figure 3:&nbsp;Truth table of a 1 bit fulladder                            
+                        </div>
+                    </section>
+                    <!-------------------------- Third section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-3">
+                        <div class="icon" id="experiment-article-section-3-icon">
+                            <!-- Enclose the icon image of your lab. -->
+                            <img src="../images/objective.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-3-heading">
+                            Objective
+                        </div>
+
+                        <div class="content" id="experiment-article-section-3-content">                            
+                            <p><b>Aim of the Experiment</b></p>
+                <br />
+               The objective of part 1 of the experiment is to fully understand the functionality of S-R Flip-Flop.<br/>
+               The objective of part 2 of the experiment is to fully understand the functionality of J-K Flip-Flop.<br/>
+               The objective of part 3 of the experiment is to fully understand the functiponality of D Flip-Flop.<br />
+			   The objective of part 4 of the experiment is to verufy the functiponality of i bit full adder(Combinational Circuit) using D Flip-Flop.<br /> 
+                        </div>
+                    </section>
+                    <!-------------------------- Fourth section of the article---------------------------------------->
+<section id="experiment-article-section-5">
+                        <div class="icon" id="experiment-article-section-5-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/procedure.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-5-heading">
+                            Procedure
+                        </div>
+
+                        <div class="content" id="experiment-article-section-5-content">                            
+                            <p><p>Please follow these steps to do the experiment.</p>
+                            <br />
+                            <br />
+                            
+                            <ul style="list-style:none">
+ 
+    <li class="expt1"> 1.&nbsp; At first apply high voltage to V<sub>cc1</sub>&nbsp;&amp;&nbsp;V<sub>cc2</sub>.So that the "Clock Start" button
+	will be enabled.<br/>
+   
+    </ul>    
+    <br />
+    </li>                      
+  <img src="images/sr1.jpg" />
+                                <br />
+                               
+                              
+         <ul style="list-style:none">
+ 
+    <li class="expt1"> 2.&nbsp;  Next, start the clock pulse by clicking on the "Clock Start" button and after generation of some clock pulses stop
+	the clock pulse by clicking on the"clock Stop" button . <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+  
+                                <br />
+                               <img src="images/sr2.jpg" />
+                                <br />
+                                <br />
+                               
+                                                       
+          <ul style="list-style:none">
+ 
+    <li class="expt1"> 3.&nbsp;  Now apply high voltage to S input and low voltage to R input and set "No of clock pulses" to 1.See the changes at output(Q and <font style="text-decoration:overline">Q</font>) at positive clock edge.<br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/sr3.jpg" />
+                                <br />
+                                <br />
+                             
+                                 <ul style="list-style:none">
+ 
+    <li class="expt1"> 4.&nbsp;  Now apply high voltage to R input and low voltage to S input and start the clock pulse.See the changes at output(Q and <font style="text-decoration:overline">Q</font>) at positive clock edge. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                               <img src="images/sr4.jpg" />
+                                <br />
+                                <br />
+                               
+                                 <ul style="list-style:none">
+    <li class="expt1"> 5.&nbsp;  Next,apply low voltage to both the inputs(S and R) and start the clock pulse again.See the changes at output(Q and <font style="text-decoration:overline">Q</font>) at positive clock edge. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                             <img src="images/sr5.jpg" />
+                               
+                                <br />
+                                <br />
+								
+								<ul style="list-style:none">
+    <li class="expt1"> 6.&nbsp;  Next,apply high voltage to both the inputs(S and R) and start the clock pulse again.See both the outputs(Q and <font style="text-decoration:overline">Q</font>) will be zero.It is "not allowed" condition. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                             <img src="images/sr6.jpg" />
+							 <br />
+                              <br />
+								
+                                 <p class="biggerblue" align="left">Please follow these steps to do the experiment(Part-II)</p>
+
+<br />
+
+ <ul style="list-style:none">
+ 
+    <li class="expt1"> 1.&nbsp; At first apply high voltage to V<sub>cc1</sub>&nbsp;&amp;&nbsp;V<sub>cc2</sub>.So that the "Clock Start" button
+	will be enabled.<br/>
+   
+    </ul>    
+    <br />
+    </li>                      
+  <img src="images/jk1.jpg" />
+                                <br />
+                               
+                              
+         <ul style="list-style:none">
+ 
+    <li class="expt1"> 2.&nbsp;  Next, start the clock pulse by clicking on the "Clock Start" button and after generation of some clock pulses stop
+	the clock pulse by clicking on the"clock Stop" button . <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+  
+                                <br />
+                               <img src="images/jk2.jpg" />
+                                <br />
+                                <br />
+                               
+                                                       
+          <ul style="list-style:none">
+ 
+    <li class="expt1"> 3.&nbsp;  Now apply high voltage to J input and low voltage to K input and set "No of clock pulses" to 1.See the changes at output(Q and <font style="text-decoration:overline">Q</font>) at positive clock edge.<br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/jk3.jpg" />
+                                <br />
+                                <br />
+                             
+                                 <ul style="list-style:none">
+ 
+    <li class="expt1"> 4.&nbsp;  Now apply high voltage to K input and low voltage to J input and start the clock pulse.See the changes at output(Q and <font style="text-decoration:overline">Q</font>) at positive clock edge. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                               <img src="images/jk4.jpg" />
+                                <br />
+                                <br />
+                               
+                                 <ul style="list-style:none">
+    <li class="expt1"> 5.&nbsp;  Next,apply low voltage to both the inputs(J and K) and start the clock pulse again.See the changes at output(Q and <font style="text-decoration:overline">Q</font>) at positive clock edge. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                             <img src="images/jk5.jpg" />
+                               
+                                <br />
+                                <br />
+								
+								<ul style="list-style:none">
+    <li class="expt1"> 6.&nbsp;  Next,apply high voltage to both the inputs(J and K) and start the clock pulse again.See both the outputs(Q and <font style="text-decoration:overline">Q</font>) will toggle at positive clock edge. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                             <img src="images/jk6.jpg" />
+							 <br />
+                             <br />
+								
+        
+                            <p class="biggerblue" align="left">Please follow these steps to do the experiment(Part-III)</p>
+                          <br />
+
+ <ul style="list-style:none">
+ 
+    <li class="expt1"> 1.&nbsp; At first apply high voltage to V<sub>cc1</sub>&nbsp;&amp;&nbsp;V<sub>cc2</sub>.So that the "Clock Start" button
+	will be enabled.<br/>
+   
+    </ul>    
+    <br />
+    </li>                      
+  <img src="images/d1.jpg" />
+                                <br />
+                               
+                              
+         <ul style="list-style:none">
+ 
+    <li class="expt1"> 2.&nbsp;  Next, start the clock pulse by clicking on the "Clock Start" button and after generation of some clock pulses stop
+	the clock pulse by clicking on the"clock Stop" button . <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+  
+                                <br />
+                               <img src="images/d2.jpg" />
+                                <br />
+                                <br />
+                               
+                                                       
+          <ul style="list-style:none">
+ 
+    <li class="expt1"> 3.&nbsp;  Now apply high voltage to D input and set "No of clock pulses" to 1.See the changes at output(Q and <font style="text-decoration:overline">Q</font>) at positive clock edge.<br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/d3.jpg" />
+                                <br />
+                                <br />
+                             
+                                 <ul style="list-style:none">
+ 
+    <li class="expt1"> 4.&nbsp;  Now apply low voltage to D input and start the clock pulse.See the changes at output(Q and <font style="text-decoration:overline">Q</font>) at positive clock edge. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                               <img src="images/d4.jpg" />
+                                <br />
+                                <br />
+								
+								
+								
+                                
+        
+                            <p class="biggerblue" align="left">Please follow these steps to do the experiment(Part-IV)</p>
+                          <br />
+
+ <ul style="list-style:none">
+ 
+    <li class="expt1"> 1.&nbsp; At first click on the "Browse Block" button.<br/>
+   
+    </ul>    
+    <br />
+    </li>                      
+  <img src="images/synthesis1.jpg" />
+                                <br />
+                               
+                              
+         <ul style="list-style:none">
+ 
+    <li class="expt1"> 2.&nbsp;  Next, click on the Ex-or block . <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+  
+                                <br />
+                               <img src="images/synthesis2.jpg" />
+                                <br />
+                                <br />
+                               
+                                                       
+          <ul style="list-style:none">
+ 
+    <li class="expt1"> 3.&nbsp;  Now drag the Ex-or block and place it on the bread board.<br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                                <img src="images/synthesisexor.jpg" />
+                                <br />
+                                <br />
+                             
+                                 <ul style="list-style:none">
+ 
+    <li class="expt1"> 4.&nbsp;  In the same way drag all the blocks and place them on the bread board according to the following manner. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                               <img src="images/synthesis3.jpg" />
+                                <br />
+                                <br />
+					  <ul style="list-style:none">
+    <li class="expt1"> 5.&nbsp;  Next,click on the first node of the "Bus Block" and start to make a connection with the first pin of the Ex-or Block. <br/>
+    
+    </ul>    
+    <br />
+    </li>                      
+   
+                                <br />
+                             <img src="images/synthesis4.jpg" />
+                               
+                                <br />
+                                <br />
+								
+								<ul style="list-style:none">
+    <li class="expt1"> 6.&nbsp;  Now conection with the first pin of the Ex-or block is completed . <br/>
+    
+    </ul>    
+    <br />
+	</li>
+	
+                                <br />
+                               <img src="images/synthesisexor1.jpg" />
+                                <br />
+                                <br />
+								<img src="images/synthesisexor2.jpg" />
+								<br />
+								<br />
+								
+								<ul style="list-style:none">
+    <li class="expt1"> 7.&nbsp; In the same way we can proceed in making circuit connection. <br/>
+    
+    </ul>    
+    <br />
+	</li>
+	
+                                <br />
+                               <img src="images/synthesis5.jpg" />
+                                <br />
+                                <br />
+								<img src="images/synthesis6.jpg" />
+								<br />
+								<br />
+								<ul style="list-style:none">
+    <li class="expt1"> 8.&nbsp; Now Circuit connection is completed. In this circuit connection sixth pin of NAND block is connected to the fifth pin
+	of Ex-or block.Here output of D Flip-Flop is fed to the C<sub>in</sub> input of the combinational circuit(one bit full adder).<br/>
+    
+    </ul>    
+    <br />
+	</li>
+	<br />
+								<img src="images/synthesis7.jpg" />
+								<br />
+								<br />
+								
+								<ul style="list-style:none">
+    <li class="expt1"> 9.&nbsp; Next, apply high voltage to V<sub>cc1</sub>, V<sub>cc2</sub>, V<sub>cc3</sub>, V<sub>cc4</sub>, V<sub>cc5</sub> and also apply low volage to GND<sub>1</sub>, GND<sub>2</sub>, GND<sub>3</sub>, GND<sub>4</sub>, GND<sub>5</sub> and set No of clock pulses to 1.So only one clock pulse is generated and then clock is stopped.Apply low voltage to both the inputs A and B and start the clock pulse.One clock pulse is generated and S = 0, C<sub>out</sub> = 0.Because at this clock edge C<sub>in</sub> = 0(C<sub>in</sub> = C<sub>out</sub> of previous clock edge). <br/>
+    
+    </ul>    
+    <br />
+	</li>
+	<br />
+								<img src="images/synthesis8.jpg" />
+								<br />
+								<br />
+								
+								<ul style="list-style:none">
+    <li class="expt1"> 10.&nbsp; Apply high voltage to both the inputs A and B and start the clock pulse.One clock pulse is generated and S = 0, C<sub>out</sub> = 1.Because at this clock edge C<sub>in</sub> = 0(C<sub>in</sub> = C<sub>out</sub> of previous clock edge). <br/>
+    
+    </ul>    
+    <br />
+	</li>
+	<br />
+								<img src="images/synthesis9.jpg" />
+								<br />
+								<br />
+								
+								<ul style="list-style:none">
+    <li class="expt1"> 11.&nbsp; Again start the clock pulse.Now S= 1, C<sub>out</sub> = 1.Because at this clock edge C<sub>in</sub> = 1(C<sub>in</sub> = C<sub>out</sub> of previous clock edge). <br/>
+    
+    </ul>    
+    <br />
+	</li>
+	<br />
+								<img src="images/synthesis10.jpg" />
+								<br />
+								<br />
+								
+								<ul style="list-style:none">
+    <li class="expt1"> 12.&nbsp; Next apply low voltage to both the inputs A and B.Again start the clock pulse.Now S= 1, C<sub>out</sub> = 0.Because at this clock edge C<sub>in</sub> = 1(C<sub>in</sub> = C<sub>out</sub> of previous clock edge).<br/>
+    
+    </ul>    
+    <br />
+	</li>
+	<br />
+								<img src="images/synthesis11.jpg" />
+								<br />
+								<br />
+                               
+							   <ul style="list-style:none">
+    <li class="expt1"> 13.&nbsp; Again start the clock pulse.In this clock edge we will see S = 0,  C<sub>out</sub> = 0.Because at this clock edge C<sub>in</sub> = 0(C<sub>in</sub> = C<sub>out</sub> of previous clock edge). <br/>
+    
+    </ul>    
+    <br />
+	</li>
+	<br />
+								<img src="images/synthesis12.jpg" />
+								<br />
+								<br />
+								
+								 <ul style="list-style:none">
+    <li class="expt1"> 14.&nbsp; We can verify the outputs(S and C<sub>out</sub>) for all the combinations of A, B, C<sub>in</sub>. <br/>
+    
+    </ul>    
+    <br />
+	</li>
+	<br /></p>                            
+                        </div>
+                    </section>
+                    
+                    <!-------------------------- Fifth section of the article---------------------------------------->
+<section id="experiment-article-section-4">
+                        <div class="icon" id="experiment-article-section-4-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/simulation.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-4-heading">
+                            Simulator</div>
+                        
+
+                        <div align="left">
+                        
+                            	<table width="100%" cellpadding="0px" cellspacing="0px" border="0px">
+                                
+                                	<!--<tr height="30px">
+                                    	<td colspan="2" valign="top"><p class="medium_black">Results Tabulation</p></td>
+                                    </tr> -->
+                                
+                                	<tr height="30px">
+                                    	<td align="left" style="padding-left:35px;">
+                                        	
+                                        </td>
+                                        <td align="right" valign="middle" style="padding-right:35px;">
+                                        <div id="help1">
+                                        	<img src="images/help.jpg" width="30px" style="cursor:pointer;" title="Help" onClick="window.open('content/help.html','helpWindow','width=900,height=800,screenX=300,screenY=120')" />
+                                            </div>
+                                            
+                                            <div id="help2" style="display:none">
+                                        	<img src="images/help.jpg" width="30px" style="cursor:pointer;" title="Help" onClick="window.open('content/help1.html','helpWindow','width=830,height=900,screenX=300,screenY=120')" />
+                                            </div>
+                                            
+                                            <div id="help3" style="display:none">
+                                        	<img src="images/help.jpg" width="30px" style="cursor:pointer;" title="Help" onClick="window.open('content/help2.html','helpWindow','width=830,height=900,screenX=300,screenY=120')" />
+                                            </div>
+											 <div id="help4" style="display:none">
+                                        	<img src="images/help.jpg" width="30px" style="cursor:pointer;" title="Help" onClick="window.open('content/help3.html','helpWindow','width=830,height=900,screenX=300,screenY=120')" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr height="15px"><td colspan="2"></td></tr>
+                                                     
+                                	<tr height="30px">
+                                    
+                                    	<td align="left" style="padding-left:35px;">
+                                        	<input type="button" name="part1" value="Part 1" class="btn_sub1" onclick="showDiv('1');" />
+                                            &nbsp;&nbsp;
+                                        	<input type="button" name="part2" value="Part 2" class="btn_sub1" onclick="showDiv('2');" />
+                                           &nbsp;&nbsp;
+                                           <input type="button" name="part3" value="Part 3" class="btn_sub1" onclick="showDiv('3');" />
+										   &nbsp;&nbsp;
+                                           <input type="button" name="part3" value="Part 4" class="btn_sub1" onclick="showDiv('4');" />
+										   
+                                            
+                                        </td>
+                                        <td align="right" valign="middle" style="padding-right:35px;">
+                                        </td>
+                                        
+                                    </tr>
+                                                              
+                                </table>
+                                
+                        
+                        
+                    	<div align="center" id="part1Div">
+                        
+                        <div align="center"><p class="faqs">Part 1 of the Experiment</p></div>
+                        
+                          <object width="800" height="600">
+                              <param name="movie" value="content/expt1.swf">
+                              <embed src="content/expt1.swf" width="800" height="600">
+                              </embed>
+                          </object>
+                          
+                        </div>  
+                        
+                    	<div align="center" id="part2Div" style="display:none;">
+                        
+                         <div align="center"><p class="faqs">Part 2 of the Experiment</p></div>
+                        
+                         <object width="800" height="600">
+                              <param name="movie" value="content/expt2.swf">
+                              <embed src="content/expt2.swf" width="800" height="600">
+                              </embed>
+                          </object>
+                          
+                        </div>  
+                        
+                        
+                     <div align="center" id="part3Div" style="display:none;">
+                        
+                         <div align="center"><p class="faqs">Part 3 of the Experiment</p></div>
+                        
+                         <object width="800" height="600">
+                              <param name="movie" value="content/expt3.swf">
+                              <embed src="content/expt3.swf" width="800" height="600">
+                              </embed>
+                          </object>
+                          
+                        </div> 
+						
+						
+						<div align="center" id="part4Div" style="display:none;">
+                        
+                         <div align="center"><p class="faqs">Part 4 of the Experiment</p></div>
+                        
+                         <object width="800" height="600">
+                              <param name="movie" value="content/expt4.swf">
+                              <embed src="content/expt4.swf" width="800" height="600">
+                              </embed>
+                          </object>
+                          
+                        </div> 
+                          
+                        </div>  
+                    </section>
+                    
+
+                    <!-------------------------- Sixth section of the article---------------------------------------->
+
+                    
+                    <!-------------------------- Seventh section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-7">
+                        <div class="icon" id="experiment-article-section-7-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/quizzes.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-7-heading">
+                            Quizzes
+                        </div>
+
+                        <div class="content" id="experiment-article-section-7-content">                            
+                            <p>Not now</p>                           
+                        </div>
+                    </section>
+                    <!-------------------------- Eight section of the article---------------------------------------->
+
+                    <section id="experiment-article-section-8">
+                        <div class="icon" id="experiment-article-section-8-icon">
+                            <!-- Enclose the icon image of your lab.-->
+                            <img src="../images/reference.jpg"></div>
+
+                        <div class="heading" id="experiment-article-section-8-heading">
+                            Reference
+                        </div>
+
+                        <div class="content" id="experiment-article-section-8-content">                            
+                           <li>Digital Principles and Applications, by Leach and Malvino.</li>
+                                <li>Digital Logic Design, Leach, by Malvino, and Saha</li>
+                                <li>Engineering Digital Design, by Richard F. Tinder.</li>
+                                <li>Digital Logic and Computer Design, by M. Morris Mano</li>                                
+                            	<li>Digital Systems: Principles and Applications, Neal S. Widmer , Ronald J. Tocci , Gregory L. Moss</li>                            
+                        </div>
+                    </section>                   
+
+                </div>
+            </article>
+<footer class="default" id="lab-footer">
+                <!-- Put the content here-->
+                <div style="margin-left:40%; margin-right:40% ">
+                    Copyright &copy; 2011 Indian Institute of Technology Kharagpur,<a href="../license/index.html" target="_blank" style="margin:auto"> Licensing Terms </a>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
