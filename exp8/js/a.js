@@ -5,6 +5,7 @@ function  showDiv(str)
 		document.getElementById("part1Div").style.display = '';
 		document.getElementById("part2Div").style.display = 'none';
 		document.getElementById("part3Div").style.display = 'none';
+		document.getElementById("part4Div").style.display = 'none';
 		document.getElementById("help2").style.display = 'none';
 		document.getElementById("help3").style.display = 'none';
 		document.getElementById("help1").style.display = '';
@@ -14,23 +15,35 @@ function  showDiv(str)
 		document.getElementById("part2Div").style.display = '';
 		document.getElementById("part1Div").style.display = 'none';
 		document.getElementById("part3Div").style.display = 'none';
+		document.getElementById("part4Div").style.display = 'none';
 		document.getElementById("help1").style.display = 'none';
 		document.getElementById("help3").style.display = 'none';
 		document.getElementById("help2").style.display = '';
 		
 	}
 	
-	else
+	else if(str == '3')
 	{
 		
 	    	document.getElementById("part2Div").style.display = 'none';
 		document.getElementById("part1Div").style.display = 'none';
 		document.getElementById("part3Div").style.display = '';
+		document.getElementById("part4Div").style.display = 'none';
 		document.getElementById("help1").style.display = 'none';
 		document.getElementById("help2").style.display = 'none';
 		document.getElementById("help3").style.display = '';
 			
 		
+	}
+	else{
+		document.getElementById("part2Div").style.display = 'none';
+		document.getElementById("part1Div").style.display = 'none';
+		document.getElementById("part1Div").style.display = 'none';
+		document.getElementById("part4Div").style.display = '';
+		document.getElementById("help1").style.display = 'none';
+		document.getElementById("help2").style.display = 'none';
+		document.getElementById("help3").style.display = '';
+			
 	}
 	
 	

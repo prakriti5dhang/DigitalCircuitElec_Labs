@@ -182,27 +182,27 @@ cursor:pointer;
 
 #loff1{
   position:absolute;
-  top:376px;
-  right:112px;
+  top:366px;
+  right:110px;
   visibility:block;
 }
 #lon1{
   position:absolute;
-  top:377px;
-  right:110px;
+  top:367px;
+  right:103px;
   visibility:hidden;
 }
 
 #loff2{
   position:absolute;
-  top:376px;
-  right:30px;
+  top:366px;
+  right:25px;
   visibility:block;
 }
 #lon2{
   position:absolute;
-  top:376px;
-  right:28px;
+  top:366px;
+  right:20px;
   visibility:hidden;
 }
 

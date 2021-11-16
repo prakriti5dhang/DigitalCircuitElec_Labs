@@ -1,6 +1,6 @@
-/* /*Lab:exp_8_Part1_S-R flip flop
-	File name: addtbl_exp8a.js
-  content: inert  into table, plot graph
+/* /*Lab:exp_8_Part2_J-K flip flop
+	File name: addtbl_exp8b.js
+  content: table creation and plotting function call
     Author:Prakriti Dhang */
 
     /* Table creation */
@@ -11,14 +11,14 @@ var clmns, vlt, columns, rest;
 var dataPoints = [];
 
 var table, rows, switching, i, x, y, shouldSwitch;
-function srintbl(){
-    table = document.getElementById("mytablesr");
+function jkintbl(){
+    table = document.getElementById("mytablejk");
 
     
     arr[0]=clkp[0];
 
-    arr[1]=sr[0];
-    arr[2]=sr[1];
+    arr[1]=jk[0];
+    arr[2]=jk[1];
     
 
     arr[3]=qq1[0];
@@ -42,11 +42,11 @@ function srintbl(){
 }
 
 
-     function srplot(){
-        document.getElementById('graphshowsr').style.display="block";
-       
-        splot();
-        rplot();
+     function jkplot(){
+        document.getElementById('graphshowjk').style.display="block";
+       plotgraph();
+        jplot();
+       kplot();
         qplot();
         qbarplot();
         

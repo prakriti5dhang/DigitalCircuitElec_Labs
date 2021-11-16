@@ -9,6 +9,11 @@
     var ctxq;
     var ctxqb;
     var ctxr;
+    var ctxs;
+    var p= 45; //period  p = 70 long square wave
+    var o= 25; //oscillation
+    var ps= 90; //period  p = 70 long square wave
+    var os= 25; //oscillation
 
     function drawGridclk(){
 
@@ -19,70 +24,86 @@
    cwidth=  ctxc.canvas.width;
    cheight= ctxc.canvas.height;
    
-   
-    ctxc.beginPath();
-    for (x=0;x<=cwidth;x+=55) {
-        ctxc.moveTo(x, 0);
-        ctxc.lineTo(x, cheight);
-        //ctx.fillText("x", 1, 50);
-    }
-        for (y=0;y<=cheight;y+=10) {
-            ctxc.moveTo(0, y);
-            ctxc.lineTo(cwidth, y);
-           
+   ctxc.beginPath();
+        for (x=0;x<=cwidth;x+=55) {
+            ctxc.moveTo(x, 0);
+            ctxc.lineTo(x, cheight);
+            //ctx.fillText("x", 1, 50);
         }
-        canvas.style.background = "black"; 
-        ctxc.strokeStyle = "Gainsboro";  
-        ctxc.lineWidth = 0.3;
-        //ctx.fillText("x", 1, 50);
+            for (y=0;y<=cheight;y+=10) {
+                ctxc.moveTo(0, y);
+                ctxc.lineTo(cwidth, y);
+               
+            }
+            canvas.style.background = "black"; 
+            ctxc.strokeStyle = "Gainsboro";  
+            ctxc.lineWidth = 0.1;
+            //ctx.fillText("x", 1, 50);*/
+           
+            ctxc.stroke();
+        
+    }
+    function squareY(x) {
+        return( (x%p)<o?o:0 );
+    }
+
+    var paused=false;
+    function clockstop(){
        
-        ctxc.stroke();
-        
-        
-    }
+        paused=true;
+        document.getElementById('clkb').style.display="block";
+            document.getElementById('clkbs').style.display="none";
+      }
 
-
+      /*function clockstart(){
+        paused=false;
+        clockpulse();
+        requestAnimationFrame(animate);
+      }    */
     function clockpulse(){
-    
-        drawGridclk(ctxc);
-        var tempx=0; // starting postion of the wave
-        var tempy=60; // starting position of the wave in x axis
-        var vpss=2; // y axis position
-        var phsw=0;  // position of the wave in x axis
-        var posts=0; //position of the wave in y axis
-        var  fos=20; //width of the  each pulse in square wave
-        var dtyc=2; // space between pulses
-        ctxc.lineWidth=1.5;
-        ctxc.beginPath();
-        for(var z=0; z<cwidth; z++){
-            
-          for(var x=0; x<=parseInt(fos); x++){
-            tempx+=1;
-           
-            ctxc.lineTo(tempx-parseInt(phsw),parseInt(vpss)*tempy-50+parseInt(posts));
-            
-    
-        }
-        if(z%parseInt(dtyc)===0)
-        {
-            tempy=30;
-        }
-        else
-        {
-            tempy=60;
-        }
-    }
-    ctxc.strokeStyle = "Green"; 
         
-    ctxc.stroke();
-      
+        var fps =40;
+        var n=0;
+        drawGridclk(ctxc);
+        
+    ctxc.lineWidth=1.5;
+
+    
+    requestAnimationFrame(animate);
+    animate();
+    function animate(){
+        if(paused){return;}
+        paused=false;
+        setTimeout(function(){
+            requestAnimationFrame(animate);
+
+        n+=1.5;
+        if(n>600){ //n >300
+            n=0;
+        }
+       //ctxc.clearRect(0,0,cwidth,cheight);
+            ctxc.beginPath();
+           for(var x=0;x<n;x++){
+                var y=squareY(x);
+                ctxc.lineTo(x,y+50); // y cordinate
+            }
+            ctxc.strokeStyle = "Green"; 
+            ctxc.stroke();
+
+        }, 3000/fps);
     }
+       
+    
+        
+      }
+    
 
 
     
 
 /*   Draw Grid for S */
 function drawGrids(){
+    
        canvas = document.getElementById("myCanvass");
      ctxs = canvas.getContext("2d");
    cwidth=  ctxs.canvas.width;
@@ -100,48 +121,83 @@ function drawGrids(){
         }
         canvas.style.background = "black"; 
         ctxs.strokeStyle = "Gainsboro";  
-        ctxs.lineWidth = 0.3;
+        ctxs.lineWidth = 0.2;
         ctxs.stroke();
 
     }
+  
 
+    function squareS(x) {
+        return( (x%ps)<os?os:0 );
+    }
 
-    function clockpulses(){
-
+    function clockpulses1(){
+        var fps =40; /* speed of the square wave */
+        var n=0;
         drawGrids(ctxs);
-        var tempx=0; // starting postion of the wave
-        var tempy=60; // starting position of the wave in x axis
-        var vpss=2; // y axis position
-        var phsw=0;  // position of the wave in x axis
-        var posts=0; //position of the wave in y axis
-        var  fos=40; //width of the  each pulse in square wave
-        var dtyc=2; // space between pulses
-        ctxs.lineWidth=2;
-        ctxs.beginPath();
-        for(var z=0; z<cwidth; z++){
+       
+        ctxs.lineWidth=1.5;
+        requestAnimationFrame(animate);
+        animate();
+        function animate(){
             
-          for(var x=0; x<=parseInt(fos); x++){
-            tempx+=1;
-           
-            ctxs.lineTo(tempx-parseInt(phsw),parseInt(vpss)*tempy-50+parseInt(posts));
-           
+            setTimeout(function(){
+                requestAnimationFrame(animate);
     
+            n+=1.5;
+            if(n>100){ 
+                n=0;
+            }
+           //ctxs.clearRect(0,0,cwidth,cheight);
+                ctxs.beginPath();
+               for(var x=0;x<n;x++){
+                    var y=squareS(x+28);
+                    ctxs.lineTo(x,y+50); // y cordinate
+                }
+                ctxs.strokeStyle = "Green"; 
+                ctxs.stroke();
+    
+            }, 3000/fps);
         }
-        if(z%parseInt(dtyc)===0)
-        {
-            tempy=30;
-        }
-        else
-        {
-            tempy=60;
-        }
-    }
-        ctxs.strokeStyle = "Green"; 
+      
         
-        ctxs.stroke();
+    }
+
+    function clockpulses0(){
+        var fps =60; /* speed of the square wave */
+        var n=0;
+        drawGrids(ctxs);
+       
+        ctxs.lineWidth=1;
+        requestAnimationFrame(animate);
+        animate();
+        function animate(){
+            
+            setTimeout(function(){
+                requestAnimationFrame(animate);
+    
+            n+=1.5;
+            if(n>200){ 
+                n=0;
+            }
+           // ctxc.clearRect(0,0,cwidth,cheight);
+                ctxs.beginPath();
+               
+               for(var x=2;x<n;x++){
+                ctxs.moveTo(x,75);
+                ctxs.lineTo(0, 75);
+                   
+                }
+                ctxs.strokeStyle = "Green"; 
+                ctxs.stroke();
+    
+            }, 3000/fps);
+        }
       
 
     }
+
+
     
         /*   Draw Grid for R */
 
@@ -163,46 +219,82 @@ function drawGrids(){
             }
             canvas.style.background = "black"; 
             ctxr.strokeStyle = "Gainsboro";  
-            ctxr.lineWidth = 0.3;
+            ctxr.lineWidth = 0.2;
             ctxr.stroke();
         }
 
 
-        function clockpulser(){
+        function clockpulser1(){
 
-            drawGridr(ctxr);
-            var tempx=0; // starting postion of the wave
-            var tempy=60; // starting position of the wave in x axis
-            var vpss=2; // y axis position
-            var phsw=0;  // position of the wave in x axis
-            var posts=0; //position of the wave in y axis
-            var  fos=80; //width of the  each pulse in square wave
-            var dtyc=2; // space between pulses
-            ctxr.lineWidth=2;
-            ctxr.beginPath();
-            for(var z=0; z<cwidth; z++){
-                
-              for(var x=0; x<=parseInt(fos); x++){
-                tempx+=1;
-               
-                ctxr.lineTo(tempx-parseInt(phsw),parseInt(vpss)*tempy-50+parseInt(posts));
-               
-        
-            }
-            if(z%parseInt(dtyc)===0)
-            {
-                tempy=30;
-            }
-            else
-            {
-                tempy=60;
-            }
-        }
-            ctxr.strokeStyle = "Green"; 
             
-            ctxr.stroke();
-          
+           
+            var fps =60; /* speed of the square wave */
+            var n=0;
+            drawGrids(ctxr);
+           
+            ctxr.lineWidth=1;
+            requestAnimationFrame(animate);
+            animate();
+            function animate(){
+                
+                setTimeout(function(){
+                    requestAnimationFrame(animate);
+        
+                n+=1.5;
+                if(n>200){ 
+                    n=0;
+                }
+               // ctxc.clearRect(0,0,cwidth,cheight);
+                    ctxr.beginPath();
+                   
+                   for(var x=2;x<n;x++){
+                    ctxr.moveTo(x,50);
+                    ctxr.lineTo(0, 50);
+                       
+                    }
+                    ctxr.strokeStyle = "Green"; 
+                    ctxr.stroke();
+        
+                }, 3000/fps);
+            }
 
+        }
+
+
+
+
+        function clockpulser0(){
+            var fps =60; /* speed of the square wave */
+            var n=0;
+            drawGrids(ctxr);
+           
+            ctxr.lineWidth=1;
+            requestAnimationFrame(animate);
+            animate();
+            function animate(){
+                
+                setTimeout(function(){
+                    requestAnimationFrame(animate);
+        
+                n+=1.5;
+                if(n>200){ 
+                    n=0;
+                }
+               // ctxc.clearRect(0,0,cwidth,cheight);
+                    ctxr.beginPath();
+                   
+                   for(var x=2;x<n;x++){
+                    ctxr.moveTo(x,75);
+                    ctxr.lineTo(0, 75);
+                       
+                    }
+                    ctxr.strokeStyle = "Green"; 
+                    ctxr.stroke();
+        
+                }, 3000/fps);
+            }
+          
+    
         }
 /*   Draw Grid for Q  */
 
@@ -224,44 +316,73 @@ function drawGridq(){
                 }
                 canvas.style.background = "black"; 
                 ctxq.strokeStyle = "Gainsboro";  
-                ctxq.lineWidth = 0.3;
+                ctxq.lineWidth = 0.2;
                 ctxq.stroke();
 
 
             }
-                function clockpulseq(){
-    
+                function clockpulseq1(){
+                    var fps =60; /* speed of the square wave */
+                    var n=0;
                     drawGridq(ctxq);
-                    var tempx=0;
-                    var tempy=60;
-                    var vpss=2;
-                    var phsw=0;
-                    var posts=0;
-                    var  fos=20;
-                    var dtyc=2;
-                    ctxq.lineWidth=2;
-                    ctxq.beginPath();
-                    for(var z=0; z<cwidth; z++){
-                        
-                      for(var x=0; x<=parseInt(fos); x++){
-                        tempx+=1;
-                       
-                        ctxq.lineTo(tempx-parseInt(phsw),parseInt(vpss)*tempy-50+parseInt(posts));
-                       
+                    ctxq.lineWidth=1;
+            requestAnimationFrame(animate);
+            animate();
+            function animate(){
                 
-                    }
-                    if(z%parseInt(dtyc)===0)
-                    {
-                        tempy=30;
-                    }
-                    else
-                    {
-                        tempy=60;
-                    }
+                setTimeout(function(){
+                    requestAnimationFrame(animate);
+        
+                n+=1.5;
+                if(n>200){ 
+                    n=0;
                 }
+               // ctxc.clearRect(0,0,cwidth,cheight);
+                    ctxq.beginPath();
+                   
+                   for(var x=2;x<n;x++){
+                    ctxq.moveTo(x,50);
+                    ctxq.lineTo(0, 50);
+                       
+                    }
                     ctxq.strokeStyle = "Green"; 
-                    
                     ctxq.stroke();
+        
+                }, 3000/fps);
+            }
+                    
+                  
+                }
+                function clockpulseq0(){
+                    var fps =60; /* speed of the square wave */
+                    var n=0;
+                    drawGridq(ctxq);
+                    ctxq.lineWidth=1;
+            requestAnimationFrame(animate);
+            animate();
+            function animate(){
+                
+                setTimeout(function(){
+                    requestAnimationFrame(animate);
+        
+                n+=1.5;
+                if(n>200){ 
+                    n=0;
+                }
+               // ctxc.clearRect(0,0,cwidth,cheight);
+                    ctxq.beginPath();
+                   
+                   for(var x=2;x<n;x++){
+                    ctxq.moveTo(x,75);
+                    ctxq.lineTo(0, 75);
+                       
+                    }
+                    ctxq.strokeStyle = "Green"; 
+                    ctxq.stroke();
+        
+                }, 3000/fps);
+            }
+                    
                   
                 }
 
@@ -284,57 +405,72 @@ function drawGridqbar(){
         }
         canvas.style.background = "black"; 
         ctxqb.strokeStyle = "Gainsboro";  
-        ctxqb.lineWidth = 0.3;
+        ctxqb.lineWidth = 0.2;
         ctxqb.stroke();
 
 }
 
-function clockpulseqbar(){
-    
+function clockpulseqbar0(){
+    var fps =60; /* speed of the square wave */
+    var n=0;
     drawGridqbar(ctxqb);
-    var tempx=0;
-    var tempy=60;
-    var vpss=2;
-    var phsw=0;
-    var posts=0;
-    var  fos=20;
-    var dtyc=2;
-    ctxqb.lineWidth=2;
-    ctxqb.beginPath();
-    for(var z=0; z<cwidth; z++){
+   
+    ctxqb.lineWidth=1;
+    requestAnimationFrame(animate);
+    animate();
+    function animate(){
         
-      for(var x=0; x<=parseInt(fos); x++){
-        tempx+=1;
-       
-        ctxqb.lineTo(tempx-parseInt(phsw),parseInt(vpss)*tempy-50+parseInt(posts));
-       
+        setTimeout(function(){
+            requestAnimationFrame(animate);
 
-    }
-    if(z%parseInt(dtyc)===0)
-    {
-        tempy=30;
-    }
-    else
-    {
-        tempy=60;
+        n+=1.5;
+        if(n>200){ 
+            n=0;
+        }
+       // ctxc.clearRect(0,0,cwidth,cheight);
+            ctxqb.beginPath();
+           
+           for(var x=2;x<n;x++){
+            ctxqb.moveTo(x,75);
+            ctxqb.lineTo(0, 75);
+               
+            }
+            ctxqb.strokeStyle = "Green"; 
+            ctxqb.stroke();
+
+        }, 3000/fps);
     }
 }
-    ctxqb.strokeStyle = "Green"; 
-    
-    ctxqb.stroke();
-  
+function clockpulseqbar1(){
+    var fps =60; /* speed of the square wave */
+    var n=0;
+    drawGridqbar(ctxqb);
+   
+    ctxqb.lineWidth=1;
+    requestAnimationFrame(animate);
+    animate();
+    function animate(){
+        
+        setTimeout(function(){
+            requestAnimationFrame(animate);
+
+        n+=1.5;
+        if(n>200){ 
+            n=0;
+        }
+       // ctxc.clearRect(0,0,cwidth,cheight);
+            ctxqb.beginPath();
+           
+           for(var x=2;x<n;x++){
+            ctxqb.moveTo(x,50);
+            ctxqb.lineTo(0, 50);
+               
+            }
+            ctxqb.strokeStyle = "Green"; 
+            ctxqb.stroke();
+
+        }, 3000/fps);
+    }
 }
 
 
-/*
-initital values
-
-var tempx=0;
-        var tempy=60;
-        var vpss=2;
-        var phsw=0;
-        var posts=0;
-        var  fos=20;
-        var dtyc=2;
-
-        */

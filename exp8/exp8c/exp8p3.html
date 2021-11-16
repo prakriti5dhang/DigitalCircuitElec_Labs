@@ -30,25 +30,35 @@
   width: 100%;
   height: auto;
         }
+        .canvasjs-chart-credit {
+        display:none ;
+            }
+      .canvasjs-chart-toolbar{
+        display:none ;
+      }
+      
         </style>
         <link rel="stylesheet" type="text/css" href="style_exp8p3.css">
        
-        <!--script type="text/javascript" src="calljsfile_exp10p1.js"></script-->
-       
-        <!--script type="text/javascript" src="circuit_exp10p1.js"></script-->
+        
         
         <script type="text/javascript" src="ledonoff_exp8p3.js"></script>
         <script type="text/javascript" src="grid_axis_d.js"></script>
        
         
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
         
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     
     
-        <script type="text/javascript" src="addtbl10p3.js"></script>
+        <script type="text/javascript" src="addtbl_exp8c.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML" id="">
         </script>
     <script src="../js/jquery-1.12.4.js"></script>
     <script src="../js/jquery-ui.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="graphchartjs_d.js"></script>
 
     <script>
         $( function() {
@@ -57,11 +67,25 @@ $( "#draggable" ).draggable();
 </script>
     </head>
     <body style="background-color:#0d213b" >
-    
+        <div class="container-fluid">
+            <div class="row">
+            <div id="dispdatetime" class="col-md-3 col-sm-6 col-xs-6" style="color: aliceblue;"></div>
+            <div class="col-sm-7"></div>
+            
+            <div id="disptimer" class="col-md-2 col-sm-6 col-xs-6" style="color: aliceblue;">
+               <!--h6>Visitors: <span id="visits" style="color: aliceblue;"></span> </h6--> 
+                
+            </div>
+            
+            </div>
+            
+            </div>
+     
+    <div class="container-fluid">
     
       
         <div class="row">
-            <img src="../../images/logo.jpg" class="responsive"/>
+            <img src="../../images/logo.jpg" class="img-fluid"/>
         </div>
         
     
@@ -72,7 +96,7 @@ $( "#draggable" ).draggable();
             </div>
         
         <div class="row">
-          <div class="column">
+          <div class="col-md-4">
             <div id="inst" style="background-color:#96baf0;font-size:16px;font-weight:bold;border:1px solid #3385ff">
                 <div class="dropdown">
                     <p style="text-align:center;color:rgb(26,0,97)"> INSTRUCTION</p>
@@ -90,23 +114,25 @@ $( "#draggable" ).draggable();
                     </div>
                 </div>
             </div>
-            
-            
+            </div>
+            <div class="col-md-3">
             
             <div id="tablein" style="background-color:#96baf0;font-size:16px;font-weight:bold;border:1px solid #3385ff">
         <div class="tbtitle">
-                    <p style="text-align:center;color:rgb(26,0,97)">TRUTH TABLE 
-                        <input type="button" id="add"  value="Add to Table"  onclick="aintbl()" style=" background-color: #d9e2f0;  float:right; cursor: pointer;font-size: 16px;font-weight: bold; border:3px solid rgb(26, 0, 97); visibility: hidden;"/></p>
+                    <p style="text-align:center;color:rgb(26,0,97)"> <input type="button" id="plot"  value="Plot"  onclick="dplot()" style=" background-color: #d9e2f0;  top:1px; right:370x;  cursor: pointer;font-size: 16px;font-weight: bold; border:3px solid rgb(26, 0, 97); visibility: visible;"/>TRUTH TABLE 
+                        <input type="button" id="add"  value="Add to Table"  onclick="dintbl()" style=" background-color: #d9e2f0;  float:right; cursor: pointer;font-size: 16px;font-weight: bold; border:3px solid rgb(26, 0, 97); visibility: hidden;"/>
+                        </p>
                     <div class="intbl" style="background-color:white;border:1px solid #3385ff">
                         <p id="equationd" style="text-align:center;"><b></b></p>
                     <center>
-                    <table id="mytabled">
+                    <table id="mytabled" class="table table-hover table-bordered">
                 
                 <tr> 
                     <th >Clock</th>
                     <th >D</th>
                     <th>Q</th>
                     <th >\(Q_{t+1}\)</th>
+                    <th> Action</th>
                     
                     
         
@@ -124,31 +150,21 @@ $( "#draggable" ).draggable();
         
         </div>
         </div>
-        
-        
-        <div>
-            
-                
-            <div id="showalt" class="dropdown-content blink" style="background-color:white;border:4px solid #ff0909; visibility: hidden;">
-                <p class="con" id="v1" style="text-align:center;font-size:large;font-weight:bold">Connect Vcc1 </p>
-                <p class="con" id="v2" style="text-align:center;font-size:large;font-weight:bold">Connect Vcc2 </p>
-                <p class="con" id="gnd2" style="text-align:center;font-size:large;font-weight:bold">Please disconnect GND 1 </p>
-                <p class="con" id="gnd2" style="text-align:center;font-size:large;font-weight:bold">Please disconnect GND 2 </p>
-        
-            </div>
-        
         </div>
-          </div>
         
-          <div class="column" style="float:right">
+        
+       
+          <div class="col-md-5" >
             <div id="cmaind" style="background-color:#96baf0;font-size:16px;font-weight:bold;border:1px solid #3385ff">
         <div class="ctitle">
                     <p style="text-align:center;color:rgb(26,0,97)">CIRCUIT DIAGRAM</p>
                     
                     <div class="crkt" style="background-color:white; position:absolute; border:2px solid #3385ff;">
-                        <input type="button" id="clk"  value="Clock Start"  onclick="clockstrt()" style=" background-color: #d9e2f0;  float:right; cursor: pointer;font-size: 16px;font-weight: bold; border:3px solid rgb(26, 0, 97);"/>
-                    <input type="number" min="0"  max="1" id="textclk" value="" placeholder="No. of clock pulses" style=" float:right; cursor: pointer;font-size: 16px;font-weight: bold; border:2px solid rgb(26, 0, 97);"/>
-                    <img class="mimg" src="dflipflop.jpg" alt="circuit image"/>
+                        <input type="button" id="clk"  value="Clock Start"  onclick="clockstrt()" style=" background-color: #d9e2f0;  float:right; cursor: pointer;font-size: 16px;font-weight: bold; border:3px solid rgb(26, 0, 97);">
+                        <input type="button" id="clkbs"  value="Clock Stop"  onclick="clockstop()" style=" background-color: #d9e2f0; position:absolute; top: 4px;
+                        right: 360px; float:right; cursor: pointer;font-size: 16px;font-weight: bold; border:3px solid rgb(26, 0, 97); display: none;">
+                        <!--input type="number" min="0"  max="1" id="textclk" value="" placeholder="No. of clock pulses" style=" float:right; cursor: pointer;font-size: 16px;font-weight: bold; border:2px solid rgb(26, 0, 97);"/-->
+                    <img class="mimg" src="dflipflop.jpg" alt="circuit image" class="img-fluid"/>
                     
                     
                     <div id="red"  ></div>
@@ -171,19 +187,19 @@ $( "#draggable" ).draggable();
                     
                     
     
-                    <img id="b1" onclick="a1()" src="red.JPG"  />
-                    <img id="b2" onclick="a2()" src="red.JPG"  />
-                    <img id="b3" onclick="a3()" src="red.JPG"  />
-                    <img id="b4" onclick="a4()" src="red.JPG"  />
-                    <img id="b5" onclick="a5()" src="red.JPG"  />
+                    <img id="b1" onclick="a1()" src="red.JPG" class="img-fluid" />
+                    <img id="b2" onclick="a2()" src="red.JPG" class="img-fluid" />
+                    <img id="b3" onclick="a3()" src="red.JPG"  class="img-fluid"/>
+                    <img id="b4" onclick="a4()" src="red.JPG" class="img-fluid" />
+                    <img id="b5" onclick="a5()" src="red.JPG" class="img-fluid" />
                    
     
     
-        <img id="lon1" src="ledon.png">
-        <img id="loff1" src="loff.png">
+        <img id="lon1" src="ledon.png" class="img-fluid">
+        <img id="loff1" src="loff.png" class="img-fluid">
     
-        <img id="lon2" src="ledon.png">
-        <img id="loff2" src="loff.png">
+        <img id="lon2" src="ledon.png" class="img-fluid">
+        <img id="loff2" src="loff.png" class="img-fluid">
     
         
     
@@ -206,33 +222,34 @@ $( "#draggable" ).draggable();
         
           </div>
         </div>
+        </div>
+
+
+        <div id="showalt" class="dropdown-content " style="position:absolute; top: 300px; right:570px; width: 300px; background:white;border:4px solid #ff0909;  visibility: hidden;">
+            <p class="con" id="v1" style="text-align:center;font-size:large;font-weight:bold">Connect Vcc1 </p>
+            <p class="con" id="v2" style="text-align:center;font-size:large;font-weight:bold">Connect Vcc2 </p>
+            <p class="con" id="gnd1" style="text-align:center;font-size:large;font-weight:bold">Please disconnect GND 1 </p>
+            <p class="con" id="gnd2" style="text-align:center;font-size:large;font-weight:bold">Please disconnect GND 2 </p>
+    
         
+    
+    </div>
         
-        <div id="draggable"  style="top:5px; position:absolute; left: 28px;">
+        <div id="draggable"  style="top:100px; position:absolute;left: 28px;">
                               
             <div id="graphshowd" draggable="true"   id="draggable"  id="drag1" style="top:80px; position:absolute; left: 28px; width: 580px; cursor:pointer; background:#96baf0;font-size:16px;font-weight:bold;border:1px solid #3385ff; display: none; ">
                       <div class="grphtitle">
-                    <p style="text-align:center;color:rgb(26,0,97)">GRAPH <span  onclick="graphclose()" style="cursor:pointer;  font-size:30px;position:absolute;top: 5px;right:10px;">&#10006;</span>
-                                     <div class="graphdisplay" style="background-color:white;border:1px solid #3385ff">
-                                        <img id="graphd" src="d_graph_clk_axis.jpg">
-                                        <br>
-                                        &nbsp;&nbsp;&nbsp;<canvas id="myCanvasclk" width="500" height="100" style="border:1px solid"></canvas><img id="graphd" src="d_y_axis.jpg"><!-- clock pulse -->
-                                       
-                                        <img id="graphd" src="d_graph_d_axis.jpg"><br>
-                                        &nbsp;&nbsp;&nbsp;<canvas id="myCanvasd" width="500" height="100" style="border:1px solid"></canvas><img id="graphd" src="d_y_axis.jpg"> <!-- D -->
+                        <p style="text-align:center;color:rgb(26,0,97)">GRAPH <p>Drag to view instruction and the truth table</p><span  onclick="graphclose()" style="cursor:pointer;  font-size:30px;position:absolute;top: 5px;right:10px;">&#10006;</span>
+                        <div class="graphdisplay" style="background-color:white;border:1px solid #3385ff">
+                        <div id="chartContainer" style="height: 100px; width: 570px;"></div>
+                        <div id="chartContainerd" style="height: 100px; width: 570px;"></div>
+                        <div id="chartContainerq" style="height: 100px; width: 570px;"></div>
+                        <div id="chartContainerqb" style="height: 100px; width: 570px;"></div>
+                        </div>
 
-                                       
-
-                                        <img id="graphd" src="d_graph_q_axis.jpg"><br>
-                                        &nbsp;&nbsp;&nbsp;<canvas id="myCanvasq" width="500" height="100" style="border:1px solid"></canvas><img id="graphd" src="d_y_axis.jpg"><!-- Q -->
-
-                                        <img id="graphd" src="d_graph_qb_axis.jpg"><br>
-                                        &nbsp;&nbsp;&nbsp;<canvas id="myCanvasqbar" width="500" height="100" style="border:1px solid"></canvas><img id="graphd" src="d_y_axis.jpg"> <!-- Qbar -->
-                                  </div>
-                      
-                      </div>
-                      </div>
-          </div>
+    </div>
+</div>
+</div>
         
         
         

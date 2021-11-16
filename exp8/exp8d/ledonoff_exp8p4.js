@@ -7,7 +7,6 @@
     var S, R, clkp;
     var sr;
     var qq1;
-    var action;
 
     
   
@@ -30,13 +29,12 @@
         clkp="1";
         sr="00".split("");
         qq1="00".split("");
-        action="No change";
         document.getElementById("addb").style.visibility="visible";
         document.getElementById("lon1").style.visibility="hidden";
         document.getElementById("lon2").style.visibility="hidden";
         document.getElementById("loff1").style.visibility="visible";
         document.getElementById("loff2").style.visibility="visible";
-       
+
     }
 
  /* else if((s.src.match("red")) &&(r.src.match("green")) && (vcc1.src.match("green")) && (vcc2.src.match("green"))){
@@ -51,13 +49,14 @@
         clkp="1";
         sr="01".split("");
         qq1="01".split("");
-        action="Reset";
         document.getElementById("addb").style.visibility="visible";
         document.getElementById("lon1").style.visibility="hidden";
         document.getElementById("lon2").style.visibility="visible";
         document.getElementById("loff1").style.visibility="visible";
         document.getElementById("loff2").style.visibility="hidden";
-       
+        clockpulser();
+        clockpulseqbar();
+        clockpulseq();
     }
 
 
@@ -73,26 +72,26 @@
         clkp="1";
         sr="10".split("");
         qq1="10".split("");
-        action="Set";
         document.getElementById("addb").style.visibility="visible";
         document.getElementById("lon1").style.visibility="visible";
         document.getElementById("lon2").style.visibility="hidden";
         document.getElementById("loff1").style.visibility="hidden";
         document.getElementById("loff2").style.visibility="visible";
-        
+       clockpulses();
+        clockpulseq();
+        clockpulseqbar();
 
     }
    else if((s.src.match("green")) &&(r.src.match("green")) && (vcc1.src.match("green")) && (vcc2.src.match("green"))){
         clkp="1";
         sr="11".split("");
         qq1="11".split("");
-        action="Forbidden";
         document.getElementById("addb").style.visibility="visible";
-        document.getElementById("lon1").style.visibility="hidden";
-        document.getElementById("lon2").style.visibility="hidden";
-        document.getElementById("loff1").style.visibility="Visible";
-        document.getElementById("loff2").style.visibility="Visible";
-        
+        document.getElementById("lon1").style.visibility="visible";
+        document.getElementById("lon2").style.visibility="visible";
+        document.getElementById("loff1").style.visibility="hidden";
+        document.getElementById("loff2").style.visibility="hidden";
+
     }
             
         
@@ -239,7 +238,6 @@ else{
             document.getElementById('b1r').style.display="none";
             document.getElementById('b1g').style.display="block";
          S =1;
-        // clockpulses1();
             
             } 
         else
@@ -248,7 +246,6 @@ else{
             document.getElementById('b1r').style.display="block";
             document.getElementById('b1g').style.display="none";
              S=0;
-            // clockpulses0();
             }
         ledchng();
         
@@ -355,20 +352,15 @@ else{
             document.getElementById('clkbs').style.display="block";
             document.getElementById('clkb').style.display="none";
             document.getElementById('graphshowsr').style.display="block";
-          
-           
-
             clkp="1";
-
-            plotgraph();
-           /* paused=false;
+            paused=false;
            
             drawGridclk();
             clockpulse();	
             drawGridq();
             drawGridqbar();
             drawGridr();
-           drawGrids();*/
+           drawGrids();
            
                
             
@@ -380,24 +372,5 @@ else{
             document.getElementById('graphshowsr').style.display="none";
             document.getElementById('clkb').style.display="block";
             document.getElementById('clkbs').style.display="none";
-            ctxc.clearRect(0, 0, canvas.width, canvas.height);
-            ctxs.clearRect(0, 0, canvas.width, canvas.height);
-            ctxr.clearRect(0, 0, canvas.width, canvas.height);
-            ctxq.clearRect(0, 0, canvas.width, canvas.height);
-            ctxqb.clearRect(0, 0, canvas.width, canvas.height);
-            ctxc.clear();
-            ctxs.clear();
-            ctxr.clear();
-            ctxq.clear();
-            ctxqb.clear();
-            
         }
         
-       /* document.getElementById('addb').addEventListener('click', function() {
-            ctxc.clearRect(0, 0, canvas.width, canvas.height);
-            ctxs.clearRect(0, 0, canvas.width, canvas.height);
-            ctxr.clearRect(0, 0, canvas.width, canvas.height);
-            ctxq.clearRect(0, 0, canvas.width, canvas.height);
-            ctxqb.clearRect(0, 0, canvas.width, canvas.height);
-            
-            }, false);*/

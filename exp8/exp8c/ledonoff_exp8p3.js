@@ -5,123 +5,203 @@ Author:Prakriti Dhang*/
 
     
     var vcc1, vcc2, gnd1, gnd2;
+    var D;
+    var dt;
+    var qq1;
+    var action;
+    var clkp;
     
     function ledchng(){
 
 
 
        
-        var D= document.getElementById('b1'); /* R */
+        var d= document.getElementById('b1'); /* R */
          var vcc1 = document.getElementById('b2'); /* VCC1 */
-        var vcc2 = document.getElementById('b3');/* VCC2 */
-        var gnd1 = document.getElementById('b4');  /* GND1 */
+        var vcc2 = document.getElementById('b4'); /* VCC2 */
+        var gnd1 = document.getElementById('b3');  /* GND1 */
        var gnd2 = document.getElementById('b5'); /* GND2 */
 
     
             
         
 
+    
+       if((d.src.match("green"))  && (vcc1.src.match("green")) && (vcc2.src.match("green"))){
+        clkp="1";
+        dt="0";
+        qq1="00".split("");
+        action="No change";
+        document.getElementById("add").style.visibility="visible";
+        document.getElementById("lon1").style.visibility="hidden";
+        document.getElementById("lon2").style.visibility="hidden";
+        document.getElementById("loff1").style.visibility="visible";
+        document.getElementById("loff2").style.visibility="visible";
+       
+    }
+
+ /* else if((s.src.match("red")) &&(r.src.match("green")) && (vcc1.src.match("green")) && (vcc2.src.match("green"))){
+        clkp="0";
+        sr="01".split("");
+        qq1="00".split("");
+        document.getElementById("addb").style.visibility="visible";
+        document.getElementById("lon1").style.visibility="hidden";
+        document.getElementById("lon2").style.visibility="hidden";
+    }*/
+    else if((d.src.match("red")) && (vcc1.src.match("green")) && (vcc2.src.match("green"))){
+        clkp="1";
+        dt="1";
+        qq1="11".split("");
+        action="Reset";
+        document.getElementById("add").style.visibility="visible";
+        document.getElementById("lon1").style.visibility="visible";
+        document.getElementById("lon2").style.visibility="visible";
+        document.getElementById("loff1").style.visibility="hidden";
+        document.getElementById("loff2").style.visibility="hidden";
+       
+    }
+
+
+ /* else if((s.src.match("green")) &&(r.src.match("red")) && (vcc1.src.match("green")) && (vcc2.src.match("green"))){
+        clkp="0";
+        sr="10".split("");
+        qq1="00".split("");
+        document.getElementById("addb").style.visibility="visible";
+
+
+    }*/
+   
+        
+else{
+    document.getElementById("add").style.visibility="hidden";
+    document.getElementById("lon1").style.visibility="hidden";
+    document.getElementById("lon2").style.visibility="hidden";
+   
+
+    document.getElementById("loff1").style.visibility="visible";
+    document.getElementById("loff2").style.visibility="visible";
+}
             
            
 
 
         /* VCC connection */
-        
-         
-        if((vcc.src.match("red"))  ){
+        if((vcc1.src.match("red")) && (vcc2.src.match("red"))   ){
             document.getElementById('showalt').style.visibility='visible';
-            document.getElementById('v').style.visibility='visible';
-            document.getElementById('gnd').style.visibility='hidden';
+            document.getElementById('v1').style.visibility='visible';
+            document.getElementById('v2').style.visibility='visible';
+            document.getElementById('gnd1').style.visibility='hidden';
+            document.getElementById('gnd2').style.visibility='hidden';
         
             
         
             document.getElementById("lon1").style.visibility="hidden";
             document.getElementById("lon2").style.visibility="hidden";
-            document.getElementById("lon3").style.visibility="hidden";
-            document.getElementById("lon4").style.visibility="hidden";
-            document.getElementById("lon5").style.visibility="hidden";
-            document.getElementById("lon6").style.visibility="hidden";
-            document.getElementById("lon7").style.visibility="hidden";
-            document.getElementById("lon8").style.visibility="hidden";
+           
         
             document.getElementById("loff1").style.visibility="visible";
             document.getElementById("loff2").style.visibility="visible";
-            document.getElementById("loff3").style.visibility="visible";
-            document.getElementById("loff4").style.visibility="visible";
-            document.getElementById("loff5").style.visibility="visible";
-            document.getElementById("loff6").style.visibility="visible";
-            document.getElementById("loff7").style.visibility="visible";
-            document.getElementById("loff8").style.visibility="visible";
+          
         
         }
-        
+       
+            
+       else if((vcc1.src.match("green")) && (vcc2.src.match("red"))){
+            document.getElementById('showalt').style.visibility='visible';
+            document.getElementById('v1').style.visibility='hidden';
+            document.getElementById('v2').style.visibility='visible';
+            document.getElementById('gnd1').style.visibility='hidden';
+            document.getElementById('gnd2').style.visibility='hidden';
+        }
+        else if((vcc1.src.match("red")) && (vcc2.src.match("green"))){
+            document.getElementById('showalt').style.visibility='visible';
+            document.getElementById('v1').style.visibility='visible';
+            document.getElementById('v2').style.visibility='hidden';
+            document.getElementById('gnd1').style.visibility='hidden';
+            document.getElementById('gnd2').style.visibility='hidden';
+        }
+       else if(vcc1.src.match("red") ){
+            document.getElementById('showalt').style.visibility='visible';
+            document.getElementById('v1').style.visibility='visible';
+            document.getElementById('v2').style.visibility='hidden';
+            document.getElementById('gnd1').style.visibility='hidden';
+            document.getElementById('gnd2').style.visibility='hidden';
+            
+        }
+     else if(vcc2.src.match("red") ){
+            document.getElementById('showalt').style.visibility='visible';
+            document.getElementById('v1').style.visibility='hidden';
+            document.getElementById('v2').style.visibility='visible';
+            document.getElementById('gnd1').style.visibility='hidden';
+            document.getElementById('gnd2').style.visibility='hidden';
+            
+        }
+      
         else{
             document.getElementById('showalt').style.visibility='hidden';
-            document.getElementById('v').style.visibility='hidden';
-            document.getElementById('gnd').style.visibility='hidden';
+            document.getElementById('v1').style.visibility='hidden';
+            document.getElementById('v2').style.visibility='hidden';
+            document.getElementById('gnd1').style.visibility='hidden';
+            document.getElementById('gnd2').style.visibility='hidden';
         }
-        /* check GND connection and VCC */
-          if(vcc.src.match("red") && gnd.src.match("green")){
-            document.getElementById('gnd').style.visibility='visible';
-            document.getElementById('showalt').style.visibility='visible';
-            document.getElementById('v').style.visibility='visible';
-            
-        }
-        else if (vcc.src.match("green") && gnd.src.match("red")){
-            document.getElementById('gnd').style.visibility='hidden';
+        
+       /* else if((vcc1.src.match("green")) && (vcc2.src.match("green"))){
             document.getElementById('showalt').style.visibility='hidden';
-            document.getElementById('v').style.visibility='hidden';
-        
-        }
-        
-        else if(vcc.src.match("red") && gnd.src.match("red")){
-            document.getElementById('gnd').style.visibility='hidden';
-            document.getElementById('showalt').style.visibility='visible';
-            document.getElementById('v').style.visibility='visible';
-            
-        }
-        else if(vcc.src.match("green") && gnd.src.match("green")){
-            document.getElementById('gnd').style.visibility='visible';
-            document.getElementById('showalt').style.visibility='visible';
-            document.getElementById('v').style.visibility='hidden';
-            
-        }
-        else{
-            document.getElementById('gnd').style.visibility='hidden';
-            document.getElementById('showalt').style.visibility='hidden';
-            document.getElementById('v').style.visibility='hidden';
-        }
-        
+            document.getElementById('v1').style.visibility='hidden';
+            document.getElementById('v2').style.visibility='hidden';
+            document.getElementById('gnd1').style.visibility='hidden';
+            document.getElementById('gnd2').style.visibility='hidden';
+
+        }*/
+       
+         
+       
+      
+       
         
         
         /* check GND connection */
-         if(gnd.src.match("green")){
-            document.getElementById('gnd').style.visibility='visible';
+       if((gnd1.src.match("green")) && (gnd2.src.match("green") )){
+            document.getElementById('gnd1').style.visibility='visible';
+            document.getElementById('gnd2').style.visibility='visible';
             document.getElementById('showalt').style.visibility='visible';
+
             document.getElementById("lon1").style.visibility="hidden";
             document.getElementById("lon2").style.visibility="hidden";
-            document.getElementById("lon3").style.visibility="hidden";
-            document.getElementById("lon4").style.visibility="hidden";
-            document.getElementById("lon5").style.visibility="hidden";
-            document.getElementById("lon6").style.visibility="hidden";
-            document.getElementById("lon7").style.visibility="hidden";
-            document.getElementById("lon8").style.visibility="hidden";
+           
         
             document.getElementById("loff1").style.visibility="visible";
             document.getElementById("loff2").style.visibility="visible";
-            document.getElementById("loff3").style.visibility="visible";
-            document.getElementById("loff4").style.visibility="visible";
-            document.getElementById("loff5").style.visibility="visible";
-            document.getElementById("loff6").style.visibility="visible";
-            document.getElementById("loff7").style.visibility="visible";
-            document.getElementById("loff8").style.visibility="visible";
+            
         
               
         }
+        else if((gnd1.src.match("green"))  ){
+            document.getElementById('showalt').style.visibility='visible';
+            document.getElementById('v1').style.visibility='hidden';
+            document.getElementById('v2').style.visibility='hidden';
+            document.getElementById('gnd1').style.visibility='visible';
+            document.getElementById('gnd2').style.visibility='hidden';
+            
+        }
+        else if((gnd2.src.match("green"))  ){
+            document.getElementById('showalt').style.visibility='visible';
+            document.getElementById('v1').style.visibility='hidden';
+            document.getElementById('v2').style.visibility='hidden';
+            document.getElementById('gnd1').style.visibility='hidden';
+            document.getElementById('gnd2').style.visibility='visible';
+            
+        }
+      
         else {
-            document.getElementById('gnd').style.visibility='hidden';
+            
+            document.getElementById('gnd1').style.visibility='hidden';
+            document.getElementById('gnd2').style.visibility='hidden';
          
         }
+        
+         
+        
         
         
         }
@@ -135,7 +215,8 @@ Author:Prakriti Dhang*/
             image.src = "green.JPG";
             document.getElementById('b1r').style.display="none";
             document.getElementById('b1g').style.display="block";
-         B0 =1;
+         d =1;
+        // clockpulses1();
             
             } 
         else
@@ -143,7 +224,8 @@ Author:Prakriti Dhang*/
             image.src = "red.JPG";
             document.getElementById('b1r').style.display="block";
             document.getElementById('b1g').style.display="none";
-             B0=0;
+             D=0;
+            // clockpulses0();
             }
         ledchng();
         
@@ -155,14 +237,15 @@ Author:Prakriti Dhang*/
             image.src = "green.JPG";
             document.getElementById('b2r').style.display="none";
             document.getElementById('b2g').style.display="block";
-             A0=1	;	
+            
+                 
             } 
         else
         {
             image.src = "red.JPG";
             document.getElementById('b2r').style.display="block";
             document.getElementById('b2g').style.display="none";
-             A0=0;
+            
             }
             ledchng();
         }
@@ -173,14 +256,14 @@ Author:Prakriti Dhang*/
             image.src = "green.JPG";
             document.getElementById('b3r').style.display="none";
             document.getElementById('b3g').style.display="block";
-             S3=1	;
+           
             } 
         else
         {
             image.src = "red.JPG";
             document.getElementById('b3r').style.display="block";
             document.getElementById('b3g').style.display="none";
-             S3=0	;
+             
             }
             ledchng();
         }
@@ -191,14 +274,14 @@ Author:Prakriti Dhang*/
             image.src = "green.JPG";
             document.getElementById('b4r').style.display="none";
             document.getElementById('b4g').style.display="block";
-             S2=1	;	
+            
             } 
         else
         {
             image.src = "red.JPG";
             document.getElementById('b4r').style.display="block";
             document.getElementById('b4g').style.display="none";
-             S2=0	;
+             
             }
             ledchng();
         }
@@ -210,41 +293,41 @@ Author:Prakriti Dhang*/
             image.src = "green.JPG";
             document.getElementById('b5r').style.display="none";
             document.getElementById('b5g').style.display="block";
-             S1=1	;
+             
             } 
         else
         {
             image.src = "red.JPG";
             document.getElementById('b5r').style.display="block";
             document.getElementById('b5g').style.display="none";
-             S1=0	;
+             
             }
             ledchng();
             
         }
-        function clockstrt() {
-            var image = document.getElementById('clk');		
-            if (image.value.match("Clock Start") )
+       
             
-        {
+        
+
+
+       
+        function clockstrt() {
+            
            
             document.getElementById('red').style.display="none";
             document.getElementById('green').style.display="block";
-            document.getElementById('clk').value="Clock Stop";
-            document.getElementById('graphshowd').style.display="block";
-            document.getElementById('clk').style.background="red";
-            drawGridd();
-            } 
-        else
-        {
-            
+            document.getElementById('clk').style.display="none";
+            document.getElementById('clkbs').style.display="block";
+            document.getElementById('clkbs').style.background="red";
+           
+        }
+         
+        function clockstop(){
             document.getElementById('red').style.display="block";
             document.getElementById('green').style.display="none";
-            document.getElementById('clk').value="Clock Start";
-            document.getElementById('clk').style.background="#d9e2f0";
-            }
-            ledchng();
-        }
+            document.getElementById('clk').style.display="block";
+            document.getElementById('clkbs').style.display="none";
+        }	
         
         function graphclose(){
             document.getElementById('graphshowd').style.display="none";

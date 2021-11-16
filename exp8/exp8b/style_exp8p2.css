@@ -8,19 +8,19 @@
 }
 
 /* Create two equal columns that floats next to each other */
-.column {
+/*.column {
   float: left;
   width: 50%;
   padding: 10px;
   
-}
+}*/
 
 /* Clear floats after the columns */
-.row:after {
+/*.row:after {
   content: "";
   display: table;
   clear: both;
-}
+}*/
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
@@ -30,20 +30,20 @@
   .div{
   width: 100%;
   }
-  .mimg{
+  /*.mimg{
   width:100%;
   }
   .img{
   width:100%;
-  }
+  }*/
 }
 
 
-.mimg{
+/*.mimg{
    
     width:645px;  /* 645px */
 	
-}
+/*}*/
 
 
 .blink{
@@ -63,23 +63,23 @@
 #clk{
 
   position:absolute;
-	top:5px;
-right: 545px;
-width: 100px;
+	top:1px;
+right: 360px;
+width: 55px;
 }
 
 #textclk{
   position:absolute;
-	top: 3px;
-right:30px;
+	top: 0px;
+right:10px;
 width: 160px;
 }
 
 #red {
   width: 22px;
   height: 3px;
-  top:65px;
-right:582px;
+  top:40px;
+right:370px;
   background-color: red;
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
@@ -87,10 +87,10 @@ position:absolute;
 }
 
 #green{
-width: 32px;
+width: 15px;
   height: 3px;
-  top: 52px;
-right: 576px;
+  top: 35px;
+right: 370px;
   background-color: green;
   -webkit-transform: rotate(50deg);
   transform: rotate(50deg);
@@ -100,8 +100,8 @@ display: none;
 
 #b1{
 	position:absolute;
-	top: 530px;
-right: 530px;
+	top: 340px;
+right: 331px;
   cursor:pointer;
     
     
@@ -111,8 +111,8 @@ right: 530px;
 {
 position: absolute;
 
-top: 579px;
-right: 530px;
+top: 370px;
+right: 331px;
 display:block;
 cursor:pointer;
 /*bottom: 335px;
@@ -124,8 +124,8 @@ right: 1058px;*/
 {
 
   position: absolute;
-top: 624px;
-right:530px;
+top: 400px;
+right:331px;
 display:block;
 /*bottom: 335px;
 right: 1058px;*/
@@ -137,8 +137,8 @@ cursor:pointer;
 
 position: absolute;
 
-top: 672px;
-right: 530px;
+top: 431px;
+right: 331px;
 display:block;
 /*bottom: 335px;
 right: 1058px;*/
@@ -151,8 +151,8 @@ cursor:pointer;
 
 position: absolute;
 
-top: 721px;
-right: 530px;
+top: 462px;
+right: 331px;
 display:block;
 /*bottom: 335px;
 right: 1058px;*/
@@ -164,8 +164,8 @@ cursor:pointer;
 
 position: absolute;
 
-top: 776px;
-right: 530px;
+top: 498px;
+right: 331px;
 display:block;
 /*bottom: 335px;
 right: 1058px;*/
@@ -193,28 +193,28 @@ cursor:pointer;
 
 #loff1{
   position:absolute;
-  top:550px;
-  right:236px;
-  visibility:hidden;
+  top:340px;
+  right:150px;
+  visibility:block;
 }
 #lon1{
   position:absolute;
-  top:551px;
-  right:230px;
-  visibility:block;
+  top:345px;
+  right:148px;
+  visibility:hidden;
 }
 
 #loff2{
   position:absolute;
-  top:550px;
-  right:78px;
-  visibility:hidden;
+  top:340px;
+  right:48px;
+  visibility:block;
 }
 #lon2{
   position:absolute;
-  top:551px;
-  right:70px;
-  visibility:block;
+  top:345px;
+  right:46px;
+  visibility:hidden;
 }
 
 
