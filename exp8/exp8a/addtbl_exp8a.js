@@ -44,7 +44,7 @@ function srintbl(){
 
      function srplot(){
         document.getElementById('graphshowsr').style.display="block";
-       
+        plotgraph();
         splot();
         rplot();
         qplot();

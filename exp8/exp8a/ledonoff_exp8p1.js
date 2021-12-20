@@ -85,12 +85,12 @@
    else if((s.src.match("green")) &&(r.src.match("green")) && (vcc1.src.match("green")) && (vcc2.src.match("green"))){
         clkp="1";
         sr="11".split("");
-        qq1="11".split("");
+        qq1="1?".split("");
         action="Forbidden";
         document.getElementById("addb").style.visibility="visible";
-        document.getElementById("lon1").style.visibility="hidden";
+        document.getElementById("lon1").style.visibility="visible";
         document.getElementById("lon2").style.visibility="hidden";
-        document.getElementById("loff1").style.visibility="Visible";
+        document.getElementById("loff1").style.visibility="hidden";
         document.getElementById("loff2").style.visibility="Visible";
         
     }
@@ -354,13 +354,13 @@ else{
             document.getElementById('green').style.display="block";
             document.getElementById('clkbs').style.display="block";
             document.getElementById('clkb').style.display="none";
-            document.getElementById('graphshowsr').style.display="block";
+           // document.getElementById('graphshowsr').style.display="block";
           
            
 
             clkp="1";
 
-            plotgraph();
+            
            /* paused=false;
            
             drawGridclk();
@@ -380,16 +380,7 @@ else{
             document.getElementById('graphshowsr').style.display="none";
             document.getElementById('clkb').style.display="block";
             document.getElementById('clkbs').style.display="none";
-            ctxc.clearRect(0, 0, canvas.width, canvas.height);
-            ctxs.clearRect(0, 0, canvas.width, canvas.height);
-            ctxr.clearRect(0, 0, canvas.width, canvas.height);
-            ctxq.clearRect(0, 0, canvas.width, canvas.height);
-            ctxqb.clearRect(0, 0, canvas.width, canvas.height);
-            ctxc.clear();
-            ctxs.clear();
-            ctxr.clear();
-            ctxq.clear();
-            ctxqb.clear();
+           
             
         }
         
