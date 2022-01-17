@@ -37,7 +37,14 @@ function jkintbl(){
         cell.innerHTML = arr[q];
 
     }
-    
+    var rowCount = document.getElementById('mytablejk').rows.length;
+
+if(rowCount == 5){
+    document.getElementById('plotb').style.visibility="visible";
+}
+else{
+    document.getElementById('plotb').style.visibility="visible";
+}
 
 }
 

@@ -36,7 +36,14 @@ function dintbl(){
         cell.innerHTML = arr[q];
 
     }
-    
+    var rowCount = document.getElementById('mytabled').rows.length;
+
+if(rowCount == 3){
+    document.getElementById('plot').style.visibility="visible";
+}
+else{
+    document.getElementById('plot').style.visibility="visible";
+}
 
 }
 

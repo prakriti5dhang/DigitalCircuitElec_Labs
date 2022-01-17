@@ -35,14 +35,21 @@ function srintbl(){
 
         var cell = row.insertCell(q);
         cell.innerHTML = arr[q];
-
+       
     }
-    
+    var rowCount = document.getElementById('mytablesr').rows.length;
 
+if(rowCount == 5){
+    document.getElementById('plotb').style.visibility="visible";
+}
+else{
+    document.getElementById('plotb').style.visibility="visible";
+}
 }
 
 
      function srplot(){
+       
         document.getElementById('graphshowsr').style.display="block";
         plotgraph();
         splot();
