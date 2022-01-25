@@ -11,7 +11,7 @@
         <link rel="stylesheet" type="text/css" href="style_exp8p1.css">
        
         <script type="text/javascript" src="ledonoff_exp8p1.js"></script>
-        <script type="text/javascript" src="grid_axis_sr.js"></script>
+        <!--script type="text/javascript" src="grid_axis_sr.js"></script-->
        
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
@@ -60,7 +60,11 @@
         display:none ;
       }
       
-     
+      .instscroll{
+  height: 580px;
+  overflow: auto;
+
+      }
       
             
             </style>
@@ -85,6 +89,13 @@
                 } */
                 </script>
                 
+
+<script>
+    function pgload() {
+  document.getElementById("clkb").disabled = true;
+  document.getElementById("clkbs").disabled = true;
+    }
+</script>
 
                 <!--<script>
                     function liveViews(response) {
@@ -131,7 +142,7 @@
             <div id="inst" style="background-color:#96baf0;font-size:16px;font-weight:bold;border:1px solid #3385ff">
                 <div class="dropdown">
                     <p style="text-align:center;color:rgb(26,0,97)"> INSTRUCTION</p>
-                    <div class="dropdown-content" style="background-color:white;border:1px solid #3385ff">
+                    <div class="dropdown-content instscroll" style="background-color:white;border:1px solid #3385ff">
                         <ol type="1">
                             <li>Apply \(V_{CC1 }\) and \(V_{CC2}\), so that clock start button will be enabled. Apply low level voltage to ground(GND1) and (GND2). </li>
                             <li>Next, start the clock pulse by clicking on the "Clock Start" button and after generation of some clock pulses stop the clock pulse by clicking on the"clock Stop" button. Click the button "Add to table", to insert the data.
@@ -201,7 +212,7 @@
                     <p style="text-align:center;color:rgb(26,0,97)">CIRCUIT DIAGRAM</p>
                     
                     <div class="crkt" style="background-color:white; position:absolute; border:2px solid #3385ff;">
-                        <input type="button" id="clkb"  value="Clock Start"  onclick="clockstrt()" style=" background-color: #d9e2f0;  float:right; cursor: pointer;font-size: 16px;font-weight: bold; border:2px solid rgb(26, 0, 97);"/>
+                        <input type="button" id="clkb"  value="Clock Start"  onclick="clockstrt()" style=" background-color: #d9e2f0;  float:right; cursor: pointer;font-size: 16px;font-weight: bold; border:2px solid rgb(26, 0, 97); "/>
                         <input type="button" id="clkbs"  value="Clock Stop" onclick="clockstop()"  style=" background-color: #d9e2f0; position:absolute; top: 1px; right: 320px; float: right; cursor: pointer;font-size: 16px;font-weight: bold; border:2px solid rgb(26, 0, 97);background-color: #ff0909;display: none;"/>
                         <!--input type="number" min="0"  max="1" id="textclk" value="" placeholder="No. of clock pulses" style=" float:right; cursor: pointer;font-size: 16px;font-weight: bold; border:2px solid rgb(26, 0, 97);"/-->
                     <img class="mimg" src="srflipflop.jpg" class="img-fluid" alt="SR circuit image"/>

@@ -102,7 +102,8 @@ else{
             document.getElementById("loff1").style.visibility="visible";
             document.getElementById("loff2").style.visibility="visible";
           
-        
+            document.getElementById("clk").disabled = true;
+            document.getElementById("clkbs").disabled = true;
         }
        
             
@@ -136,6 +137,10 @@ else{
             document.getElementById('gnd2').style.visibility='hidden';
             
         }
+        if((vcc1.src.match("green")) && (vcc2.src.match("green"))){
+            document.getElementById("clk").disabled = false;
+            document.getElementById("clkbs").disabled = false;
+         }
       
         else{
             document.getElementById('showalt').style.visibility='hidden';

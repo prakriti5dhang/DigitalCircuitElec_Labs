@@ -128,7 +128,9 @@ else{
             document.getElementById("loff1").style.visibility="visible";
             document.getElementById("loff2").style.visibility="visible";
           
-        
+            document.getElementById("clkb").disabled = true;
+            document.getElementById("clkbs").disabled = true;
+            
         }
        
             
@@ -165,6 +167,8 @@ else{
       
         else{
             document.getElementById('showalt').style.visibility='hidden';
+            
+          
             document.getElementById('v1').style.visibility='hidden';
             document.getElementById('v2').style.visibility='hidden';
             document.getElementById('gnd1').style.visibility='hidden';
@@ -180,7 +184,10 @@ else{
 
         }*/
        
-         
+         if((vcc1.src.match("green")) && (vcc2.src.match("green"))){
+            document.getElementById("clkb").disabled = false;
+            document.getElementById("clkbs").disabled = false;
+         }
        
       
        
@@ -383,6 +390,12 @@ else{
            
             
         }
+        function clockstop(){
+            document.getElementById('red').style.display="block";
+            document.getElementById('green').style.display="none";
+            document.getElementById('clkb').style.display="block";
+            document.getElementById('clkbs').style.display="none";
+          }
         
        /* document.getElementById('addb').addEventListener('click', function() {
             ctxc.clearRect(0, 0, canvas.width, canvas.height);

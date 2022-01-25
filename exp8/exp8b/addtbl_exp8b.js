@@ -42,9 +42,7 @@ function jkintbl(){
 if(rowCount == 5){
     document.getElementById('plotb').style.visibility="visible";
 }
-else{
-    document.getElementById('plotb').style.visibility="visible";
-}
+
 
 }
 

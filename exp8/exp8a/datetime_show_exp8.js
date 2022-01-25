@@ -8,6 +8,7 @@ var sec=0;
 var min=0;
 
 function pgload() {
+ 
 var day = new Date();
 var month=day.getMonth();
 var se=day.getSeconds();

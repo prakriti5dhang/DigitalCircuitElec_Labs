@@ -36,6 +36,12 @@
       .canvasjs-chart-toolbar{
         display:none ;
       }
+
+      .instscroll{
+  height: 570px;
+  overflow: auto;
+
+      }
         </style>
         <link rel="stylesheet" type="text/css" href="style_exp8p2.css">
        
@@ -64,8 +70,15 @@
     $( "#draggable" ).draggable();
   } );
   </script>
+  <script>
+    function pgload() {
+  document.getElementById("clk").disabled = true;
+  document.getElementById("clkbs").disabled = true;
+    }
+</script>
+
     </head>
-    <body style="background-color:#0d213b" >
+    <body style="background-color:#0d213b" onload="pgload()">
     <div class="container-fluid">
         <div class="row">
             <div id="dispdatetime" class="col-md-3 col-sm-6 col-xs-6" style="color: aliceblue;"></div>
@@ -95,7 +108,7 @@
             <div id="inst" style="background-color:#96baf0;font-size:16px;font-weight:bold;border:1px solid #3385ff">
                 <div class="dropdown">
                     <p style="text-align:center;color:rgb(26,0,97)"> INSTRUCTION</p>
-                    <div class="dropdown-content" style="background-color:white;border:1px solid #3385ff">
+                    <div class="dropdown-content instscroll" style="background-color:white;border:1px solid #3385ff">
                         <ol type="1">
                             <li >Apply \(V_{CC1 }\) and \(V_{CC2}\), so that clock start button will be enabled. Apply low level voltage to ground(GND1) and (GND2). </li>
                             <li>Next, start the clock pulse by clicking on the "Clock Start" button and after generation of some clock pulses stop the clock pulse by clicking on the"clock Stop" button .

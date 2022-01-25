@@ -41,9 +41,7 @@ function dintbl(){
 if(rowCount == 3){
     document.getElementById('plot').style.visibility="visible";
 }
-else{
-    document.getElementById('plot').style.visibility="visible";
-}
+
 
 }
 
