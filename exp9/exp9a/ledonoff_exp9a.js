@@ -29,6 +29,7 @@
       await sleep(1500);
       clockstop();
       await sleep(1500);
+     
       var image = document.getElementById('b2');		
             if (image.src.match("green")) 
         {
@@ -86,6 +87,7 @@
             document.getElementById('b6g').style.display="none";
             
             } 
+            
       }
      
 
@@ -100,6 +102,21 @@
           P3 = document.getElementById('b6'); /* P3 */
          vcc = document.getElementById('b7'); /* VCC */
          gnd = document.getElementById('b8');/* GND */
+
+         if ((ds.src.match("green"))){
+            document.getElementById("clkb").disabled = false;
+            document.getElementById("clkbs").disabled = false;
+            document.getElementById("clkb2").disabled = true;
+            document.getElementById("clkbs2").disabled = true;
+         }
+         if ((s.src.match("green"))){
+            document.getElementById("clkb").disabled = true;
+            document.getElementById("clkbs").disabled = true;
+            document.getElementById("clkb2").disabled = false;
+            document.getElementById("clkbs2").disabled = false;
+         }
+
+
       
          if( (vcc.src.match("green")) &&(s.src.match("green") )){
             /*document.getElementById("b3").onclick = true;
@@ -226,10 +243,10 @@
 
             if((vcc.src.match("green"))){
                 
-                document.getElementById("clkb").disabled = false;
+               /* document.getElementById("clkb").disabled = false;
                 document.getElementById("clkbs").disabled = false;
                 document.getElementById("clkb2").disabled = false;
-                document.getElementById("clkbs2").disabled = false;
+                document.getElementById("clkbs2").disabled = false;*/
 
             }
         }
@@ -399,8 +416,20 @@
             document.getElementById('plotb1').disabled=false; 
             document.getElementById('plotb2').disabled=true;
             }
-              
-               
+            if ((s.src.match("green"))){
+                alert ("Apply low voltage to mode control S");
+                document.getElementById('red1').style.display="block";
+                document.getElementById('green1').style.display="none";
+                document.getElementById('clkb').style.display="block";
+                document.getElementById('clkbs').style.display="none";
+            }
+               if ((ds.src.match("red"))){
+                alert ("Apply high voltage to Serial input Ds");
+                document.getElementById('red1').style.display="block";
+                document.getElementById('green1').style.display="none";
+                document.getElementById('clkb').style.display="block";
+                document.getElementById('clkbs').style.display="none";
+               }
         
     }
     function clockstrt2() {
@@ -415,6 +444,20 @@
        
 
         clkp="1";
+        if ((s.src.match("red"))){
+            alert ("Apply high voltage to mode control S");
+            document.getElementById('red2').style.display="block";
+            document.getElementById('green2').style.display="none";
+            document.getElementById('clkb2').style.display="block";
+            document.getElementById('clkbs2').style.display="none";
+        }
+        if ((ds.src.match("green"))){
+            alert ("Apply low voltage to Serial input Ds");
+            document.getElementById('red2').style.display="block";
+            document.getElementById('green2').style.display="none";
+            document.getElementById('clkb2').style.display="block";
+            document.getElementById('clkbs2').style.display="none";
+           }
         if( (s.src.match("green"))&&(P0.src.match("green")) && (vcc.src.match("green")) ){
             document.getElementById("lon0").style.visibility="visible";
             document.getElementById("lon1").style.visibility="hidden";
@@ -471,6 +514,8 @@
             delayedclck2display();
             document.getElementById('plotb2').disabled=false;
             document.getElementById('plotb1').disabled=true;
+
+            
         }
         
     }
